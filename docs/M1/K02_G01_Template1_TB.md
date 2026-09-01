@@ -9,7 +9,7 @@ TOPIC BRAINSTORMING
 
 ## *Nama Perangkat Lunak*
 
-### Untuk: *[Nama Asisten]*
+### Untuk: *Aurelia Jennifer Gunawan*
 
 Dipersiapkan oleh:
 | Informasi | Keterangan |
@@ -32,7 +32,11 @@ Dipersiapkan oleh:
 # BAB 1: Analisis Permasalahan
 
 ## 1.1 Latar Belakang Masalah
-Tuliskan deskripsi permasalahan yang kalian pilih secara naratif dan spesifik. Tambahkan keterkaitan permasalahan tersebut dengan Tujuan Pembangunan Berkelanjutan (SDGs) yang telah disepakati. Dukung argumen kalian dengan data yang kredibel, serta jelaskan urgensi mengapa masalah ini perlu dan layak untuk segera diselesaikan.
+Pencemaran ekosistem laut akibat sampah, khususnya limbah plastik. telah berkembang menjadi salah satu masalah yang besar dan krusial di masa ini. Masalah ini berkaitan erat dengan Tujuan Pembangunan Berkelanjutan (SDGs) 14 yaitu Life Below Water untuk mencegah segala bentuk pencemaran laut, terutama yang bersumber dari aktivitas dari daratan
+
+Berdasarkan publikasi dari World Bank Group (WBG, 2021), Indonesia menghasilkan sebanyak 7,8 juta ton sampah plastik memasukin lautan global setiap tahunnya. Diperkirakan rentang antara 201,1 - 552,3 kilo ton sampah plastik per tahun dibuang ke dalam ekosistem laut yang bersumber dari daratan, di mana 2/3 sampah tersebut berasal dari Jawa dan Sumatera. Data Kementerian Lingkungan Hidup dan Kehutanan (KLHK, 2022) juga menunjukkan bahwa tumpukan plastik baik makro ataupun mikroplastik di perairan Indonesia mengancam lebih dari 200 spesies laut, merusak terumbu karang, serta menimbulkan kerugian ekonomi mencapai triliunan rupiah pada sektor perikanan tangkap dan pariwisata bahari.
+
+Urgensi penanganan masalah ini sangat tinggi karena limbah plastik tersebut terombang-ambing di laut sehingga bisa terpecah menjadi mikroplastik yang dapat membahayakan maritim laut dan manusia. Metode pemantauan tradisional secara manual terbukti tidak bisa menyelesaikan masalah sampah laut yang terus terombang-ambing ini. Oleh karena itu, diperlukan penanganan melalui software berbentuk gamifikasi untuk menarik perhatian masyarakat dari berbagai daerah di Indonesia untuk ikut berkontribusi dalam membersihkan sampah laut tersebut.
 
 ## 1.2 Analisis Kondisi Saat Ini
 Lakukan analisis terhadap proses yang berjalan saat ini di dunia nyata, baik itu sistem lama ataupun solusi yang sudah ada. Soroti kesenjangan atau celah dari kondisi tersebut yang nantinya akan diselesaikan oleh perangkat lunak kalian.
