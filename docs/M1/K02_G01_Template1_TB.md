@@ -52,20 +52,20 @@ Data yang dikumpulkan akan diolah oleh sistem menjadi 2 output utama. Pertama ad
 
 Perangkat lunak ini akan dikembangkan dalam bentuk web supaya masyarakat dapat mengakses lebih mudah. Dengan bentuk ini, informasi terkait pencemaran lingkungan laut akan lebih mudah untuk diperbarui dan laporan masyarkat dapat dikirimkan ke database sehingga dapat langsung diolah oleh sistem. Aplikasi web juga dinilai lebih sesuai karena visualisasi heatmap dan data dapat ditampilkan dengan lebih baik dalam bentuk ini. Selain itu, SeaGuard dapat diakses dari berbagai perangkat tanpa instalasi.
 
-Nilai unik SeaGuard terdapat pada fitur leaderboard seperti gamifikasi bagi masyarakat untuk berpartisipasi dalam penanganan pencemaran lingkungan laut. Jika suatu tim relawan telah membersihkan sampah dari suatu wilayah maka tim tersebut dapat melaporkan ke website bahwa wilayah tersebut sudah dibersihkan beserta memberikan bukti-buktinya. Lalu, bukti-bukti itu akan diverifikasi lebih lanjut oleh sistem dan wilayah akan disurvei kembali untuk memastikan lagi. Setelah terverifikasi maka tim tersebut akan mendapatkan poin sesuai dengan usahanya. Kontribusi dan usaha tim itu akan dicantumkan juga ke dalam leaderboard di platform itu. Hal ini akan lebih menarik masyarkat umum untuk lebih aktif dalam berpartisipasi untuk membersihkan wilayah perairan yang tercemar.
+Nilai unik SeaGuard terdapat pada fitur leaderboard seperti gamifikasi bagi masyarakat untuk berpartisipasi dalam penanganan pencemaran lingkungan laut. Jika suatu tim relawan telah membersihkan sampah dari suatu wilayah maka tim tersebut dapat melaporkan ke website bahwa wilayah tersebut sudah dibersihkan beserta memberikan bukti-buktinya. Lalu, bukti-bukti itu akan diverifikasi lebih lanjut oleh sistem. Setelah terverifikasi maka tim tersebut akan mendapatkan poin sesuai dengan usahanya. Kontribusi dan usaha tim itu akan dicantumkan juga ke dalam leaderboard di platform itu. Hal ini akan lebih menarik masyarkat umum untuk lebih aktif dalam berpartisipasi untuk membersihkan wilayah perairan yang tercemar.
 
 ## 2.2 Asumsi dan Batasan
-Definisikan secara tegas asumsi (baik teknis maupun dari sisi pengguna) yang menjadi dasar pengembangan. Tuliskan batasan seperti regulasi/hukum, keterbatasan sumber daya, dan ruang lingkup solusi.
-
-Asumsi Teknis:
+Asumsi :
 - Relawan / Masyarakat sekitar yang melaporkan adanya pencemaran lingkungan di wilayah tertentu diasumsikan memiliki perangkat yang dapat melaporkan hal itu dan memiliki akses pada internet.
--
+- Pengguna yang memberikan laporan kondisi pencemaran lingkungan perairan dan bukti sebelum dan setelah pembersihan diasumsikan benar dan sesuai dengan kondisi yang nyata dan tidak dipalsukan
+- Data laporan yang dikirimkan sudah lengkap dengan informasi wilayah yang akurat dan data pencemaran yang dikirimkan sudah lengkap dan valid
 
-Asumsi Pengguna:
-- 
-
-Batasan Sumber daya:
-- 
+Batasan :
+- SeaGuard tidak melakukan pengukuran tingkat pencemaran air sehingga sangat bergantung pada data yang diberikan oleh masyarakat setempat atau relawan
+- Proyek dibatasi oleh ketersediaan sumber daya seperti uang dan waktu sehingga pengembangan difokuskan pada fitur-fitur yang utama
+- Hasil akhir projek hanya berupa prototipe software yang tidak sempurna dan belum mencakup seluruh fitur yang dibutuhkan untuk implementasi yang nyata
+- Peran SeaGuard hanya terbatas pada peran dalam mengumpulkan informasi, mengolahnya, dan menganalisis data pencemaran wilayah. Pelaksanaan kegiatan pembersihan lingkungan berada di luar batasan SeaGuard
+- Pengolahan dan analisis data yang dilakukan hanya terbatas pada wilayah-wilayah tertentu di Indonesia dan tidak mecakup seluruh wilayah perairan Indonesia
 
 ---
 
