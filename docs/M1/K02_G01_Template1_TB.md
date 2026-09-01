@@ -46,10 +46,26 @@ Lakukan analisis terhadap proses yang berjalan saat ini di dunia nyata, baik itu
 # BAB 2: Analisis Solusi
 
 ## 2.1 Deskripsi Perangkat Lunak
-Abstraksikan solusi perangkat lunak yang diusulkan dari sudut pandang pengguna. Jelaskan target platform yang akan digunakan (misalnya: desktop application) beserta alasan pemilihannya. Deskripsikan juga nilai unik (inovasi inti) dari perangkat lunak kalian dan apa yang membedakannya dari solusi yang sudah ada.
+Untuk mengatasi masalah itu, kelompok kami mengusulkan untuk membuat perangkat lunak bernama SeaGuard: Sistem Monitoring dan Analisis Sampah Laut. SeaGuard merupakan platform yang dapat digunakan masyarakat untuk memperoleh informasi mengenai kondisi pencemaran sampah laut di Indonesia. SeaGuard juga dapat berperan sebagai pusat informasi dan data-data terkait laporan pencemaran dan titik-titik sampah laut. Sumber datanya dapat diperoleh dari laporan relawan atau survei dari masyarakat sekitar yang dapat memasukan datanya ke dalam website untuk kemudian diverifikasi dan dianalisis lebih lanjut.
+
+Data yang dikumpulkan akan diolah oleh sistem menjadi 2 output utama. Pertama adalah analisis dan statistik pencemaran wilayah yang dilaporkan, yang mencakup data-data seperti volume sampah dalam perairan tersebut, sumber pencemaran lingkungan, tingkat kesehatan ekosistem laut, dan tingkat kualitas air. Kedua adalah visualisasi dalam bentuk heatmap yang menunjukkan tingkat pencemaran lingkungan dalam wilayah perairan tertentu. Semakin pekat warna dalam heatmapnya, maka semakin tinggi tingkat pencemaran lingkungan di wilayah itu.
+
+Perangkat lunak ini akan dikembangkan dalam bentuk web supaya masyarakat dapat mengakses lebih mudah. Dengan bentuk ini, informasi terkait pencemaran lingkungan laut akan lebih mudah untuk diperbarui dan laporan masyarkat dapat dikirimkan ke database sehingga dapat langsung diolah oleh sistem. Aplikasi web juga dinilai lebih sesuai karena visualisasi heatmap dan data dapat ditampilkan dengan lebih baik dalam bentuk ini. Selain itu, SeaGuard dapat diakses dari berbagai perangkat tanpa instalasi.
+
+Nilai unik SeaGuard terdapat pada fitur leaderboard seperti gamifikasi bagi masyarakat untuk berpartisipasi dalam penanganan pencemaran lingkungan laut. Jika suatu tim relawan telah membersihkan sampah dari suatu wilayah maka tim tersebut dapat melaporkan ke website bahwa wilayah tersebut sudah dibersihkan beserta memberikan bukti-buktinya. Lalu, bukti-bukti itu akan diverifikasi lebih lanjut oleh sistem dan wilayah akan disurvei kembali untuk memastikan lagi. Setelah terverifikasi maka tim tersebut akan mendapatkan poin sesuai dengan usahanya. Kontribusi dan usaha tim itu akan dicantumkan juga ke dalam leaderboard di platform itu. Hal ini akan lebih menarik masyarkat umum untuk lebih aktif dalam berpartisipasi untuk membersihkan wilayah perairan yang tercemar.
 
 ## 2.2 Asumsi dan Batasan
 Definisikan secara tegas asumsi (baik teknis maupun dari sisi pengguna) yang menjadi dasar pengembangan. Tuliskan batasan seperti regulasi/hukum, keterbatasan sumber daya, dan ruang lingkup solusi.
+
+Asumsi Teknis:
+- Relawan / Masyarakat sekitar yang melaporkan adanya pencemaran lingkungan di wilayah tertentu diasumsikan memiliki perangkat yang dapat melaporkan hal itu dan memiliki akses pada internet.
+-
+
+Asumsi Pengguna:
+- 
+
+Batasan Sumber daya:
+- 
 
 ---
 
