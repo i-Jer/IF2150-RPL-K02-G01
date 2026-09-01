@@ -39,7 +39,9 @@ Berdasarkan publikasi dari World Bank Group (WBG, 2021), Indonesia menghasilkan 
 Urgensi penanganan masalah ini sangat tinggi karena limbah plastik tersebut terombang-ambing di laut sehingga bisa terpecah menjadi mikroplastik yang dapat membahayakan maritim laut dan manusia. Metode pemantauan tradisional secara manual terbukti tidak bisa menyelesaikan masalah sampah laut yang terus terombang-ambing ini. Oleh karena itu, diperlukan penanganan melalui software berbentuk gamifikasi untuk menarik perhatian masyarakat dari berbagai daerah di Indonesia untuk ikut berkontribusi dalam membersihkan sampah laut tersebut.
 
 ## 1.2 Analisis Kondisi Saat Ini
-Lakukan analisis terhadap proses yang berjalan saat ini di dunia nyata, baik itu sistem lama ataupun solusi yang sudah ada. Soroti kesenjangan atau celah dari kondisi tersebut yang nantinya akan diselesaikan oleh perangkat lunak kalian.
+Pada kondisi saat ini, upaya atau solusi yang diterapkan untuk mengatasi pencemaran perairan karena sampah masih kurang dan minim dilakukan. Hanya sebagian dikit dari masyarakat yang peduli dan berupaya untuk membersihkan sampah dari perairaan, dan hal ini terjadi secara fragmentasi atayu terpisah. Umumnya, kegiatan pembersihan sampah dari ekosistem perairan hanya dilakukan sesekali bila ada suatu kegiatan organisasi seperti pembersihan pantai dan hal serupa lainnya, atau bila ada yang ingin meneliti terkait hal ini. 
+
+Solusi yang bersifat sementara tersebut tidak terlalu berpengaruh pada hasil akhir jangka panjang dalam membersihkan sampah dari perairan. Hal ini dapat disebabkan dari beberapa hal atau aspek, yaitu kurangnya inisiatif atau motivasi dari masyarakat dan relawan dalam membersihkan sampah. Tidak adanya informasi mengenai lokasi pencemaran serta ketiadaan suatu pusat yang dapat memandu proses pembersihan ini dapat membuat upaya yang dilakukan juga kurang efektif. Selain itu, pemerintah juga kurang memberikan dukungan dalam membantu serta memberikan motivasi pada masyarakat dengan menyediakan suatu aksi yang lebih interaktif hingga memicu rasa peduli lingkungan. 
 
 ---
 
