@@ -56,30 +56,37 @@ Definisikan secara tegas asumsi (baik teknis maupun dari sisi pengguna) yang men
 # BAB 3: Spesifikasi Kebutuhan dan Proses Bisnis
 
 ## 3.1 Identifikasi Aktor
-Buatlah daftar seluruh aktor (pengguna) yang akan berinteraksi langsung dengan sistem solusi yang kalian kembangkan. Berikan penjelasan singkat mengenai peran dan karakteristik dari masing-masing aktor tersebut.
 
 | Aktor | Deskripsi |
 | :--- | :--- |
-| *Kasir* | *Pengguna ini bertindak sebagai pihak yang bertanggung jawab untuk memproses transaksi harian dan melayani pembayaran pelanggan. Karakteristik dari pengguna ini adalah mengutamakan kecepatan dan keakuratan saat bertransaksi.* |
-| ... | ... |
-
+| *Relawan* | *Pengguna umum (masyarakat/mahasiswa/komunitas peduli lingkungan) yang melaporkan titik sampah, memantau heatmap, mengklaim titik untuk dibersihkan, dan mengunggah bukti pembersihan. Karakteristiknya mengutamakan kemudahan pelaporan dan motivasi berupa skor/kompetisi.* |
+| *Verifikator/Admin* | *Pengelola sistem (bisa dari pihak Dinas Lingkungan Hidup, koordinator komunitas, atau tim internal) yang bertugas memvalidasi kebenaran laporan sampah dan bukti pembersihan sebelum skor diberikan. Karakteristiknya mengutamakan akurasi data agar sistem tidak disalahgunakan (laporan palsu/klaim curang).* |
+| *Sistem* | *Aktor otomatis untuk menghitung skor kepanasan tiap titik, memperbarui heatmap secara real-time, dan mengelola leaderboard.* |
 
 ## 3.2 Kebutuhan Pengguna Awal
-Definisikan apa yang ingin dicapai oleh pengguna saat menggunakan sistem ini dalam format *User Story* (Sebagai [Aktor], saya ingin [Aktivitas/Kebutuhan], sehingga [Tujuan/Nilai]). Pastikan kalian berfokus pada "apa yang ingin dilakukan pengguna".
 
 | ID | Aktor | Kebutuhan / Aktivitas | Tujuan / Nilai |
 | :--- | :--- | :--- | :--- |
-| US-01 | *Kasir* |  *Memindai barcode barang* | *Proses pembayaran berjalan cepat dan akurat* |
-| US-02 | *[Nama Aktor]* | *[Kebutuhan pengguna]* | *[Tujuan yang dicapai pengguna]* |
-| ... | ... | ... | ... |
+| US-01 | *Relawan* | *Melaporkan titik sampah dengan foto dan lokasi GPS* | *Data sebaran sampah tercatat akurat dan real-time* |
+| US-02 | *Relawan* | *Melihat peta heatmap sebaran sampah* | *Bisa memilih lokasi yang paling butuh dibersihkan* |
+| US-03 | *Relawan* | *Mengklaim titik sampah untuk dibersihkan* | *Menghindari duplikasi usaha dengan relawan lain* |
+| US-04 | *Relawan* | *Mengunggah bukti before/after pembersihan* | *Mendapatkan pengakuan dan skor atas kontribusinya* |
+| US-05 | *Relawan* | *Melihat papan peringkat (leaderboard)* | *Termotivasi berkompetisi secara sehat dengan relawan lain* |
+| US-06 | *Verifikator/Admin* | *Memeriksa validitas laporan titik sampah* | *Mencegah data palsu/spam mengotori heatmap* |
+| US-07 | *Verifikator/Admin* | *Memvalidasi bukti pembersihan yang diunggah* | *Memastikan skor hanya diberikan untuk pembersihan nyata* |
+| US-08 | *Verifikator/Admin* | *Mengelola data pengguna dan komunitas* | *Menjaga kualitas dan keamanan platform* |
 
 ## 3.3 Deskripsi Aktivitas
-Buatlah daftar seluruh aktivitas yang terdapat dalam sistem solusi, lengkap dengan ID dan penjelasan. Telusuri hubungan aktivitas tersebut dengan *user story* yang sudah dituliskan sebelumnya. Bisa dibuat dalam bentuk tabel.
 | ID | Aktivitas | Penjelasan | ID User Story |
 | :--- | :--- | :--- | :--- |
-| A01 | *Melakukan Pemesanan* | *Pelanggan memulai proses dengan memesan produk.* | *US-01* |
-| A02 | *Memproses Pesanan* | *Sistem memproses dan menyiapkan detail sesuai dengan pesanan.* | *US-02*|
-| ... | ... | ... | ... |
+| A01 | *Melaporkan Titik Sampah* | *Relawan mengunggah foto dan lokasi titik sampah ke sistem* | *US-01* |
+| A02 | *Menghitung Skor Kepanasan* | *Sistem menghitung tingkat urgensi tiap titik berdasarkan jumlah laporan dan lama belum ditangani, lalu memperbarui heatmap* | *US-02* |
+| A03 | *Memeriksa Validitas Laporan* | *Verifikator meninjau laporan masuk untuk memastikan bukan spam/data palsu* | *US-06* |
+| A04 | *Mengklaim Titik untuk Dibersihkan* | *Relawan memilih dan mengunci satu titik di peta sebagai target pembersihannya* | *US-03* |
+| A05 | *Mengunggah Bukti Pembersihan* | *Relawan mengunggah foto sebelum dan sesudah sebagai bukti aksi bersih-bersih* | *US-04* |
+| A06 | *Memvalidasi Bukti Pembersihan* | *Verifikator memeriksa kesesuaian bukti dengan titik yang diklaim* | *US-07* |
+| A07 | *Memberi Skor & Update Leaderboard* | *Sistem memberikan skor sesuai tingkat kepanasan titik yang berhasil dibersihkan, lalu memperbarui papan peringkat* | *US-04, US-05* |
+| A08 | *Mengelola Data Pengguna/Komunitas* | *Admin mengatur akun, hak akses, dan data komunitas dalam sistem* | *US-08* |
 
 ## 3.4 Model Proses Bisnis
 Buatlah *Activity Diagram* atau *Swimlane Diagram* yang menunjukkan alur kerja proses bisnis dari sistem solusi. Diagram ini harus memvisualisasikan bagaimana alur operasional di dunia nyata berjalan lebih efisien dengan adanya interaksi antara aktor (yang didefinisikan pada poin 3.1) dan sistem perangkat lunak. Perhatikan notasi yang digunakan dalam pembuatannya.
