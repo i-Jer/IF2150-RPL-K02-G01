@@ -43,6 +43,8 @@ Pada kondisi saat ini, upaya atau solusi yang diterapkan untuk mengatasi pencema
 
 Solusi yang bersifat sementara tersebut tidak terlalu berpengaruh pada hasil akhir jangka panjang dalam membersihkan sampah dari perairan. Hal ini dapat disebabkan dari beberapa hal atau aspek, yaitu kurangnya inisiatif atau motivasi dari masyarakat dan relawan dalam membersihkan sampah. Tidak adanya informasi mengenai lokasi pencemaran serta ketiadaan suatu pusat yang dapat memandu proses pembersihan ini dapat membuat upaya yang dilakukan juga kurang efektif. Selain itu, pemerintah juga kurang memberikan dukungan dalam membantu serta memberikan motivasi pada masyarakat dengan menyediakan suatu aksi yang lebih interaktif hingga memicu rasa peduli lingkungan. 
 
+Selain permasalahan di lapangan secara langsung, terdapat juga kekurangan pada bidang software yang dapat mendukung tindakan atau aksi ini. Salah satu situs web yang berfokus dalam pembersihan ekosistem laut adalah The Oceam Cleanup. Situs ini melakukan pembersihan dengan skala industri, namun masih kurang dalam kerjasama dengan masyarakat lokal dalam pembersihannya. Selain itu, masyarakat hanya dapat kontribusi dengan memberikan sumbangan, namun tidak ada bukti verifikasi hasil pembersihan dan juga mekanisme gamifikasi yang dapat membuat masyarakat lebih aktif dan tertarik dalam okut membersihkan ekosistem laut.
+
 ---
 
 # BAB 2: Analisis Solusi
