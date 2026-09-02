@@ -4,20 +4,20 @@
 
 | Informasi | Keterangan |
 |---|---|
-| Kelas | *[Kelas]* |
-| Nomor Kelompok | *[Nomor Kelompok]* |
-| Nama Kelompok | *[Nama Kelompok]* |
-| Nama Perangkat Lunak | *[Nama P/L]* |
+| Kelas | *K02* |
+| Nomor Kelompok | *G01*  |
+| Nama Kelompok | *Swike Karang Anyar*  |
+| Nama Perangkat Lunak | *SeaGuard*  |
 
 **Anggota Kelompok:**
 
 | NIM | Nama |
 |---|---|
-| *[NIM 1]* | *[Nama Anggota 1]* |
-| *[NIM 2]* | *[Nama Anggota 2]* |
-| *[NIM 3]* | *[Nama Anggota 3]* |
-| *[NIM 4]* | *[Nama Anggota 4]* |
-| *[NIM 5]* | *[Nama Anggota 5]* |
+| *13525104* | *Jeremy Gerald Sutanto* |
+| *13525116* | *Christian Immanuel* |
+| *13525014* | *Denzel Santoso* |
+| *13525011* | *Raihan* |
+| *13525125* | *Peter Emmanuel Suwardy* |
 
 ---
 
@@ -52,7 +52,7 @@ Kami yang bertanda tangan di bawah ini menyatakan bahwa seluruh log penggunaan A
 
 | Tanda Tangan | Nama Anggota |
 | :---: | :--- |
-| <img src="./assets/ttd-anggota1.png" width="100"> | **[NIM - Nama Anggota 1]** |
+| <img src="./assets/ttd-anggota1.png" width="100"> | **13525104 - Jeremy Gerald Sutanto** |
 | <img src="./assets/ttd-anggota2.png" width="100"> | **[NIM - Nama Anggota 2]** |
 | <img src="./assets/ttd-anggota3.png" width="100"> | **[NIM - Nama Anggota 3]** |
 | <img src="./assets/ttd-anggota4.png" width="100"> | **[NIM - Nama Anggota 4]** |
