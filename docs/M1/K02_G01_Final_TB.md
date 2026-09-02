@@ -121,3 +121,5 @@ Batasan :
 
 # Referensi
 - Diagram URL: https://drive.google.com/file/d/1Gw0aQZLnf4XcgjcNiH7Y9AsN8YVfYWpX/view?usp=sharing
+- World Bank Group URL: https://www.worldbank.org/in/country/indonesia/publication/plastic-waste-discharges-from-rivers-and-coastlines-in-indonesia
+- KLH-BPLH URL: https://www.kemenlh.go.id/news/detail/klh-bplh-tegaskan-arah-baru-menuju-indonesia-bebas-sampah-2029-dalam-rakornas-pengelolaan-sampah-2025
