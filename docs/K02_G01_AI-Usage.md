@@ -53,7 +53,7 @@ Kami yang bertanda tangan di bawah ini menyatakan bahwa seluruh log penggunaan A
 | Tanda Tangan | Nama Anggota |
 | :---: | :--- |
 | <img src="./assets/ttd-anggota1.png" width="100"> | **13525104 - Jeremy Gerald Sutanto** |
-| <img src="./assets/ttd-anggota2.png" width="100"> | **[NIM - Nama Anggota 2]** |
+| <img src="./assets/ttdDenzel.png" width="100"> | **13525014 - Denzel Santoso** |
 | <img src="./assets/ttd-anggota3.png" width="100"> | **[NIM - Nama Anggota 3]** |
 | <img src="./assets/ttd-anggota4.png" width="100"> | **[NIM - Nama Anggota 4]** |
 | <img src="./assets/ttd-anggota5.png" width="100"> | **[NIM - Nama Anggota 5]** |
