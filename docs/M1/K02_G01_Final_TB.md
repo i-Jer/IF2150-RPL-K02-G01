@@ -83,7 +83,6 @@ Batasan :
 | :--- | :--- |
 | *Relawan* | *Pengguna umum (masyarakat/mahasiswa/komunitas peduli lingkungan) yang melaporkan titik sampah, memantau heatmap, mengklaim titik untuk dibersihkan, dan mengunggah bukti pembersihan. Karakteristiknya mengutamakan kemudahan pelaporan dan motivasi berupa skor/kompetisi.* |
 | *Verifikator/Admin* | *Pengelola sistem (bisa dari pihak Dinas Lingkungan Hidup, koordinator komunitas, atau tim internal) yang bertugas memvalidasi kebenaran laporan sampah dan bukti pembersihan sebelum skor diberikan. Karakteristiknya mengutamakan akurasi data agar sistem tidak disalahgunakan (laporan palsu/klaim curang).* |
-| *Sistem* | *Aktor otomatis untuk menghitung skor kepanasan tiap titik, memperbarui heatmap secara real-time, dan mengelola leaderboard.* |
 
 ## 3.2 Kebutuhan Pengguna Awal
 
@@ -115,13 +114,13 @@ Buatlah *Activity Diagram* atau *Swimlane Diagram* yang menunjukkan alur kerja p
 <br>
 
 <p align="center">
-<img alt="Contoh Activity Diagram" src="./assets/diagram/diagram-act-1.avif" width="70%">
+<img alt="Contoh Activity Diagram" src="./assets/diagram/diagram-aktor.png" width="70%">
 </p>
 <p align="center">
-<i>Gambar 1. Contoh Activity Diagram</i>
+<i>Gambar 1. Activity Diagram</i>
 </p>
 
 <br>
 
 # Referensi
-- Diagram UML: https://www.drawio.com/, https://staruml.io/
+- Diagram URL: https://drive.google.com/file/d/1Gw0aQZLnf4XcgjcNiH7Y9AsN8YVfYWpX/view?usp=sharing
