@@ -44,7 +44,8 @@
 | *02/09/2026* | *Peter* | *Memperbaiki bab 1.2* | *1* | *Done* | - |
 | *02/09/2026* | *Jeremy* | *Memperbaiki bab 3.1* | *0.2* | *Done* | - |
 | *02/09/2026* | *Jeremy* | *Membuat diagram* | *1* | *Done* | - |
-| *01/09/2026* | *Christian* | *Memperbaiki bab 2.1 dan 2.2* | *0.1* | *Done* | - |
+| *02/09/2026* | *Denzel* | *Memperbaiki bab 1.1* | *0.1* | *Done* | - |
+| *02/09/2026* | *Christian* | *Memperbaiki bab 2.1 dan 2.2* | *0.1* | *Done* | - |
 
 **Catatan/Evaluasi Milestone 1:**
 * *Saling mengecek hasil pengerjaan teman, bukan hanya bertanya sudah/belum*
