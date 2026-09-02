@@ -50,7 +50,7 @@ Selain permasalahan di lapangan secara langsung, terdapat juga kekurangan pada b
 # BAB 2: Analisis Solusi
 
 ## 2.1 Deskripsi Perangkat Lunak
-Untuk mengatasi masalah itu, kelompok kami mengusulkan SeaGuard, sebuah platform yang memungkinkan masyarakat melaporkan dan memantau kondisi pencemaran sampah di wilayah perairan Indonesia.
+Untuk mengatasi masalah pencemaran lingkungan laut, kelompok kami mengusulkan SeaGuard, sebuah platform yang memungkinkan masyarakat melaporkan dan memantau kondisi pencemaran sampah di wilayah perairan Indonesia.
 
 Secara umum, sistem ini bekerja dengan mengumpulkan laporan dari masyarakat atau relawan mengenai titik titik sampah yang mereka temukan, lengkap dengan foto dan lokasi. Laporan tersebut kemudian diolah menjadi dua bentuk keluaran. Pertama, data statistik mengenai kondisi pencemaran di suatu wilayah, seperti perkiraan volume sampah dan tingkat keparahannya. Kedua, visualisasi berupa heatmap yang menunjukkan sebaran titik pencemaran, sehingga pengguna dapat melihat wilayah mana yang paling membutuhkan penanganan.
 
@@ -62,9 +62,12 @@ Dengan demikian, peran SeaGuard terbatas pada pengumpulan, pengolahan, dan penya
 
 ## 2.2 Asumsi dan Batasan
 Asumsi :
-- Relawan / Masyarakat sekitar yang melaporkan adanya pencemaran lingkungan di wilayah tertentu diasumsikan memiliki perangkat yang dapat melaporkan hal itu dan memiliki akses pada internet.
+- Relawan atau Masyarakat sekitar yang melaporkan adanya pencemaran lingkungan di wilayah tertentu diasumsikan memiliki perangkat yang dapat mengakses dan menggunakan SeaGuard
+- Relawan atau Masyarakat sekitar yang menggunakan SeaGuard diasumsikan memiliki koneksi dan akses pada internet untuk mengirimkan laporan ke dalam sistem.
 - Pengguna yang memberikan laporan kondisi pencemaran lingkungan perairan dan bukti sebelum dan setelah pembersihan diasumsikan benar dan sesuai dengan kondisi yang nyata dan tidak dipalsukan
 - Data laporan yang dikirimkan sudah lengkap dengan informasi wilayah yang akurat dan data pencemaran yang dikirimkan sudah lengkap dan valid
+- Sumber yang didapatkan dari SeaGuard diasumsikan dapat diakses dengan baik dan sudah sesuai format data yang dapat langsung diproses oleh sistem
+- Sistem perangkat lunak diasumsikan memiliki koneksi dan server yang memadai untuk menampung dan mengolah seluruh data yang dikirimkan ke dalam SeaGuard
 
 Batasan :
 - SeaGuard tidak melakukan pengukuran tingkat pencemaran air sehingga sangat bergantung pada data yang diberikan oleh masyarakat setempat atau relawan
