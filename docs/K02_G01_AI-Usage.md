@@ -37,7 +37,7 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | :--- | :--- | :--- | :--- |
 | *[Nama AI]* | *[Sertakan Tujuan Penggunaan]* | *[Tuliskan Prompt Utama]* | *[Tuliskan Keputusan Hasil Validasi]* |
 | *Gemini* | *Mengecek relasi antar class* | *"Apakah relasi antara class User dan Order dalam UML ini seharusnya composition atau aggregation?"* | *AI menyarankan composition, tapi setelah dicek kembali ke requirement, kami menggunakan aggregation karena Order masih bisa eksis di history.* |
-| | | | | |
+| *Gemini* | *Menyusun dan mencari referensi terkait latar belakang pencemaran sampah laut di Indonesia* | *Tolong carikan sumber dan referensi terkait permasalahan pencemaran laut di Indonesia dan hubungannya dengan SDGs 14* | Sumber yang diberikan dicek ulang dan diverifikasi lagi untuk memastikan kebenaran informasi dan data yang diberikan masih relevan dengan kondisi saat ini |
 
 ### Milestone 2
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
@@ -54,6 +54,6 @@ Kami yang bertanda tangan di bawah ini menyatakan bahwa seluruh log penggunaan A
 | :---: | :--- |
 | <img src="./assets/ttd-anggota1.png" width="100"> | **13525104 - Jeremy Gerald Sutanto** |
 | <img src="./assets/ttdDenzel.png" width="100"> | **13525014 - Denzel Santoso** |
-| <img src="./assets/ttd-anggota3.png" width="100"> | **[NIM - Nama Anggota 3]** |
+| <img src="./assets/ttdNoel.jpg" width="100"> | **13525116 - Christian Immanuel** |
 | <img src="./assets/ttd-anggota4.png" width="100"> | **[NIM - Nama Anggota 4]** |
 | <img src="./assets/ttdPeter.png" width="100"> | **13525125 - Peter Emmanuel Suwardy** |
