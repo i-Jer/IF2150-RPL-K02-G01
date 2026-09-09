@@ -52,5 +52,16 @@
 
 ---
 
+### Milestone 2
+**Periode:** 03/09/2026 - 09/09/2026
+
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *09/09/2026* | *Jeremy* | *Mengerjakan bab 2.4 dan 2.5* | *1* | *Done* | - | 
+
+**Catatan/Evaluasi Milestone 2:**
+* *-*
+
+---
 
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
