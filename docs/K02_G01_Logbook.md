@@ -58,6 +58,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *08/09/2026* | *Christian* | *Mengerjakan bab 1.1, 1.2, 2.1, dan 2.2* | *1* | *Done* | - |
 | *09/09/2026* | *Jeremy* | *Mengerjakan bab 2.4 dan 2.5* | *1* | *Done* | - | 
+| *09/09/2026* | *Peter* | *Merevisi bab 2.3, 2.4, dan 2.5* | *2* | *Done* | - | 
 
 **Catatan/Evaluasi Milestone 2:**
 * *-*
