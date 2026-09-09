@@ -56,6 +56,7 @@
 
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
+| *08/09/2026* | *Christian* | *Mengerjakan bab 1.1, 1.2, 2.1, dan 2.2* | *1* | *Done* | - |
 | *09/09/2026* | *Jeremy* | *Mengerjakan bab 2.4 dan 2.5* | *1* | *Done* | - | 
 
 **Catatan/Evaluasi Milestone 2:**
