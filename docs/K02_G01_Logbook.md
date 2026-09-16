@@ -24,6 +24,7 @@
 ### Daftar Isi
 * [Milestone 1](#milestone-1)
 * [Milestone 2](#milestone-2)
+* [Milestone 3](#milestone-3).
 
 ---
 
@@ -73,8 +74,10 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *13/09/2026* | *Christian* | *Mengerjakan bab 1, 2, 3.1, dan 3.2* | *1* | *Done* | - |
 | *15/09/2026* | *Christian* | *Mengerjakan bab 3.4.1 dan 3.4.2* | *0.5* | *Done* | - |
+| *15/09/2026* | *Denzel* | *Mengerjakan bab 3.4.3, 3.4.4, 3.4.5, 3.4.6, 3.4.7, 3.4.8, 3.4.9* | *1.5* | *Done* | - |
 | *16/09/2026* | *Christian* | *Mengerjakan bab 3.3* | *0.5* | *Done* | - |
 | *16/09/2026* | *Christian* | *Merevisi bab 2, 3.2, dan 3.4* | *0.2* | *Done* | - |
+| *16/09/2026* | *Denzel* | *Mengerjakan bab 3.4.2* | *0.5* | *Done* | - |
 
 
 **Catatan/Evaluasi Milestone 3:**
