@@ -27,11 +27,11 @@
 | Catatan |
 | --- |
 | 1. 2: KF13 dan KF23 dihapus dan dipindahkan ke Kebutuhan non fungsional |
-| 2. 3.2: Menyesuaikan use case dengan KF yg dihapus |
-| 3. 3.3: Menambahkan include dan extend yang sesuai dengan UC |
+| 2. 3.2: Menghapus UC08 dan menyesuaikan use case dengan KF yg dihapus |
+| 3. 3.3: Menghapus UC08 dari diagram use case |
 | 4. 3.4.1: Memperbaiki penulisan dan menambahkan error message di skenario alternatif 2 |
 | 5. 3.4.2: Menyeseuaikan skenario use case dengan KF07 |
-| 6. 3.4.8: Menghapus step 2 dan Menambahakan error message dan meminta pengiriman ulang di skenario alternatif 1 |
+| 6. 3.4.8: Menghapus skenario UC08 |
 
 ## Dokumentasi
 
