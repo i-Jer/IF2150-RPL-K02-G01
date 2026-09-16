@@ -66,4 +66,20 @@
 
 ---
 
+### Milestone 3
+**Periode:** 10/09/2026 - 16/09/2026
+
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *13/09/2026* | *Christian* | *Mengerjakan bab 1, 2, 3.1, dan 3.2* | *1* | *Done* | - |
+| *15/09/2026* | *Christian* | *Mengerjakan bab 3.4.1 dan 3.4.2* | *0.5* | *Done* | - |
+| *16/09/2026* | *Christian* | *Mengerjakan bab 3.3* | *0.5* | *Done* | - |
+| *16/09/2026* | *Christian* | *Merevisi bab 2, 3.2, dan 3.4* | *0.2* | *Done* | - |
+
+
+**Catatan/Evaluasi Milestone 3:**
+* *-*
+
+---
+
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
