@@ -78,6 +78,7 @@
 | *16/09/2026* | *Christian* | *Mengerjakan bab 3.3* | *0.5* | *Done* | - |
 | *16/09/2026* | *Christian* | *Merevisi bab 2, 3.2, 3.3 dan 3.4* | *0.5* | *Done* | - |
 | *16/09/2026* | *Denzel* | *Mengerjakan bab 3.4.2* | *0.3* | *Done* | - |
+| *16/09/2026* | *Peter* | *Mengerjakan bab 3.4.6, 3.4.7, 3.4.8* | *1* | *Done* | - |
 
 
 **Catatan/Evaluasi Milestone 3:**
