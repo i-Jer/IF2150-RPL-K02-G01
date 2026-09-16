@@ -26,19 +26,18 @@
 
 | Catatan |
 | --- |
-| 1. *\[Berikan catatan hasil asistensi\]*  |
-| 2. ... |
-| 3. ... |
-| 4. ... |
-
-**Notes for this section:**  
-*Catatan dapat dituliskan dalam bentuk paragraf atau poin-poin, disesuaikan saja.* 
+| 1. 2: KF13 dan KF23 dihapus dan dipindahkan ke Kebutuhan non fungsional |
+| 2. 3.2: Menyesuaikan use case dengan KF yg dihapus |
+| 3. 3.3: Menambahkan include dan extend yang sesuai dengan UC |
+| 4. 3.4.1: Memperbaiki penulisan dan menambahkan error message di skenario alternatif 2 |
+| 5. 3.4.2: Menyeseuaikan skenario use case dengan KF07 |
+| 6. 3.4.8: Menghapus step 2 dan Menambahakan error message dan meminta pengiriman ulang di skenario alternatif 1 |
 
 ## Dokumentasi
 
 <!-- ![](./assets/foto-asistensi.jpg) -->
 <p align="center">
-  <img src="./assets/foto-asistensi.jpg" width="100%">
+  <img src="./assets/foto-asistensi.png" width="100%">
 </p>
 
 <p align="center">
