@@ -23,7 +23,8 @@
 
 ### Daftar Isi
 * [Milestone 1](#milestone-1)
-* Notes: Copy bagian Daftar Isi seperti Milestone 1 untuk Milestone berikutnya, contoh ``* [Milestone 2](#milestone-2)``. Ketika Daftar isi diklik maka akan langsung diarahkan ke bagian bawah sesuai dengan Milestone tujuan.
+* [Milestone 2](#milestone-2)
+* [Milestone 3](#milestone-3)
 
 ---
 
@@ -44,6 +45,11 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | :--- | :--- | :--- | :--- |
 | | | | | |
 | | | | | |
+
+### Milestone 3
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| ChatGPT | *Mengecek penulisan dan kesesuaian use case dengan setiap kebutuhan fungsional* | *Tolong cek penulisan dan cek apakah setiap use case sesuai dengan KFnya* | *Memeriksa kembali hasil yang diberikan dan memperbaiki penulisan sesuai gaya bahasa sendiri* |
 
 ---
 ### Pernyataan Integritas dan Persetujuan
