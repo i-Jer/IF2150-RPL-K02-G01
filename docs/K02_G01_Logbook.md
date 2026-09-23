@@ -87,4 +87,18 @@
 
 ---
 
+### Milestone 4
+**Periode:** 17/09/2026 - 23/09/2026
+
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *21/09/2026* | *Denzel* | *Mengerjakan bab 4.2.1, 4.2.2, 4.2.3, 4.2.4, 4.2.5, 4.2.6, 4.2.7, 4.2.8* | *1.5* | *Done* | - |
+| *23/09/2026* | *Denzel* | *Mengerjakan bab 5* | *0.2* | *Done* | - |
+
+
+**Catatan/Evaluasi Milestone 4:**
+* *-*
+
+---
+
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
