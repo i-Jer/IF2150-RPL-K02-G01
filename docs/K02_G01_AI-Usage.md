@@ -25,6 +25,7 @@
 * [Milestone 1](#milestone-1)
 * [Milestone 2](#milestone-2)
 * [Milestone 3](#milestone-3)
+* [Milestone 4](#milestone-4)
 
 ---
 
@@ -50,6 +51,11 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
 | :--- | :--- | :--- | :--- |
 | ChatGPT | *Mengecek penulisan dan kesesuaian use case dengan setiap kebutuhan fungsional* | *Tolong cek penulisan dan cek apakah setiap use case sesuai dengan KFnya* | *Memeriksa kembali hasil yang diberikan dan memperbaiki penulisan sesuai gaya bahasa sendiri* |
+
+### Milestone 4
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| Gemini | *Brainstorming ide dan format penulisan (parafrase) agar kalimat lebih jelas* | *Tolong cek penulisan dan ide apa yang perlu ditambahkan* | *Memeriksa kembali hasil yang diberikan dan memperbaiki penulisan sesuai gaya bahasa sendiri dan memodifikasi konsep ide brainstorming yang diberikan* |
 
 ---
 ### Pernyataan Integritas dan Persetujuan
