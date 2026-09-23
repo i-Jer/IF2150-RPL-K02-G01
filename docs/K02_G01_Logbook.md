@@ -98,6 +98,7 @@
 | *22/09/2026* | *Christian* | *Mengerjakan deskripsi dan diagram bab 4.2.1, 4.2.2, 4.2.3* | *1* | *Done* | - |
 | *23/09/2026* | *Peter* | *Mengerjakan diagram bab 4.2.4, 4.2.5, 4.2.6, 4.2.7, 4.2.8* | *1* | *Done* | - |
 | *23/09/2026* | *Denzel* | *Mengerjakan bab 5* | *0.2* | *Done* | - |
+| *23/09/2026* | *Jeremy* | *Mengerjakan bab 4.3* | *1* | *Done* | - |
 
 
 **Catatan/Evaluasi Milestone 4:**
