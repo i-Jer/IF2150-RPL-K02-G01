@@ -35,10 +35,10 @@ Tidak ada perubahan dari milestone 4
 # BAB 1: Pendahuluan
 
 ## 1.1 Tujuan Penulisan Dokumen
-Tuliskan dengan ringkas tujuan dokumen SKPL ini dibuat dan siapa saja yang akan menggu
+Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) merupakan dokumen yang bertujuan sebagai acuan atau panduan untuk pengembang dan pengguna perangkat lunak selama dalam pengembangan perangkat lunak yang akan dibangun. Dokumen SKPL ini berisi spesifikasi kebutuhan dari perangkat lunak bernama SeaGuard yang akan dikembangkan. Perangkat lunak SeaGuard merupakan aplikasi berbasis web bagi Relawan untuk memantau dan melaporkan kondisi pencemaran di wilayah-wilayah perairan Indonesia.
 
 ## 1.2 Lingkup Masalah
-Tuliskan dengan ringkas nama aplikasi dan deskripsi singkatnya. Bagian ini maksimal berisi satu paragraf, dapat diringkas dari BAB 1 *Analisis Permasalahan* pada dokumen *Topic Brainstorming*.
+SeaGuard merupakan perangkat lunak berbasis web yang digunakkan untuk memantau dan memberikan data mengenai kondisi sampat laut di suatu wilayah di Indonesia. Berdasarkan publikasi dari World Bank Group (WBG, 2021), Indonesia menghasilkan sebanyak 7,8 juta ton sampah plastik memasukin lautan global setiap tahunnya. Diperkirakan rentang antara 201,1 - 552,3 kilo ton sampah plastik per tahun dibuang ke dalam ekosistem laut yang bersumber dari daratan, di mana 2 per 3 sampah tersebut berasal dari Jawa dan Sumatera. Urgensi penanganan masalah ini sangat tinggi karena limbah plastik tersebut dapat membahayakan maritim laut dan manusia. Oleh karena itu, diperlukan penanganan melalui software berbentuk gamifikasi untuk menarik perhatian masyarakat dari berbagai daerah di Indonesia untuk ikut berkontribusi dalam membersihkan sampah laut tersebut.
 
 ## 1.3 Definisi, Istilah, dan Singkatan
 Semua definisi dan singkatan yang digunakan dalam dokumen ini beserta penjelasannya.
@@ -81,6 +81,8 @@ Tuliskan sistematika pembahasan dokumen SKPL ini secara runut (misalnya: BAB 2 m
 
 ## 2.1 Deskripsi Umum Sistem
 Bagian ini dapat disalin dari BAB 1.1 *Deskripsi Umum Sistem* pada dokumen *Requirement Gathering*, disesuaikan bila ada perubahan alur bisnis. Lengkapi dengan gambaran proses bisnis dalam bentuk *Activity Diagram* (boleh disalin dan diperbarui dari 3.3 *Model Proses Bisnis* pada dokumen *Topic Brainstorming*).
+
+SeaGuard merupakan aplikasi berbasis web bagi Relawan untuk memantau dan melaporkan kondisi pencemaran di wilayah-wilayah perairan Indonesia. Pengguna dapat memperoleh ringkasan mengenai parameter terkini beserta rentang kualitas perairan yang sehat, waspada, dan berbahaya, serta melihat heatmap yang memvisualisasikan persebaran polusi laut dan tingkat pencemarannya di suatu wilayah. Pengguna dapat melaporkan data pencemaran baru beserta buktinya pada wilayah tertentu, yang kemudian diverifikasi oleh Verifikator/Admin sebelum ditampilkan sepenuhnya pada heatmap publik. Berdasarkan data yang sudah tersedia, Pengguna juga dapat mengklaim dan membersihkan wilayah yang dikategorikan memiliki tingkat pencemaran tinggi atau membutuhkan penanganan. Setelah pembersihan selesai, Pengguna mengirimkan laporan beserta bukti sebelum dan sesudah untuk diverifikasi kembali oleh Verifikator/Admin. Setiap kontribusi yang telah diverifikasi akan dinilai berdasarkan skor yang ditentukan sistem, dan Pengguna dapat melihat leaderboard yang menampilkan peringkat antar Pengguna berdasarkan skor tersebut.
 
 <p align="center">
 <img alt="Contoh Activity Diagram" src="./assets/diagram/diagram-act-1.avif" width="70%">
@@ -165,16 +167,16 @@ Salin ulang daftar aktor final dari BAB 3.1 dokumen *Use Case & Scenario Use Cas
 | *...* | *...* | *...* |
 
 ## 4.2 Identifikasi Use Case
-Salin ulang daftar Use Case versi terbaru dari BAB 3.2 dokumen *Class Diagram*, pastikan seluruh ID KF yang dirujuk sudah sesuai dengan tabel pada 3.1.
-
-| ID UC | Nama Use Case | Deskripsi Singkat | Aktor | ID KF |
+| ID UC | Nama Use Case | Deskripsi Singkat | Aktor Terlibat | ID KF Terkait |
 | :--- | :--- | :--- | :--- | :--- |
-| *UC01* | *Memesan Produk* | *Pelanggan memilih produk hingga pesanan tersimpan di sistem.* | *Pelanggan* | *KF01, KF02* |
-| *UC02* | *Melihat Keranjang* | *Pelanggan melihat daftar item yang telah dipilih sebelum checkout.* | *Pelanggan* | *KF02* |
-| *UC03* | *Melakukan Pembayaran* | *Pelanggan menyelesaikan pembayaran atas pesanan yang dibuat.* | *Pelanggan* | *KF03, KF04, KF05* |
-| *UC04* | *Memilih Metode Pembayaran* | *Pelanggan memilih metode pembayaran alternatif (kartu atau e-wallet).* | *Pelanggan* | *KF03* |
-| *UC05* | *Melihat Riwayat Pesanan* | *Pelanggan melihat daftar pesanan yang pernah dibuat beserta statusnya.* | *Pelanggan* | *KF06* |
-| *...* | *...* | *...* | *...* | *...* |
+| *UC01* | *Melaporkan Titik Pencemaran* | *Relawan melaporkan titik pencemaran di wilayah tertentu dan melampirkan buktinya* | *Relawan* | *KF01, KF02, KF03, KF04, KF05* |
+| *UC02* | *Melihat Data dan Heatmap Pencemaran* | *Relawan dapat melihat sejumlah parameter pencemaran dan tingkat polusi perairan melalui heatmap yang disediakan aplikasi* | *Relawan* | *KF06, KF07, KF08* |
+| *UC03* | *Memverifikasi Laporan Pencemaran* | *Admin memverifikasi lebih lanjut bukti laporan pencemaran yang telah diupload ke aplikasi untuk memvalidasikan informasi yang diberikan relawan* | *Verifikator / Admin* | *KF09, KF10, KF11* |
+| *UC04* | *Mengklaim Titik Pencemaran* | *Relawan dapat mengklaim titik pencemaran supaya wilayah yang diklaim itu dapat dibersihkan* | *Relawan* | *KF12* |
+| *UC05* | *Melaporkan Hasil Pembersihan* | *Relawan melaporkan hasil pembersihan yang telah dilakukan di wilayah tersebut dan melampirkan bukti pembersihannya* | *Relawan* | *KF13, KF14* |
+| *UC06* | *Memverifikasi Hasil Pembersihan* | *Admin memverifikasi lagi bukti foto sebelum pembersihan dan setelah pembersihan untuk memvalidasikan hasil pembersihan relawan* | *Verifikator / Admin* | *KF15, KF16, KF17* |
+| *UC07* | *Melihat Leaderboard* | *Relawan dapat melihat leaderboard beserta skornya berdasarkan hasil pembersihan yang telah dilakukan* | *Relawan* | *KF18* |
+| *UC08* | *Mengelola Akun Relawan dan Data Komunitas* | *Admin mengelola data akun relawan dan komunitas serta mengatasi akun yang sedang bermasalah* | *Verifikator / Admin* | *KF20, KF21* |
 
 ## 4.3 Use Case Diagram
 Salin ulang Use Case Diagram dari BAB 3.3 dokumen *Use Case & Scenario Use Case* atau *Class Diagram* (gunakan versi paling akhir/terbaru apabila terdapat perubahan).
@@ -216,14 +218,17 @@ Salin ulang skenario **setiap** use case (skenario normal dan alternatif) dari B
 # BAB 5: Pemodelan Kelas
 
 ## 5.1 Identifikasi Kelas
-Salin ulang seluruh kelas yang telah diidentifikasi dari BAB 4.1 dokumen *Class Diagram*.
-
-| ID Kelas | Nama Kelas | Deskripsi Kelas | ID Use Case |
 | :--- | :--- | :--- | :--- |
-| *C01* | *Pelanggan* | *Menyimpan data akun pelanggan yang membuat pesanan.* | *UC01, UC05* |
-| *C02* | *Pesanan* | *Menyimpan data pesanan beserta status pembayarannya.* | *UC01, UC03, UC05* |
-| *C03* | *Keranjang* | *Menyimpan sementara item yang dipilih sebelum checkout.* | *UC01, UC02* |
-| *...* | *...* | *...* | *...* |
+| *C01* | *LaporanPencemaran* | *Menyimpan data laporan pencemaran seperti tingkat indikator, koordinat lokasi, dan waktu laporan.* | *UC01, UC02, UC03, UC04* |
+| *C02* | *BuktiLaporan* | *Menyimpan bukti laporan pencemaran untuk proses verifikasi* | *UC01, UC03* |
+| *C03* | *KlaimTitikPencemaran* | *Menyimpan informasi relawan pada titik pencemaran yang akan dibersihkan* | *UC04, UC05* |
+| *C04* | *LaporanPembersihan* | *Menyimpan data hasil kegiatan pembersihan yang dilakukan oleh relawan* | *UC05, UC06* |
+| *C05* | *BuktiPembersihan* | *Menyimpan bukti foto sebelum dan sesudah pembersihan untuk proses verifikasi* | *UC05, UC06* |
+| *C06* | *LogVerifikasi* | *Menyimpan hasil verifikasi seperti identitas verifikator, keputusan, dan stempel waktu* | *UC03, UC06* |
+| *C07* | *Leaderboard* | *Menyimpan dan menampilkan skor kontribusi dan peringkat relawan* | *UC07* |
+| *C08* | *AkunRelawan* | *Menyimpan data profil relawan, total poin kontribusi, dan status akun* | *UC01, UC02, UC04, UC05, UC07, UC08* |
+| *C09* | *Komunitas* | *Menyimpan data komunitas yang dikelola admin* | *UC08* |
+| *C10* | *PetaHeatmap* | *Merepresentasikan tampilan visual polusi sampah di suatu lokasi* | *UC02* |
 
 ## 5.2 Diagram Kelas per Use Case
 Salin ulang diagram kelas untuk setiap use case dari BAB 4.2 dokumen *Class Diagram*, lengkap dengan tabel atribut dan metode/operasinya.
@@ -266,14 +271,18 @@ Gabungkan seluruh kelas dan hubungan antarkelas dari BAB 4.3 dokumen *Class Diag
 ---
 
 # BAB 6: Traceability
-Salin ulang tabel Traceability dari BAB 5 dokumen *Class Diagram*, cocokkan setiap Kebutuhan Fungsional, Use Case, dan Kelas yang saling terkait.
-
 | ID Kelas | ID Use Case | ID KF |
 | :--- | :--- | :--- |
-| *C01* | *UC01, UC05* | *KF01, KF06* |
-| *C02* | *UC01, UC03, UC05* | *KF01, KF02, KF05, KF06* |
-| *C03* | *UC01, UC02* | *KF01, KF02* |
-| *...* | *...* | *...* |
+| *C01* | *UC01, UC02, UC03, UC04* | *KF01, KF02, KF06, KF07, KF08, KF09, KF10, KF11, KF12* |
+| *C02* | *UC01, UC03* | *KF01, KF03, KF04, KF09* |
+| *C03* | *UC04, UC05* | *KF12, KF14* |
+| *C04* | *UC05, UC06* | *KF13, KF15, KF16* |
+| *C05* | *UC05, UC06* | *KF13, KF14, KF15* |
+| *C06* | *UC03, UC06* | *KF10, KF16, KF17* |
+| *C07* | *UC06, UC07* | *KF18, KF19* |
+| *C08* | *UC01, UC02, UC04, UC05, UC07, UC08* | *KF01, KF02, KF05, KF11, KF12, KF18, KF19, KF20* |
+| *C09* | *UC08* | *KF21* |
+| *C10* | *UC02* | *KF06, KF07, KF08* |
 
 ---
 
