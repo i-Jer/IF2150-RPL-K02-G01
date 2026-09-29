@@ -72,23 +72,17 @@ Dokumentasi yang dirujuk dalam penyusunan dokumen SKPL ini meliputi:
 
 ## 1.6 Deskripsi Umum Dokumen (Ikhtisar)
 Sistematika Dokumen SKPL ini disusun sebagai berikut:
-- **BAB 1: Pendahuluan**
-  Membahas latar belakang, tujuan penulisan dokumen, lingkup masalah, definisi istilah/singkatan, aturan penomoran, referensi, serta sistematika penulisan dokumen SKPL.
+- **BAB 1: Pendahuluan** - Membahas latar belakang, tujuan penulisan dokumen, lingkup masalah, definisi istilah/singkatan, aturan penomoran, referensi, serta sistematika penulisan dokumen SKPL.
 
-- **BAB 2: Deskripsi Perangkat Lunak**
-  Membahas deskripsi umum mengenai sistem dan perangkat lunak beserta lingkup interaksinya, karakteristik pengguna (aktor) dan kebutuhan pengguna, batasan perangkat lunak, serta spesifikasi lingkungan operasi tempat perangkat lunak dijalankan.
+- **BAB 2: Deskripsi Perangkat Lunak** - Membahas deskripsi umum mengenai sistem dan perangkat lunak beserta lingkup interaksinya, karakteristik pengguna (aktor) dan kebutuhan pengguna, batasan perangkat lunak, serta spesifikasi lingkungan operasi tempat perangkat lunak dijalankan.
 
-- **BAB 3: Deskripsi Kebutuhan Perangkat Lunak**
-  Membahas mengenai Kebutuhan Fungsional (KF) dan Kebutuhan Non Fungsional (KNF) yang ditulis sesuai format EARS.
+- **BAB 3: Deskripsi Kebutuhan Perangkat Lunak** - Membahas mengenai Kebutuhan Fungsional (KF) dan Kebutuhan Non Fungsional (KNF) yang ditulis sesuai format EARS.
 
-- **BAB 4: Pemodelan Use Case**
-  Membahas mengenai pemodelan use case yang berisi identifikasi aktor dan use case, diagram use case, dan skenario setiap use case.
+- **BAB 4: Pemodelan Use Case** - Membahas mengenai pemodelan use case yang berisi identifikasi aktor dan use case, diagram use case, dan skenario setiap use case.
 
-- **BAB 5: Pemodelan Kelas**
-  Membahas mengenai identifikasi kelas beserta dengan diagram kelas setiap use case.
+- **BAB 5: Pemodelan Kelas** - Membahas mengenai identifikasi kelas beserta dengan diagram kelas setiap use case.
 
-- **BAB 6: Traceability**
-  Membahas traceability penghubung kelas, use case, dan kebutuhan fungsional.
+- **BAB 6: Traceability** - Membahas traceability penghubung kelas, use case, dan kebutuhan fungsional.
 
 ---
 
