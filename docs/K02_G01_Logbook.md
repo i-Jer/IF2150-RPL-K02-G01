@@ -26,6 +26,7 @@
 * [Milestone 2](#milestone-2)
 * [Milestone 3](#milestone-3)
 * [Milestone 4](#milestone-4)
+* [Milestone 5](#milestone-5)
 
 ---
 
@@ -103,6 +104,18 @@
 
 
 **Catatan/Evaluasi Milestone 4:**
+* *-*
+
+---
+
+### Milestone 5
+**Periode:** 24/09/2026 - 30/09/2026
+
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *28/09/2026* | *Denzel* | *Mengerjakan bab 1.1, 1.2, 2.1, 4.2, 5.1, 6* | *1.5* | *Done* | - |
+
+**Catatan/Evaluasi Milestone 5:**
 * *-*
 
 ---
