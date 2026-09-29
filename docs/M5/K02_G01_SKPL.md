@@ -66,10 +66,29 @@ Tabel 1.4. Aturan Penomoran
 | *Kelas* | *CXX* | Diawali "C" diikuti dengan dua digit yang terurut dari C01 hingga C10. Setiap kelas terhubung dengan UC yang berkaitan. |
 
 ## 1.5 Referensi
-Dokumentasi P/L yang dirujuk oleh dokumen ini. Referensi dapat berupa buku, panduan, ataupun dokumentasi lain yang dipakai dalam pengembangan P/L ini.
+Dokumentasi yang dirujuk dalam penyusunan dokumen SKPL ini meliputi:
+1. Sommerville, I. (2015). *Software Engineering* (10th ed.). Pearson.
+2. Laboratorium Rekayasa Perangkat Lunak. (2026). *Asistensi Akbar Tugas 4: Class Diagram*. IF2150 Rekayasa Perangkat Lunak.
 
 ## 1.6 Deskripsi Umum Dokumen (Ikhtisar)
-Tuliskan sistematika pembahasan dokumen SKPL ini secara runut (misalnya: BAB 2 membahas deskripsi umum P/L, BAB 3 membahas kebutuhan fungsional dan non-fungsional, dst).
+Sistematika Dokumen SKPL ini disusun sebagai berikut:
+- **BAB 1: Pendahuluan**
+  Membahas latar belakang, tujuan penulisan dokumen, lingkup masalah, definisi istilah/singkatan, aturan penomoran, referensi, serta sistematika penulisan dokumen SKPL.
+
+- **BAB 2: Deskripsi Perangkat Lunak**
+  Membahas deskripsi umum mengenai sistem dan perangkat lunak beserta lingkup interaksinya, karakteristik pengguna (aktor) dan kebutuhan pengguna, batasan perangkat lunak, serta spesifikasi lingkungan operasi tempat perangkat lunak dijalankan.
+
+- **BAB 3: Deskripsi Kebutuhan Perangkat Lunak**
+  Membahas mengenai Kebutuhan Fungsional (KF) dan Kebutuhan Non Fungsional (KNF) yang ditulis sesuai format EARS.
+
+- **BAB 4: Pemodelan Use Case**
+  Membahas mengenai pemodelan use case yang berisi identifikasi aktor dan use case, diagram use case, dan skenario setiap use case.
+
+- **BAB 5: Pemodelan Kelas**
+  Membahas mengenai identifikasi kelas beserta dengan diagram kelas setiap use case.
+
+- **BAB 6: Traceability**
+  Membahas traceability penghubung kelas, use case, dan kebutuhan fungsional.
 
 ---
 
