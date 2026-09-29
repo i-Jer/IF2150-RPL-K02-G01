@@ -93,10 +93,10 @@ Sistematika Dokumen SKPL ini disusun sebagai berikut:
 SeaGuard merupakan aplikasi berbasis web bagi Relawan untuk memantau dan melaporkan kondisi pencemaran di wilayah-wilayah perairan Indonesia. Pengguna dapat memperoleh ringkasan mengenai parameter terkini beserta rentang kualitas perairan yang sehat, waspada, dan berbahaya, serta melihat heatmap yang memvisualisasikan persebaran polusi laut dan tingkat pencemarannya di suatu wilayah. Pengguna dapat melaporkan data pencemaran baru beserta buktinya pada wilayah tertentu, yang kemudian diverifikasi oleh Verifikator/Admin sebelum ditampilkan sepenuhnya pada heatmap publik. Berdasarkan data yang sudah tersedia, Pengguna juga dapat mengklaim dan membersihkan wilayah yang dikategorikan memiliki tingkat pencemaran tinggi atau membutuhkan penanganan. Setelah pembersihan selesai, Pengguna mengirimkan laporan beserta bukti sebelum dan sesudah untuk diverifikasi kembali oleh Verifikator/Admin. Setiap kontribusi yang telah diverifikasi akan dinilai berdasarkan skor yang ditentukan sistem, dan Pengguna dapat melihat leaderboard yang menampilkan peringkat antar Pengguna berdasarkan skor tersebut.
 
 <p align="center">
-<img alt="Contoh Activity Diagram" src="./assets/diagram/diagram-act-1.avif" width="70%">
+<img alt="Activity Diagram" src="./assets/diagram/Activity Diagram.png" width="70%">
 </p>
 <p align="center">
-<i>Gambar 1. Contoh Activity Diagram Proses Bisnis</i>
+<i>Gambar 1. Activity Diagram</i>
 </p>
 
 ## 2.2 Deskripsi Umum Perangkat Lunak
