@@ -100,9 +100,9 @@ SeaGuard merupakan aplikasi berbasis web bagi Relawan untuk memantau dan melapor
 </p>
 
 ## 2.2 Deskripsi Umum Perangkat Lunak
-Diisi dengan deskripsi umum perangkat lunak untuk mendukung proses bisnis yang telah diuraikan pada sub-bab sebelumnya. Uraian harus menunjukkan lingkup perangkat lunak, mencakup keterkaitan perangkat lunak dengan sistem lain di luar (misalnya *Payment Gateway* atau layanan pihak ketiga lain yang dipakai).
+SeaGuard merupakan aplikasi berbasis web yang mendukung Relawan dalam memantau, melaporkan, dan membersihkan titik pencemaran di perairan Indonesia. Sistem menerima input dari Relawan melalui antarmuka aplikasi berupa laporan pencemaran beserta foto bukti, klaim titik pencemaran, dan laporan hasil pembersihan beserta foto sebelum dan sesudah. Sistem juga menerima keputusan verifikasi dari Verifikator/Admin, yang menentukan apakah suatu laporan atau bukti pembersihan disetujui atau ditolak. Hasil dari proses tersebut ditampilkan kembali kepada pengguna dalam bentuk heatmap persebaran pencemaran, notifikasi in-app, skor kontribusi, dan leaderboard.
 
-*Contoh narasi:* "*[Nama P/L]* merupakan aplikasi *[deskripsi singkat]* yang berinteraksi dengan *Payment Gateway (dummy)* untuk memproses otorisasi pembayaran. Sistem menerima input dari *Pelanggan* melalui antarmuka aplikasi dan mengirimkan permintaan transaksi ke *Payment Gateway* setiap kali pelanggan melakukan checkout."
+Dalam operasinya, SeaGuard berinteraksi dengan beberapa layanan di luar sistem. Fitur geolocation pada browser digunakan untuk mengambil koordinat GPS koordinat GPS perangkat pengguna setiap kali Relawan melaporkan titik pencemaran atau mengunggah bukti pembersihan. Layanan peta pihak ketiga digunakan untuk menampilkan peta dasar dan layer heatmap, dan layanan penyimpanan berkas digunakan untuk menyimpan foto bukti. SeaGuard hanya bergantung pada data laporan pengguna dan bukti foto yang dilampirkan, sehingga tidak terhubung dengan sensor atau sumber data pencemaran lain. Karena seluruh proses berjalan secara daring, SeaGuard hanya dapat digunakan ketika perangkat pengguna terhubung ke internet.
 
 ## 2.3 Pengguna dan Kebutuhan Pengguna Perangkat Lunak
 | Aktor | Deskripsi |
