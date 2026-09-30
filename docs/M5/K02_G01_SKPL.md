@@ -119,15 +119,18 @@ Batasan yang harus dituliskan, di antaranya:
 5. *SeaGuard hanya memberi data pencemaran yang terbatas pada wilayah tertentu yang ditentukan*
 
 ## 2.5 Lingkungan Operasi Perangkat Lunak
-Spesifikasi *operating system* atau lingkungan yang dibutuhkan P/L untuk beroperasi. Bagian ini digunakan untuk memastikan pengguna memiliki spesifikasi yang cukup untuk menjalankan P/L. Misalnya mencakup komponen server, client, OS, DBMS, tetapi tidak menutupi kemungkinan komponen lain.
+Perangkat lunak SeaGuard diimplementasikan menggunakan arsitektur *client-server* berbasis *web*. Karena aplikasi ini sangat bergantung pada pemrosesan data koordinat dan rendering peta interaktif.
 
 | Komponen | Spesifikasi |
 | :--- | :--- |
-| *Server* | *[contoh: Node.js v20, dijalankan pada layanan cloud]* |
-| *Client* | *[contoh: Web Browser modern (Chrome, Firefox terbaru)]* |
-| *DBMS* | *[contoh: PostgreSQL 15]* |
-| *OS* | *[contoh: Cross-platform (Windows/Linux/MacOS) melalui browser]* |
-| *...* | *...* |
+| *Arsitektur Sistem* | *Client-Server terdistribusi secara daring (Web-based Application).* |
+| *Server (Backend)* | *Node.js v20 LTS (atau ekivalen) yang dapat menangani koneksi secara real-time untuk notifikasi.* |
+| *Sistem Operasi Server* | *Linux (contoh: Ubuntu 22.04 LTS) atau lingkungan berbasis container (Docker) pada layanan komputasi Cloud.* |
+| *Client (Frontend)* | *Web Browser modern yang memiliki dukungan penuh terhadap HTML5, Geolocation API, dan WebGL (contoh: Google Chrome v100+, Mozilla Firefox v100+, Safari v15+, atau Microsoft Edge terbaru).* |
+| *Sistem Operasi Client* | *Cross-platform (Windows, macOS, Linux, Android, iOS) selama sistem operasi tersebut mendukung web browser modern yang disyaratkan.* |
+| *DBMS (Database)* | *PostgreSQL v15 (atau terbaru) dilengkapi dengan ekstensi **PostGIS** yang krusial untuk menyimpan koordinat, menghitung tingkat kepanasan heatmap, dan melakukan validasi foto.* |
+| *Penyimpanan Berkas (Storage)* | *Layanan Cloud Object Storage (contoh: AWS S3, Google Cloud Storage) untuk penyimpanan dan distribusi berkas foto bukti berukuran hingga 5 MB secara terenkripsi.* |
+| *Jaringan Client* | *Koneksi internet yang stabil (minimal 3G/4G/LTE untuk perangkat seluler) untuk pengiriman data formulir, unduh/unggah foto bukti, dan pemuatan layer heatmap peta.* |
 
 ---
 
