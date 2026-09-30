@@ -38,7 +38,7 @@ Tidak ada perubahan dari milestone 4
 Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) merupakan dokumen yang bertujuan sebagai acuan atau panduan untuk pengembang dan pengguna perangkat lunak selama dalam pengembangan perangkat lunak yang akan dibangun. Dokumen SKPL ini berisi spesifikasi kebutuhan dari perangkat lunak bernama SeaGuard yang akan dikembangkan. Perangkat lunak SeaGuard merupakan aplikasi berbasis web bagi Relawan untuk memantau dan melaporkan kondisi pencemaran di wilayah-wilayah perairan Indonesia.
 
 ## 1.2 Lingkup Masalah
-SeaGuard merupakan perangkat lunak berbasis web yang digunakkan untuk memantau dan memberikan data mengenai kondisi sampat laut di suatu wilayah di Indonesia. Berdasarkan publikasi dari World Bank Group (WBG, 2021), Indonesia menghasilkan sebanyak 7,8 juta ton sampah plastik memasukin lautan global setiap tahunnya. Diperkirakan rentang antara 201,1 - 552,3 kilo ton sampah plastik per tahun dibuang ke dalam ekosistem laut yang bersumber dari daratan, di mana 2 per 3 sampah tersebut berasal dari Jawa dan Sumatera. Urgensi penanganan masalah ini sangat tinggi karena limbah plastik tersebut dapat membahayakan maritim laut dan manusia. Oleh karena itu, diperlukan penanganan melalui software berbentuk gamifikasi untuk menarik perhatian masyarakat dari berbagai daerah di Indonesia untuk ikut berkontribusi dalam membersihkan sampah laut tersebut.
+SeaGuard merupakan perangkat lunak berbasis web yang digunakan untuk memantau dan memberikan data mengenai kondisi sampah laut di suatu wilayah di Indonesia. Berdasarkan publikasi dari World Bank Group (WBG, 2021), Indonesia menghasilkan sekitar 7,8 juta ton sampah plastik per tahun, dan diperkirakan 201,1 sampai 552,3 kiloton di antaranya masuk ke ekosistem laut, di mana dua pertiganya berasal dari Jawa dan Sumatera. Limbah plastik ini membahayakan ekosistem laut dan manusia, sehingga diperlukan penanganan melalui perangkat lunak berbentuk gamifikasi untuk mengajak masyarakat dari berbagai daerah ikut berkontribusi membersihkan sampah laut.
 
 ## 1.3 Definisi, Istilah, dan Singkatan
 
@@ -59,9 +59,10 @@ Tabel 1.4. Aturan Penomoran
 
 | Hal/Bagian | Penomoran | Keterangan |
 | :--- | :--- | :--- |
+| *Kebutuhan* | *RXX* | Diawali "R" diikuti dengan dua digit yang terurut dari R01 hingga R25. Satu ID kebutuhan dapat dipakai oleh lebih dari satu KF atau KNF. |
 | *Kebutuhan Fungsional* | *KFXX* | Diawali "KF" diikuti dengan dua digit yang terurut dari KF01 hingga KF21. Setiap KF terhubung dengan satu ID kebutuhan. |
-| *Kebutuhan Non-Fungsional* | *KNFXX* | Diawali "KNF" diikuti dengan dua digit yang terurut dari KNF01 hingga KNF012. Setiap KNF terhubung dengan satu ID kebutuhan dan satu parameter. |
-| *Aktor* | *AXX* | 	Diawali "A" diikuti dengan dua digit yang terurut dari A01 hingga A02. |
+| *Kebutuhan Non-Fungsional* | *KNFXX* | Diawali "KNF" diikuti dengan dua digit yang terurut dari KNF01 hingga KNF12. Setiap KNF terhubung dengan satu ID kebutuhan dan satu parameter. |
+| *Aktor* | *AXX* | Diawali "A" diikuti dengan dua digit yang terurut dari A01 hingga A02. |
 | *Use Case* | *UCXX* | Diawali "UC" diikuti dengan dua digit yang terurut dari UC01 hingga UC08. Setiap UC terhubung dengan KF yang berkaitan. |
 | *Kelas* | *CXX* | Diawali "C" diikuti dengan dua digit yang terurut dari C01 hingga C10. Setiap kelas terhubung dengan UC yang berkaitan. |
 
@@ -102,10 +103,10 @@ SeaGuard merupakan aplikasi berbasis web bagi Relawan untuk memantau dan melapor
 ## 2.2 Deskripsi Umum Perangkat Lunak
 SeaGuard merupakan aplikasi berbasis web yang mendukung Relawan dalam memantau, melaporkan, dan membersihkan titik pencemaran di perairan Indonesia. Sistem menerima input dari Relawan melalui antarmuka aplikasi berupa laporan pencemaran beserta foto bukti, klaim titik pencemaran, dan laporan hasil pembersihan beserta foto sebelum dan sesudah. Sistem juga menerima keputusan verifikasi dari Verifikator/Admin, yang menentukan apakah suatu laporan atau bukti pembersihan disetujui atau ditolak. Hasil dari proses tersebut ditampilkan kembali kepada pengguna dalam bentuk heatmap persebaran pencemaran, notifikasi in-app, skor kontribusi, dan leaderboard.
 
-Dalam operasinya, SeaGuard berinteraksi dengan beberapa layanan di luar sistem. Fitur geolocation pada browser digunakan untuk mengambil koordinat GPS koordinat GPS perangkat pengguna setiap kali Relawan melaporkan titik pencemaran atau mengunggah bukti pembersihan. Layanan peta pihak ketiga digunakan untuk menampilkan peta dasar dan layer heatmap, dan layanan penyimpanan berkas digunakan untuk menyimpan foto bukti. SeaGuard hanya bergantung pada data laporan pengguna dan bukti foto yang dilampirkan, sehingga tidak terhubung dengan sensor atau sumber data pencemaran lain. Karena seluruh proses berjalan secara daring, SeaGuard hanya dapat digunakan ketika perangkat pengguna terhubung ke internet.
+Dalam operasinya, SeaGuard berinteraksi dengan beberapa layanan di luar sistem. Fitur geolocation pada browser digunakan untuk mengambil koordinat GPS perangkat pengguna setiap kali Relawan melaporkan titik pencemaran atau mengunggah bukti pembersihan. Layanan peta pihak ketiga digunakan untuk menampilkan peta dasar dan layer heatmap, dan layanan penyimpanan berkas digunakan untuk menyimpan foto bukti. SeaGuard hanya bergantung pada data laporan pengguna dan bukti foto yang dilampirkan, sehingga tidak terhubung dengan sensor atau sumber data pencemaran lain. Karena seluruh proses berjalan secara daring, SeaGuard hanya dapat digunakan ketika perangkat pengguna terhubung ke internet.
 
 ## 2.3 Pengguna dan Kebutuhan Pengguna Perangkat Lunak
-| Aktor | Deskripsi |
+| Pengguna | Deskripsi |
 | :--- | :--- |
 | *Relawan* | *Pengguna umum (masyarakat/mahasiswa/komunitas peduli lingkungan) yang melaporkan titik sampah, memantau heatmap, mengklaim titik untuk dibersihkan, dan mengunggah bukti pembersihan. Karakteristiknya mengutamakan kemudahan pelaporan dan motivasi berupa skor/kompetisi.* |
 | *Verifikator/Admin* | *Pengelola sistem (bisa dari pihak Dinas Lingkungan Hidup, koordinator komunitas, atau tim internal) yang bertugas memvalidasi kebenaran laporan sampah dan bukti pembersihan sebelum skor diberikan. Karakteristiknya mengutamakan akurasi data agar sistem tidak disalahgunakan (laporan palsu/klaim curang).* |
@@ -219,7 +220,6 @@ Tabel 3.2. Kebutuhan Non-Fungsional
 | *UC08* | *Mengelola Akun Relawan dan Data Komunitas* | *Admin mengelola data akun relawan dan komunitas serta mengatasi akun yang sedang bermasalah* | *Verifikator / Admin* | *KF20, KF21* |
 
 ## 4.3 Use Case Diagram
-Salin ulang Use Case Diagram dari BAB 3.3 dokumen *Use Case & Scenario Use Case* atau *Class Diagram* (gunakan versi paling akhir/terbaru apabila terdapat perubahan).
 
 <p align="center">
 <img src="./assets/diagram/Diagram Use Case.png" width= "70%" height="60%">
@@ -666,7 +666,6 @@ Salin ulang Use Case Diagram dari BAB 3.3 dokumen *Use Case & Scenario Use Case*
 
 
 ## 5.3 Diagram Kelas Keseluruhan
-Gabungkan seluruh kelas dan hubungan antarkelas dari BAB 4.3 dokumen *Class Diagram* menjadi satu diagram kelas keseluruhan. Pastikan tidak ada kelas yang terduplikasi atau tertinggal.
 
 <p align="center">
 <img alt="Class Diagram Keseluruhan" src="./assets/diagram/DiagramKelasKeseluruhan.png" width="70%">
