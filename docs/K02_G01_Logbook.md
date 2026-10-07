@@ -120,4 +120,16 @@
 
 ---
 
+### Milestone 6
+**Periode:** 24/09/2026 - 30/09/2026
+
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *07/10/2026* | *Jeremy* | *Mengerjakan bab 3 dan diagram logical view* | *2* | *Done* | - |
+
+**Catatan/Evaluasi Milestone 5:**
+* *-*
+
+---
+
 ``Gunakan format penulisan Logbook yang sama untuk setiap Milestone dan pastikan pembuatan Daftar Isi juga sudah sesuai sebelum Logbook dikumpulkan. ``
