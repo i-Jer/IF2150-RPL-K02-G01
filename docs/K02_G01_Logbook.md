@@ -126,6 +126,7 @@
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *07/10/2026* | *Jeremy* | *Mengerjakan bab 3 dan diagram logical view* | *2* | *Done* | - |
+| *07/10/2026* | *Denzel* | *Mengerjakan bab 2* | *2* | *Done* | - |
 
 **Catatan/Evaluasi Milestone 5:**
 * *-*
