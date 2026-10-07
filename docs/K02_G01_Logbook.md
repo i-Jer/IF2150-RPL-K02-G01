@@ -114,6 +114,7 @@
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *28/09/2026* | *Denzel* | *Mengerjakan bab 1.1, 1.2, 2.1, 4.2, 5.1, 6* | *1.5* | *Done* | - |
+| *28/09/2026* | *Christian* | *Mengerjakan bab 1.4, 2.3, 2.4, 3.1, 3.2, 4.1, 4.3, 4.4, 5.2, 5.3* | *1.5* | *Done* | - |
 
 **Catatan/Evaluasi Milestone 5:**
 * *-*
@@ -127,6 +128,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *07/10/2026* | *Jeremy* | *Mengerjakan bab 3 dan diagram logical view* | *2* | *Done* | - |
 | *07/10/2026* | *Denzel* | *Mengerjakan bab 2* | *2* | *Done* | - |
+| *07/10/2026* | *Christian* | *Mengerjakan bab 1* | *2* | *Done* | - |
 
 **Catatan/Evaluasi Milestone 5:**
 * *-*
