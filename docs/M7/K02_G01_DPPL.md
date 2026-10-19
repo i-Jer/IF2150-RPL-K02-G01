@@ -224,22 +224,26 @@ Tuliskan secara singkat model arsitektur yang dipilih dan alasan model tersebut 
 
 # BAB 3: Realisasi Use Case
 
-## 3.1 Use Case [Nama Use Case 1]
+## 3.1 Use Case Melaporkan Titik Pencemaran
 
-**ID Use Case:** *[UC01 sesuai SKPL]*  
-**Nama Use Case:** *[Nama use case sesuai SKPL]*
+**ID Use Case:** *UC01*  
+**Nama Use Case:** *Melaporkan Titik Pencemaran*
 
 ### 3.1.1 Identifikasi Kelas
 
 Identifikasi kelas yang terkait dengan use case tersebut. Kelas di tahap perancangan dapat berbeda dengan dengan kelas di tahap analisis. Dapat menggunakan tabel di bawah:
 
-Tabel 3.1. Identifikasi Kelas Use Case [UC01]
+Tabel 3.1. Identifikasi Kelas Use Case UC01
 
 | No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
 |:--- | :--- | :--- |
-| 1 | *[Nama kelas perancangan]* | *[Nama kelas analisis pada SKPL]* |
-| 2 | *[Nama kelas perancangan]* | *[Nama kelas analisis pada SKPL]* |
-| ... | *...* | *...* |
+| 1 | *PelaporanView (C11)* | *-* |
+| 2 | *PelaporanController (C17)* | *-* |
+| 3 | *LaporanPencemaran (C01)* | *LaporanPencemaran (C01)* |
+| 4 | *BuktiLaporan (C02)* | *BuktiLaporan (C02)* |
+| 5 | *AkunRelawan (C08)* | *AkunRelawan (C08)* |
+| 6 | *Autentikasi (C25)* | *-* |
+| 7 | *StorageAdapter (C26)* | *-* |
 
 ### 3.1.2 Sequence Diagram
 
@@ -319,10 +323,35 @@ Tabel 4.1. Daftar Kelas Perancangan Keseluruhan
 
 Petakan kelas perancangan dengan use case yang terkait. Gunakan **BAB 6 Traceability pada dokumen SKPL** sebagai acuan keterkaitan kelas analisis dan use case, lalu sesuaikan dengan realisasi use case dan kelas perancangan pada BAB 3–BAB 5 DPPL.
 
-Tabel 7.1. Matriks Kerunutan Kelas terhadap Use Case
+Tabel 5.1. Matriks Kerunutan Kelas terhadap Use Case
 
 | Kelas | Use Case Terkait |
 | :--- | :--- |
-| *[ID kelas - Nama kelas]* | *[ID UC - Nama use case]* |
-| *[ID kelas - Nama kelas]* | *[ID UC - Nama use case]* |
-| *...* | *...* |
+| *C01 - LaporanPencemaran* | *UC01 - Melaporkan Titik Pencemaran*<br>*UC02 - Melihat Data dan Heatmap Pencemaran*<br>*UC03 - Memverifikasi Laporan Pencemaran*<br>*UC04 - Mengklaim Titik Pencemaran* |
+| *C02 - BuktiLaporan* | *UC01 - Melaporkan Titik Pencemaran*<br>*UC03 - Memverifikasi Laporan Pencemaran* |
+| *C03 - KlaimTitikPencemaran* | *UC04 - Mengklaim Titik Pencemaran*<br>*UC05 - Melaporkan Hasil Pembersihan* |
+| *C04 - LaporanPembersihan* | *UC05 - Melaporkan Hasil Pembersihan*<br>*UC06 - Memverifikasi Hasil Pembersihan* |
+| *C05 - BuktiPembersihan* | *UC05 - Melaporkan Hasil Pembersihan*<br>*UC06 - Memverifikasi Hasil Pembersihan* |
+| *C06 - LogVerifikasi* | *UC03 - Memverifikasi Laporan Pencemaran*<br>*UC06 - Memverifikasi Hasil Pembersihan* |
+| *C07 - Leaderboard* | *UC06 - Memverifikasi Hasil Pembersihan*<br>*UC07 - Melihat Leaderboard* |
+| *C08 - AkunRelawan* | *UC01 - Melaporkan Titik Pencemaran*<br>*UC02 - Melihat Data dan Heatmap Pencemaran*<br>*UC03 - Memverifikasi Laporan Pencemaran*<br>*UC04 - Mengklaim Titik Pencemaran*<br>*UC05 - Melaporkan Hasil Pembersihan*<br>*UC06 - Memverifikasi Hasil Pembersihan*<br>*UC07 - Melihat Leaderboard*<br>*UC08 - Mengelola Akun Relawan dan Data Komunitas* |
+| *C09 - Komunitas* | *UC08 - Mengelola Akun Relawan dan Data Komunitas* |
+| *C10 - PetaHeatmap* | *UC02 - Melihat Data dan Heatmap Pencemaran* |
+| *C11 - PelaporanView* | *UC01 - Melaporkan Titik Pencemaran* |
+| *C12 - HeatmapView* | *UC02 - Melihat Data dan Heatmap Pencemaran*<br>*UC04 - Mengklaim Titik Pencemaran* |
+| *C13 - DashboardVerifikasiView* | *UC03 - Memverifikasi Laporan Pencemaran*<br>*UC06 - Memverifikasi Hasil Pembersihan* |
+| *C14 - PembersihanView* | *UC05 - Melaporkan Hasil Pembersihan* |
+| *C15 - LeaderboardView* | *UC07 - Melihat Leaderboard* |
+| *C16 - PanelAdminView* | *UC08 - Mengelola Akun Relawan dan Data Komunitas* |
+| *C17 - PelaporanController* | *UC01 - Melaporkan Titik Pencemaran* |
+| *C18 - HeatmapController* | *UC02 - Melihat Data dan Heatmap Pencemaran* |
+| *C19 - VerifikasiController* | *UC03 - Memverifikasi Laporan Pencemaran*<br>*UC06 - Memverifikasi Hasil Pembersihan* |
+| *C20 - KlaimController* | *UC04 - Mengklaim Titik Pencemaran* |
+| *C21 - PembersihanController* | *UC05 - Melaporkan Hasil Pembersihan* |
+| *C22 - LeaderboardController* | *UC07 - Melihat Leaderboard* |
+| *C23 - AdminController* | *UC08 - Mengelola Akun Relawan dan Data Komunitas* |
+| *C24 - Notifikasi* | *UC03 - Memverifikasi Laporan Pencemaran*<br>*UC06 - Memverifikasi Hasil Pembersihan* |
+| *C25 - Autentikasi* | *UC01 - Melaporkan Titik Pencemaran*<br>*UC02 - Melihat Data dan Heatmap Pencemaran*<br>*UC03 - Memverifikasi Laporan Pencemaran*<br>*UC04 - Mengklaim Titik Pencemaran*<br>*UC05 - Melaporkan Hasil Pembersihan*<br>*UC06 - Memverifikasi Hasil Pembersihan*<br>*UC07 - Melihat Leaderboard*<br>*UC08 - Mengelola Akun Relawan dan Data Komunitas* |
+| *C26 - StorageAdapter* | *UC01 - Melaporkan Titik Pencemaran*<br>*UC05 - Melaporkan Hasil Pembersihan* |
+
+ 
