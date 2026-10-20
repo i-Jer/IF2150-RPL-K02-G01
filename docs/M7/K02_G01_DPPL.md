@@ -285,9 +285,248 @@ Pada diagram, pastikan:
 - Semua operasi yang dipanggil pada sequence diagram 3.1.2 (skenario normal dan alternatif) ada pada kelas yang bersangkutan.
 - Kelas yang sama dengan kelas di use case lain memakai nama, atribut, dan metode yang konsisten.
 
-## 3.2 Use Case XX
+## 3.2 Use Case Melihat Data dan Heatmap Pencemaran
 
-Silahkan lanjutkan untuk  *use case* berikutnya dengan content yang sama dengan 3.1
+**ID Use Case:** *UC02*  
+**Nama Use Case:** *Melihat Data dan Heatmap Pencemaran*
+
+### 3.2.1 Identifikasi Kelas
+
+Tabel 3.2. Identifikasi Kelas Use Case UC02
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *HeatmapView (C12)* | *-* |
+| 2 | *HeatmapController (C18)* | *-* |
+| 3 | *LaporanPencemaran (C01)* | *LaporanPencemaran (C01)* |
+| 4 | *PetaHeatmap (C10)* | *PetaHeatmap (C10)* |
+| 5 | *Autentikasi (C25)* | *-* |
+
+### 3.2.2 Sequence Diagram
+
+- **Skenario Normal**
+
+<p align="center">
+<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/UC02_normal.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC02]</i>
+</p>
+
+- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+
+<p align="center">
+<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC02] - Lokasi Tidak Ditemukan</i>
+</p>
+
+### 3.2.3 Diagram Kelas
+
+<p align="center">
+<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
+</p>
+<p align="center">
+<i>Gambar X. Diagram Kelas [UC02]</i>
+</p>
+
+## 3.3 Use Case Memverifikasi Laporan Pencemaran
+
+**ID Use Case:** *UC03*  
+**Nama Use Case:** *Memverifikasi Laporan Pencemaran*
+
+### 3.3.1 Identifikasi Kelas
+
+Tabel 3.3. Identifikasi Kelas Use Case UC03
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *DashboardVerifikasiView (C13)* | *-* |
+| 2 | *VerifikasiController (C19)* | *-* |
+| 3 | *LaporanPencemaran (C01)* | *LaporanPencemaran (C01)* |
+| 4 | *BuktiLaporan (C02)* | *BuktiLaporan (C02)* |
+| 5 | *LogVerifikasi (C06)* | *LogVerifikasi (C06)* |
+| 6 | *AkunRelawan (C08)* | *AkunRelawan (C08)* |
+| 7 | *Notifikasi (C24)* | *-* |
+| 8 | *Autentikasi (C25)* | *-* |
+
+### 3.3.2 Sequence Diagram
+
+- **Skenario Normal**
+
+> *(Diagram blm selesai)*
+
+- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+
+> *(Diagram blm selesai)*
+
+### 3.3.3 Diagram Kelas
+
+> *(Diagram blm selesai)*
+
+## 3.4 Use Case Mengklaim Titik Pencemaran
+
+**ID Use Case:** *UC04*  
+**Nama Use Case:** *Mengklaim Titik Pencemaran*
+
+### 3.4.1 Identifikasi Kelas
+
+Tabel 3.4. Identifikasi Kelas Use Case UC04
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *HeatmapView (C12)* | *-* |
+| 2 | *KlaimController (C20)* | *-* |
+| 3 | *LaporanPencemaran (C01)* | *LaporanPencemaran (C01)* |
+| 4 | *KlaimTitikPencemaran (C03)* | *KlaimTitikPencemaran (C03)* |
+| 5 | *AkunRelawan (C08)* | *AkunRelawan (C08)* |
+| 6 | *Autentikasi (C25)* | *-* |
+
+### 3.4.2 Sequence Diagram
+
+- **Skenario Normal**
+
+> *(Diagram blm selesai)*
+
+- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+
+> *(Diagram blm selesai)*
+
+### 3.4.3 Diagram Kelas
+
+> *(Diagram blm selesai)*
+
+## 3.5 Use Case Melaporkan Hasil Pembersihan
+
+**ID Use Case:** *UC05*  
+**Nama Use Case:** *Melaporkan Hasil Pembersihan*
+
+### 3.5.1 Identifikasi Kelas
+
+Tabel 3.5. Identifikasi Kelas Use Case UC05
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *PembersihanView (C14)* | *-* |
+| 2 | *PembersihanController (C21)* | *-* |
+| 3 | *KlaimTitikPencemaran (C03)* | *KlaimTitikPencemaran (C03)* |
+| 4 | *LaporanPembersihan (C04)* | *LaporanPembersihan (C04)* |
+| 5 | *BuktiPembersihan (C05)* | *BuktiPembersihan (C05)* |
+| 6 | *AkunRelawan (C08)* | *AkunRelawan (C08)* |
+| 7 | *Autentikasi (C25)* | *-* |
+| 8 | *StorageAdapter (C26)* | *-* |
+
+### 3.5.2 Sequence Diagram
+
+- **Skenario Normal**
+
+> *(Diagram blm selesai)*
+
+- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+
+> *(Diagram blm selesai)*
+
+### 3.5.3 Diagram Kelas
+
+> *(Diagram blm selesai)*
+
+## 3.6 Use Case Memverifikasi Hasil Pembersihan
+
+**ID Use Case:** *UC06*  
+**Nama Use Case:** *Memverifikasi Hasil Pembersihan*
+
+### 3.6.1 Identifikasi Kelas
+
+Tabel 3.6. Identifikasi Kelas Use Case UC06
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *DashboardVerifikasiView (C13)* | *-* |
+| 2 | *VerifikasiController (C19)* | *-* |
+| 3 | *LaporanPembersihan (C04)* | *LaporanPembersihan (C04)* |
+| 4 | *BuktiPembersihan (C05)* | *BuktiPembersihan (C05)* |
+| 5 | *LogVerifikasi (C06)* | *LogVerifikasi (C06)* |
+| 6 | *Leaderboard (C07)* | *Leaderboard (C07)* |
+| 7 | *AkunRelawan (C08)* | *AkunRelawan (C08)* |
+| 8 | *Notifikasi (C24)* | *-* |
+| 9 | *Autentikasi (C25)* | *-* |
+
+### 3.6.2 Sequence Diagram
+
+- **Skenario Normal**
+
+> *(Diagram blm selesai)*
+
+- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+
+> *(Diagram blm selesai)*
+
+### 3.6.3 Diagram Kelas
+
+> *(Diagram blm selesai)*
+
+## 3.7 Use Case Melihat Leaderboard*
+
+**ID Use Case:** *UC07*  
+**Nama Use Case:** *Melihat Leaderboard*
+
+### 3.7.1 Identifikasi Kelas
+
+Tabel 3.7. Identifikasi Kelas Use Case UC07
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *LeaderboardView (C15)* | *-* |
+| 2 | *LeaderboardController (C22)* | *-* |
+| 3 | *Leaderboard (C07)* | *Leaderboard (C07)* |
+| 4 | *AkunRelawan (C08)* | *AkunRelawan (C08)* |
+| 5 | *Autentikasi (C25)* | *-* |
+
+### 3.7.2 Sequence Diagram
+
+- **Skenario Normal**
+
+> *(Diagram blm selesai)*
+
+- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+
+> *(Diagram blm selesai)*
+
+### 3.7.3 Diagram Kelas
+
+> *(Diagram blm selesai)*
+
+## 3.8 Use Case Mengelola Akun Relawan dan Data Komunitas
+
+**ID Use Case:** *UC08*  
+**Nama Use Case:** *Mengelola Akun Relawan dan Data Komunitas*
+
+### 3.8.1 Identifikasi Kelas
+
+Tabel 3.8. Identifikasi Kelas Use Case UC08
+
+| No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
+|:--- | :--- | :--- |
+| 1 | *PanelAdminView (C16)* | *-* |
+| 2 | *AdminController (C23)* | *-* |
+| 3 | *AkunRelawan (C08)* | *AkunRelawan (C08)* |
+| 4 | *Komunitas (C09)* | *Komunitas (C09)* |
+| 5 | *Autentikasi (C25)* | *-* |
+
+### 3.8.2 Sequence Diagram
+
+- **Skenario Normal**
+
+> *(Diagram blm selesai)*
+
+- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+
+> *(Diagram blm selesai)*
+
+### 3.8.3 Diagram Kelas
+
+> *(Diagram blm selesai)*
 
 <br>
 
