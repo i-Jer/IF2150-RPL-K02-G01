@@ -313,13 +313,22 @@ Tabel 3.2. Identifikasi Kelas Use Case UC02
 <i>Gambar X. Sequence Diagram [UC02]</i>
 </p>
 
-- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+- **Skenario Alternatif 1: Lokasi Tidak Ditemukan**
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/UC02_alt.jpg" width="50%">
 </p>
 <p align="center">
 <i>Gambar X. Sequence Diagram [UC02] - Lokasi Tidak Ditemukan</i>
+</p>
+
+- **Skenario Alternatif 2: Hasil Filter Kosong**
+
+<p align="center">
+<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/UC02_alt2.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC02] - Hasil Filter Kosong</i>
 </p>
 
 ### 3.2.3 Diagram Kelas
@@ -355,11 +364,12 @@ Tabel 3.3. Identifikasi Kelas Use Case UC03
 
 - **Skenario Normal**
 
-> *(Diagram blm selesai)*
-
-- **Skenario Alternatif [Nomor]: [Nama Skenario]**
-
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/UC03_normal.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC03]</i>
+</p>
 
 ### 3.3.3 Diagram Kelas
 
@@ -387,7 +397,12 @@ Tabel 3.4. Identifikasi Kelas Use Case UC04
 
 - **Skenario Normal**
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/UC03_normal.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC04]</i>
+</p>
 
 - **Skenario Alternatif [Nomor]: [Nama Skenario]**
 
