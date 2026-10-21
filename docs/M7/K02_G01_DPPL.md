@@ -37,17 +37,6 @@ Dipersiapkan oleh:
 
 ---
 
-<br>
-
-> **Petunjuk pengerjaan:** *[Silahkan hapus bagian ini setelah selesai mengerjakan]*
->
-> Dokumen ini melanjutkan **Spesifikasi Kebutuhan Perangkat Lunak (SKPL)** dan **Arsitektur Perangkat Lunak (APL)**. Gunakan nama, ID, kebutuhan, dan use case yang konsisten dengan kedua dokumen tersebut. Contoh pola ID baru di bawah dapat disesuaikan dengan kesepakatan kelompok, ID yang sudah ada tetap dipertahankan.
-
-<br>
-
----
-
-
 # BAB 1: Pendahuluan
 
 ## 1.1 Tujuan Penulisan Dokumen
@@ -191,7 +180,7 @@ Keterangan:
 
 ## 2.4 Model Arsitektur Perangkat Lunak
 
-### 2.4 Logical View
+### 2.4.1 Logical View
 
 *Logical View* dipilih karena *view* ini dapat memperlihatkan seluruh komponen pada Tabel 2.1 beserta hubungan antarkomponennya dalam pembagian *View*, *Controller*, dan *Model*. Dengan *view* ini, alur setiap use case dapat ditelusuri mulai dari halaman yang dibuka pengguna sampai data yang disimpan. Lingkungan fisik SeaGuard (server, browser, basis data, dan penyimpanan berkas) sudah dijelaskan pada Tabel 1.1, sehingga kelompok cukup membuat satu *view*.
 
@@ -213,25 +202,9 @@ Gambar 2 menggambarkan seluruh komponen pada Tabel 2.1 yang dikelompokkan sesuai
 7. **unggah foto bukti** dan **simpan berkas foto**: *PelaporanController* dan *PembersihanController* mengunggah foto melalui *StorageAdapter* ke Cloud Object Storage.
 8. **memuat peta dasar** dan **ambil koordinat GPS**: *HeatmapView* memuat peta dasar dari layanan peta pihak ketiga, sedangkan *PelaporanView* dan *PembersihanView* mengambil koordinat GPS dari Geolocation API pada browser.
 
-
-### 2.4.1 View [Nama View]
-
-Tuliskan secara singkat model arsitektur yang dipilih dan alasan model tersebut cocok untuk aplikasi.
-
-<p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh-logical-view.webp" width="50%">
-</p>
-<p align="center">
-<i>Gambar 2. Contoh Logical View pada P/L E-Commerce</i>
-</p>
-
-### 2.4.X View [Nama View]
-*[Lakukan hal yang sama dengan bagian sebelumnya]*
-
 <br>
 
 ---
-
 
 # BAB 3: Realisasi Use Case
 
@@ -262,7 +235,7 @@ Tabel 3.1. Identifikasi Kelas Use Case UC01
 <img alt="Sequence Diagram UC01 normal" src="./assets/diagram/UC01_normal.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC01]</i>
+<i>Gambar 3. Sequence Diagram UC01</i>
 </p>
 
 - **Skenario Alternatif 1: Format Atau Ukuran Foto Tidak Valid**
@@ -271,7 +244,7 @@ Tabel 3.1. Identifikasi Kelas Use Case UC01
 <img alt="Sequence Diagram UC01 alt1" src="./assets/diagram/UC01_alt.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC01] - Format Atau Ukuran Foto Tidak Valid</i>
+<i>Gambar 4. Sequence Diagram UC01 - Format Atau Ukuran Foto Tidak Valid</i>
 </p>
 
 ### 3.1.3 Diagram Kelas
@@ -317,7 +290,7 @@ Tabel 3.2. Identifikasi Kelas Use Case UC02
 <img alt="Sequence Diagram UC02 normal" src="./assets/diagram/UC02_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC02]</i>
+<i>Gambar X. Sequence Diagram UC02</i>
 </p>
 
 - **Skenario Alternatif 1: Lokasi Tidak Ditemukan**
@@ -326,7 +299,7 @@ Tabel 3.2. Identifikasi Kelas Use Case UC02
 <img alt="Sequence Diagram UC02 alt1" src="./assets/diagram/UC02_alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC02] - Lokasi Tidak Ditemukan</i>
+<i>Gambar X. Sequence Diagram UC02 - Lokasi Tidak Ditemukan</i>
 </p>
 
 - **Skenario Alternatif 2: Hasil Filter Kosong**
@@ -335,7 +308,7 @@ Tabel 3.2. Identifikasi Kelas Use Case UC02
 <img alt="Sequence Diagram UC02 alt2" src="./assets/diagram/UC02_alt2.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC02] - Hasil Filter Kosong</i>
+<i>Gambar X. Sequence Diagram UC02 - Hasil Filter Kosong</i>
 </p>
 
 ### 3.2.3 Diagram Kelas
@@ -344,7 +317,7 @@ Tabel 3.2. Identifikasi Kelas Use Case UC02
 <img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
 </p>
 <p align="center">
-<i>Gambar X. Diagram Kelas [UC02]</i>
+<i>Gambar X. Diagram Kelas UC02</i>
 </p>
 
 ## 3.3 Use Case Memverifikasi Laporan Pencemaran
@@ -375,7 +348,7 @@ Tabel 3.3. Identifikasi Kelas Use Case UC03
 <img alt="Sequence Diagram UC03 normal" src="./assets/diagram/UC03_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC03]</i>
+<i>Gambar X. Sequence Diagram UC03</i>
 </p>
 
 ### 3.3.3 Diagram Kelas
@@ -408,7 +381,7 @@ Tabel 3.4. Identifikasi Kelas Use Case UC04
 <img alt="Sequence Diagram UC04 normal" src="./assets/diagram/UC04_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC04]</i>
+<i>Gambar X. Sequence Diagram UC04</i>
 </p>
 
 - **Skenario Alternatif 1: Titik Sudah Diklaim**
@@ -417,7 +390,7 @@ Tabel 3.4. Identifikasi Kelas Use Case UC04
 <img alt="Sequence Diagram UC04 alt1" src="./assets/diagram/UC04_alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC04] - Titik Sudah Diklaim</i>
+<i>Gambar X. Sequence Diagram UC04 - Titik Sudah Diklaim</i>
 </p>
 
 - **Skenario Alternatif 2: Klaim Bersamaan pada Titik yang Sama**
@@ -426,7 +399,7 @@ Tabel 3.4. Identifikasi Kelas Use Case UC04
 <img alt="Sequence Diagram UC04 alt2" src="./assets/diagram/UC04_alt2.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC04] - Klaim Bersamaan pada Titik yang Sama</i>
+<i>Gambar X. Sequence Diagram UC04 - Klaim Bersamaan pada Titik yang Sama</i>
 </p>
 
 ### 3.4.3 Diagram Kelas
@@ -461,7 +434,7 @@ Tabel 3.5. Identifikasi Kelas Use Case UC05
 <img alt="Sequence Diagram UC05 normal" src="./assets/diagram/UC05_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC05]</i>
+<i>Gambar X. Sequence Diagram UC05</i>
 </p>
 
 - **Skenario Alternatif 1: Lokasi Foto di Luar Radius Geofencing**
@@ -470,7 +443,7 @@ Tabel 3.5. Identifikasi Kelas Use Case UC05
 <img alt="Sequence Diagram UC05 alt1" src="./assets/diagram/UC05_alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC05] - Lokasi Foto di Luar Radius Geofencing</i>
+<i>Gambar X. Sequence Diagram UC05 - Lokasi Foto di Luar Radius Geofencing</i>
 </p>
 
 ### 3.5.3 Diagram Kelas
@@ -506,14 +479,14 @@ Tabel 3.6. Identifikasi Kelas Use Case UC06
 <img alt="Sequence Diagram UC06 normal" src="./assets/diagram/UC06_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC06]</i>
+<i>Gambar X. Sequence Diagram UC06</i>
 </p>
 
 ### 3.6.3 Diagram Kelas
 
 > *(Diagram blm selesai)*
 
-## 3.7 Use Case Melihat Leaderboard*
+## 3.7 Use Case Melihat Leaderboard
 
 **ID Use Case:** *UC07*  
 **Nama Use Case:** *Melihat Leaderboard*
@@ -538,7 +511,7 @@ Tabel 3.7. Identifikasi Kelas Use Case UC07
 <img alt="Sequence Diagram UC07 normal" src="./assets/diagram/UC07_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC07]</i>
+<i>Gambar X. Sequence Diagram UC07</i>
 </p>
 
 - **Skenario Alternatif 1: Gagal Memuat Leaderboard**
@@ -547,7 +520,7 @@ Tabel 3.7. Identifikasi Kelas Use Case UC07
 <img alt="Sequence Diagram UC07 alt1" src="./assets/diagram/UC07_alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC05] - Gagal Memuat Leaderboard</i>
+<i>Gambar X. Sequence Diagram UC07 - Gagal Memuat Leaderboard</i>
 </p>
 
 ### 3.7.3 Diagram Kelas
@@ -579,7 +552,7 @@ Tabel 3.8. Identifikasi Kelas Use Case UC08
 <img alt="Sequence Diagram UC08 normal" src="./assets/diagram/UC08_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC08]</i>
+<i>Gambar X. Sequence Diagram UC08</i>
 </p>
 
 - **Skenario Alternatif 1: Pembaruan Data Gagal**
@@ -588,7 +561,7 @@ Tabel 3.8. Identifikasi Kelas Use Case UC08
 <img alt="Sequence Diagram UC08 alt1" src="./assets/diagram/UC08_alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC08] - Pembaruan Data Gagal</i>
+<i>Gambar X. Sequence Diagram UC08 - Pembaruan Data Gagal</i>
 </p>
 
 ### 3.8.3 Diagram Kelas
@@ -626,8 +599,6 @@ Tabel 4.1. Daftar Kelas Perancangan Keseluruhan
 ---
 
 # BAB 5: Matriks Kerunutan
-
-Petakan kelas perancangan dengan use case yang terkait. Gunakan **BAB 6 Traceability pada dokumen SKPL** sebagai acuan keterkaitan kelas analisis dan use case, lalu sesuaikan dengan realisasi use case dan kelas perancangan pada BAB 3–BAB 5 DPPL.
 
 Tabel 5.1. Matriks Kerunutan Kelas terhadap Use Case
 
