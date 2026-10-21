@@ -8,7 +8,10 @@ DESKRIPSI PERANCANGAN PERANGKAT LUNAK (DPPL)
 <br>
 
 ## *SeaGuard*
-### *[Logo Perangkat Lunak]*
+<p align="center">
+<img alt="Logo SeaGuard" src="./assets/logo-seaguard.png" width="45%">
+</p>
+
 ### Untuk: *Aurelia Jennifer Gunawan*
 
 Dipersiapkan oleh:
@@ -30,20 +33,17 @@ Dipersiapkan oleh:
 
 | Revisi | Deskripsi |
 | :--- | :--- |
-| *A* | *Deskripsikan perubahan yang dilakukan dari dokumen sebelumnya pada dokumen ini. Jika tidak terdapat perubahan, harap kosongkan tabel.* |
-| *B* |  |
-| *C* |  |
-| ... |  |
+|  |  |
 
 ---
 
 # BAB 1: Pendahuluan
 
 ## 1.1 Tujuan Penulisan Dokumen
-Dokumen Spesifikasi Kebutuhan Perangkat Lunak (SKPL) merupakan dokumen yang bertujuan sebagai acuan atau panduan untuk pengembang dan pengguna perangkat lunak selama dalam pengembangan perangkat lunak yang akan dibangun. Dokumen SKPL ini berisi spesifikasi kebutuhan dari perangkat lunak bernama SeaGuard yang akan dikembangkan. Perangkat lunak SeaGuard merupakan aplikasi berbasis web bagi Relawan untuk memantau dan melaporkan kondisi pencemaran di wilayah-wilayah perairan Indonesia.
+Dokumen Deskripsi Perancangan Perangkat Lunak (DPPL) ini bertujuan menjelaskan rancangan perangkat lunak SeaGuard berdasarkan kebutuhan pada dokumen SKPL dan arsitektur pada dokumen APL. Dokumen ini berisi rancangan lingkungan implementasi, arsitektur, realisasi setiap use case dalam bentuk sequence diagram dan diagram kelas, serta matriks kerunutan kelas terhadap use case. Dokumen ini digunakan oleh tim pengembang sebagai acuan saat implementasi dan pengujian, serta oleh asisten sebagai bahan evaluasi rancangan.
 
 ## 1.2 Lingkup Masalah
-SeaGuard merupakan perangkat lunak berbasis web yang digunakan untuk memantau dan memberikan data mengenai kondisi sampah laut di suatu wilayah di Indonesia. Berdasarkan publikasi dari World Bank Group (WBG, 2021), Indonesia menghasilkan sekitar 7,8 juta ton sampah plastik per tahun, dan diperkirakan 201,1 sampai 552,3 kiloton di antaranya masuk ke ekosistem laut, di mana dua pertiganya berasal dari Jawa dan Sumatera. Limbah plastik ini membahayakan ekosistem laut dan manusia, sehingga diperlukan penanganan melalui perangkat lunak berbentuk gamifikasi untuk mengajak masyarakat dari berbagai daerah ikut berkontribusi membersihkan sampah laut.
+SeaGuard merupakan aplikasi berbasis web bagi Relawan untuk memantau, melaporkan, dan membersihkan titik pencemaran sampah di wilayah perairan Indonesia. Relawan melaporkan titik pencemaran beserta foto bukti, melihat persebaran pencemaran melalui heatmap, mengklaim titik untuk dibersihkan, lalu melaporkan hasil pembersihan. Laporan dan hasil pembersihan diverifikasi oleh Verifikator/Admin, dan setiap kontribusi yang disetujui menambah skor Relawan pada leaderboard.
 
 ## 1.3 Definisi, Istilah, dan Singkatan
 
@@ -52,11 +52,12 @@ Tabel 1.3. Definisi Istilah dan Singkatan
 | Singkatan, Akronim, atau Istilah | Penjelasan |
 | :--- | :--- |
 | *P/L* | *Singkatan dari Perangkat Lunak, yaitu aplikasi yang memberikan perintah kepada komputer untuk menjalankan tugas tertentu.* |
-| *SKPL* | *Singkatan dari Spesifikasi Kebutuhan Perangkat Lunak, yaitu dokumen yang merangkum kriteria-kriteria yang diperlukan untuk membangun aplikasi menjalankan tugasnya.* |
-| *KF* | *Singkatan dari Kebutuhan Fungsional.* |
-| *KNF* | *Singkatan dari Kebutuhan Non-Fungsional.* |
+| *DPPL* | *Singkatan dari Deskripsi Perancangan Perangkat Lunak, yaitu dokumen yang menjelaskan rancangan perangkat lunak yang akan diimplementasikan.* |
+| *SKPL* | *Singkatan dari Spesifikasi Kebutuhan Perangkat Lunak, yaitu dokumen yang merangkum kebutuhan perangkat lunak.* |
+| *APL* | *Singkatan dari Arsitektur Perangkat Lunak, yaitu dokumen yang menjelaskan style/pattern, komponen, dan model arsitektur perangkat lunak.* |
+| *MVC* | *Model-View-Controller, yaitu pola arsitektur yang memisahkan data (Model), tampilan (View), dan pengendali alur proses (Controller).* |
 | *UC* | *Singkatan dari Use Case.* |
-| *EARS* | *Easy Approach to Requirements Syntax, yaitu pola penulisan kebutuhan agar konsisten dan mudah diuji.* |
+| *Sequence Diagram* | *Diagram UML yang menggambarkan urutan pesan antarobjek untuk menjalankan satu skenario use case.* |
 
 ## 1.4 Aturan Penomoran
 
@@ -64,31 +65,19 @@ Tabel 1.4. Aturan Penomoran
 
 | Hal/Bagian | Penomoran | Keterangan |
 | :--- | :--- | :--- |
-| *Kebutuhan* | *RXX* | Diawali "R" diikuti dengan dua digit yang terurut dari R01 hingga R25. Satu ID kebutuhan dapat dipakai oleh lebih dari satu KF atau KNF. |
-| *Kebutuhan Fungsional* | *KFXX* | Diawali "KF" diikuti dengan dua digit yang terurut dari KF01 hingga KF21. Setiap KF terhubung dengan satu ID kebutuhan. |
-| *Kebutuhan Non-Fungsional* | *KNFXX* | Diawali "KNF" diikuti dengan dua digit yang terurut dari KNF01 hingga KNF12. Setiap KNF terhubung dengan satu ID kebutuhan dan satu parameter. |
-| *Aktor* | *AXX* | Diawali "A" diikuti dengan dua digit yang terurut dari A01 hingga A02. |
-| *Use Case* | *UCXX* | Diawali "UC" diikuti dengan dua digit yang terurut dari UC01 hingga UC08. Setiap UC terhubung dengan KF yang berkaitan. |
-| *Kelas* | *CXX* | Diawali "C" diikuti dengan dua digit yang terurut dari C01 hingga C10. Setiap kelas terhubung dengan UC yang berkaitan. |
+| *Kebutuhan Fungsional* | *KFXX* | Diawali "KF" diikuti dengan dua digit yang terurut dari KF01 hingga KF21, sesuai SKPL. |
+| *Kebutuhan Non-Fungsional* | *KNFXX* | Diawali "KNF" diikuti dengan dua digit yang terurut dari KNF01 hingga KNF12, sesuai SKPL. |
+| *Use Case* | *UCXX* | Diawali "UC" diikuti dengan dua digit yang terurut dari UC01 hingga UC08, sesuai SKPL. |
+| *Kelas* | *CXX* | Diawali "C" diikuti dengan dua digit. C01 hingga C10 adalah kelas analisis pada SKPL, sedangkan C11 hingga C26 adalah kelas perancangan tambahan (View, Controller, dan komponen pendukung dari APL). |
 
 ## 1.5 Referensi
-Dokumentasi yang dirujuk dalam penyusunan dokumen SKPL ini meliputi:
-1. Sommerville, I. (2015). *Software Engineering* (10th ed.). Pearson.
-2. Laboratorium Rekayasa Perangkat Lunak. (2026). *Asistensi Akbar Tugas 4: Class Diagram*. IF2150 Rekayasa Perangkat Lunak.
+Dokumentasi yang dirujuk dalam penyusunan dokumen DPPL ini meliputi:
+1. Kelompok G01 K02. (2026). *Spesifikasi Kebutuhan Perangkat Lunak (SKPL) SeaGuard*. IF2150 Rekayasa Perangkat Lunak.
+2. Kelompok G01 K02. (2026). *Arsitektur Perangkat Lunak (APL) SeaGuard*. IF2150 Rekayasa Perangkat Lunak.
+3. Sommerville, I. (2016). *Software Engineering* (10th ed.). Pearson.
 
 ## 1.6 Deskripsi Umum Dokumen (Ikhtisar)
-Sistematika Dokumen SKPL ini disusun sebagai berikut:
-- **BAB 1: Pendahuluan** - Membahas latar belakang, tujuan penulisan dokumen, lingkup masalah, definisi istilah/singkatan, aturan penomoran, referensi, serta sistematika penulisan dokumen SKPL.
-
-- **BAB 2: Deskripsi Perangkat Lunak** - Membahas deskripsi umum mengenai sistem dan perangkat lunak beserta lingkup interaksinya, karakteristik pengguna (aktor) dan kebutuhan pengguna, batasan perangkat lunak, serta spesifikasi lingkungan operasi tempat perangkat lunak dijalankan.
-
-- **BAB 3: Deskripsi Kebutuhan Perangkat Lunak** - Membahas mengenai Kebutuhan Fungsional (KF) dan Kebutuhan Non Fungsional (KNF) yang ditulis sesuai format EARS.
-
-- **BAB 4: Pemodelan Use Case** - Membahas mengenai pemodelan use case yang berisi identifikasi aktor dan use case, diagram use case, dan skenario setiap use case.
-
-- **BAB 5: Pemodelan Kelas** - Membahas mengenai identifikasi kelas beserta dengan diagram kelas setiap use case.
-
-- **BAB 6: Traceability** - Membahas traceability penghubung kelas, use case, dan kebutuhan fungsional.
+Dokumen ini terdiri atas lima bab. BAB 1 berisi pendahuluan, BAB 2 berisi perancangan arsitektur yang mencakup lingkungan implementasi, pola MVC, komponen, dan logical view, BAB 3 berisi realisasi setiap use case melalui identifikasi kelas, sequence diagram, dan diagram kelas, BAB 4 berisi diagram kelas perancangan keseluruhan beserta daftar atribut dan metodenya, dan BAB 5 berisi matriks kerunutan kelas terhadap use case.
 
 <br>
 
@@ -137,7 +126,7 @@ Pola MVC dipilih berdasarkan karakteristik SeaGuard berikut.
 <i>Gambar 1. Arsitektur MVC pada SeaGuard</i>
 </p>
 
-### 2.3 Identifikasi Komponen / Modul / Subsistem
+## 2.3 Identifikasi Komponen / Modul / Subsistem
 
 Komponen SeaGuard dikelompokkan berdasarkan lapisan MVC, ditambah komponen *Pendukung*, *Integrasi Eksternal*, dan *Penyimpanan Data*.
 
@@ -145,7 +134,7 @@ Tabel 2.3. Identifikasi Komponen/Modul/Subsistem
 
 | Nama Komponen/Modul/Subsistem | Jenis                 | Penjelasan                                                                                                           |
 | :---------------------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------------- |
-| *HeatmapView* | *View* | *Menampilkan peta heatmap persebaran pencemaran beserta kategori (sehat, waspada, berbahaya), filter, pencarian lokasi, dan detail titik pencemaram (UC02). Halaman ini juga menyediakan tombol klaim titik pencemaran (UC04).* |
+| *HeatmapView* | *View* | *Menampilkan peta heatmap persebaran pencemaran beserta kategori (sehat, waspada, berbahaya), filter, pencarian lokasi, dan detail titik pencemaran (UC02). Halaman ini juga menyediakan tombol klaim titik pencemaran (UC04).* |
 | *PembersihanView* | *View* | *Menampilkan form laporan pembersihan berisi foto sebelum, foto sesudah, dan deskripsi kegiatan (UC05).* |
 | *PelaporanView* | *View* | *Menampilkan form laporan pencemaran berisi unggah foto, indikator tingkat pencemaran, dan koordinat lokasi, beserta dialog persetujuan akses lokasi dan kamera (UC01).* |
 | *DashboardVerifikasiView* | *View* | *Menampilkan antrean laporan pencemaran dan daftar pengajuan pembersihan, detail laporan, perbandingan foto before-after, serta tombol setujui/tolak bagi Verifikator (UC03, UC06).* |
@@ -182,7 +171,7 @@ Keterangan:
 
 ### 2.4.1 Logical View
 
-*Logical View* dipilih karena *view* ini dapat memperlihatkan seluruh komponen pada Tabel 2.1 beserta hubungan antarkomponennya dalam pembagian *View*, *Controller*, dan *Model*. Dengan *view* ini, alur setiap use case dapat ditelusuri mulai dari halaman yang dibuka pengguna sampai data yang disimpan. Lingkungan fisik SeaGuard (server, browser, basis data, dan penyimpanan berkas) sudah dijelaskan pada Tabel 1.1, sehingga kelompok cukup membuat satu *view*.
+*Logical View* dipilih karena *view* ini dapat memperlihatkan seluruh komponen pada Tabel 2.3 beserta hubungan antarkomponennya dalam pembagian *View*, *Controller*, dan *Model*. Dengan *view* ini, alur setiap use case dapat ditelusuri mulai dari halaman yang dibuka pengguna sampai data yang disimpan. Lingkungan fisik SeaGuard (server, browser, basis data, dan penyimpanan berkas) sudah dijelaskan pada subbab 2.1, sehingga kelompok cukup membuat satu *view*.
 
 <p align="center">
 <img alt="Logical View SeaGuard" src="./assets/diagram/logical-view-seaguard.png" width="100%">
@@ -191,7 +180,7 @@ Keterangan:
 <i>Gambar 2. Logical View SeaGuard</i>
 </p>
 
-Gambar 2 menggambarkan seluruh komponen pada Tabel 2.1 yang dikelompokkan sesuai pola MVC, ditambah komponen *Pendukung*, *Integrasi Eksternal*, dan *Database*. Sistem di luar P/L, yaitu Layanan Peta Pihak Ketiga, Geolocation API (browser), dan Cloud Object Storage, digambarkan dengan garis putus-putus. Arti setiap label garis adalah sebagai berikut.
+Gambar 2 menggambarkan seluruh komponen pada Tabel 2.3 yang dikelompokkan sesuai pola MVC, ditambah komponen *Pendukung*, *Integrasi Eksternal*, dan *Database*. Sistem di luar P/L, yaitu Layanan Peta Pihak Ketiga, Geolocation API (browser), dan Cloud Object Storage, digambarkan dengan garis putus-putus. Arti setiap label garis adalah sebagai berikut.
 
 1. **Memanggil**: *View* memanggil *Controller* ketika pengguna melakukan aksi pada halaman.
 2. **akses**: *Controller* mengakses *Model* yang dibutuhkan use case. *BuktiLaporan* dan *BuktiPembersihan* diakses melalui *Model* induknya, yaitu *LaporanPencemaran* dan *LaporanPembersihan*.
@@ -249,21 +238,12 @@ Tabel 3.1. Identifikasi Kelas Use Case UC01
 
 ### 3.1.3 Diagram Kelas
 
-Buatlah diagram kelas untuk use case ini yang terdiri atas kelas-kelas dari 3.1.1. **Setiap kelas pada diagram wajib menampilkan atribut dan metode/operasi langsung di dalam kotak kelasnya**, sehingga tidak perlu membuat tabel daftar atribut dan metode per kelas pada subbab ini. Daftar lengkap atribut dan metode seluruh kelas disajikan pada Tabel 4.1 (Bab 4).
-
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
+<img alt="Diagram Kelas UC01" src="./assets/diagram/diagram-kelas-UC01.png" width="100%">
 </p>
 <p align="center">
-<i>Gambar X. Diagram Kelas [Nama Uce Case]</i>
+<i>Gambar 5. Diagram Kelas UC01</i>
 </p>
-
-Pada diagram, pastikan:
-- Atribut dituliskan beserta visibilitas dan tipe datanya, misalnya `- email: String`.
-- Operasi dituliskan beserta visibilitas, parameter, dan tipe kembaliannya, misalnya `+ login(email: String, password: String): Boolean`.
-- Relasi antarkelas (asosiasi, agregasi, komposisi, generalisasi, dan dependensi) digambarkan lengkap dengan multiplisitas.
-- Semua operasi yang dipanggil pada sequence diagram 3.1.2 (skenario normal dan alternatif) ada pada kelas yang bersangkutan.
-- Kelas yang sama dengan kelas di use case lain memakai nama, atribut, dan metode yang konsisten.
 
 ## 3.2 Use Case Melihat Data dan Heatmap Pencemaran
 
@@ -290,7 +270,7 @@ Tabel 3.2. Identifikasi Kelas Use Case UC02
 <img alt="Sequence Diagram UC02 normal" src="./assets/diagram/UC02_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC02</i>
+<i>Gambar 6. Sequence Diagram UC02</i>
 </p>
 
 - **Skenario Alternatif 1: Lokasi Tidak Ditemukan**
@@ -299,7 +279,7 @@ Tabel 3.2. Identifikasi Kelas Use Case UC02
 <img alt="Sequence Diagram UC02 alt1" src="./assets/diagram/UC02_alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC02 - Lokasi Tidak Ditemukan</i>
+<i>Gambar 7. Sequence Diagram UC02 - Lokasi Tidak Ditemukan</i>
 </p>
 
 - **Skenario Alternatif 2: Hasil Filter Kosong**
@@ -308,16 +288,16 @@ Tabel 3.2. Identifikasi Kelas Use Case UC02
 <img alt="Sequence Diagram UC02 alt2" src="./assets/diagram/UC02_alt2.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC02 - Hasil Filter Kosong</i>
+<i>Gambar 8. Sequence Diagram UC02 - Hasil Filter Kosong</i>
 </p>
 
 ### 3.2.3 Diagram Kelas
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh_class-diagram2.jpg" width="35%">
+<img alt="Diagram Kelas UC02" src="./assets/diagram/diagram-kelas-UC02.png" width="100%">
 </p>
 <p align="center">
-<i>Gambar X. Diagram Kelas UC02</i>
+<i>Gambar 9. Diagram Kelas UC02</i>
 </p>
 
 ## 3.3 Use Case Memverifikasi Laporan Pencemaran
@@ -348,12 +328,17 @@ Tabel 3.3. Identifikasi Kelas Use Case UC03
 <img alt="Sequence Diagram UC03 normal" src="./assets/diagram/UC03_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC03</i>
+<i>Gambar 10. Sequence Diagram UC03</i>
 </p>
 
 ### 3.3.3 Diagram Kelas
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Diagram Kelas UC03" src="./assets/diagram/diagram-kelas-UC03.png" width="100%">
+</p>
+<p align="center">
+<i>Gambar 11. Diagram Kelas UC03</i>
+</p>
 
 ## 3.4 Use Case Mengklaim Titik Pencemaran
 
@@ -381,7 +366,7 @@ Tabel 3.4. Identifikasi Kelas Use Case UC04
 <img alt="Sequence Diagram UC04 normal" src="./assets/diagram/UC04_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC04</i>
+<i>Gambar 12. Sequence Diagram UC04</i>
 </p>
 
 - **Skenario Alternatif 1: Titik Sudah Diklaim**
@@ -390,7 +375,7 @@ Tabel 3.4. Identifikasi Kelas Use Case UC04
 <img alt="Sequence Diagram UC04 alt1" src="./assets/diagram/UC04_alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC04 - Titik Sudah Diklaim</i>
+<i>Gambar 13. Sequence Diagram UC04 - Titik Sudah Diklaim</i>
 </p>
 
 - **Skenario Alternatif 2: Klaim Bersamaan pada Titik yang Sama**
@@ -399,12 +384,17 @@ Tabel 3.4. Identifikasi Kelas Use Case UC04
 <img alt="Sequence Diagram UC04 alt2" src="./assets/diagram/UC04_alt2.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC04 - Klaim Bersamaan pada Titik yang Sama</i>
+<i>Gambar 14. Sequence Diagram UC04 - Klaim Bersamaan pada Titik yang Sama</i>
 </p>
 
 ### 3.4.3 Diagram Kelas
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Diagram Kelas UC04" src="./assets/diagram/diagram-kelas-UC04.png" width="100%">
+</p>
+<p align="center">
+<i>Gambar 15. Diagram Kelas UC04</i>
+</p>
 
 ## 3.5 Use Case Melaporkan Hasil Pembersihan
 
@@ -434,7 +424,7 @@ Tabel 3.5. Identifikasi Kelas Use Case UC05
 <img alt="Sequence Diagram UC05 normal" src="./assets/diagram/UC05_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC05</i>
+<i>Gambar 16. Sequence Diagram UC05</i>
 </p>
 
 - **Skenario Alternatif 1: Lokasi Foto di Luar Radius Geofencing**
@@ -443,12 +433,17 @@ Tabel 3.5. Identifikasi Kelas Use Case UC05
 <img alt="Sequence Diagram UC05 alt1" src="./assets/diagram/UC05_alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC05 - Lokasi Foto di Luar Radius Geofencing</i>
+<i>Gambar 17. Sequence Diagram UC05 - Lokasi Foto di Luar Radius Geofencing</i>
 </p>
 
 ### 3.5.3 Diagram Kelas
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Diagram Kelas UC05" src="./assets/diagram/diagram-kelas-UC05.png" width="100%">
+</p>
+<p align="center">
+<i>Gambar 18. Diagram Kelas UC05</i>
+</p>
 
 ## 3.6 Use Case Memverifikasi Hasil Pembersihan
 
@@ -479,12 +474,17 @@ Tabel 3.6. Identifikasi Kelas Use Case UC06
 <img alt="Sequence Diagram UC06 normal" src="./assets/diagram/UC06_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC06</i>
+<i>Gambar 19. Sequence Diagram UC06</i>
 </p>
 
 ### 3.6.3 Diagram Kelas
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Diagram Kelas UC06" src="./assets/diagram/diagram-kelas-UC06.png" width="100%">
+</p>
+<p align="center">
+<i>Gambar 20. Diagram Kelas UC06</i>
+</p>
 
 ## 3.7 Use Case Melihat Leaderboard
 
@@ -511,7 +511,7 @@ Tabel 3.7. Identifikasi Kelas Use Case UC07
 <img alt="Sequence Diagram UC07 normal" src="./assets/diagram/UC07_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC07</i>
+<i>Gambar 21. Sequence Diagram UC07</i>
 </p>
 
 - **Skenario Alternatif 1: Gagal Memuat Leaderboard**
@@ -520,12 +520,17 @@ Tabel 3.7. Identifikasi Kelas Use Case UC07
 <img alt="Sequence Diagram UC07 alt1" src="./assets/diagram/UC07_alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC07 - Gagal Memuat Leaderboard</i>
+<i>Gambar 22. Sequence Diagram UC07 - Gagal Memuat Leaderboard</i>
 </p>
 
 ### 3.7.3 Diagram Kelas
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Diagram Kelas UC07" src="./assets/diagram/diagram-kelas-UC07.png" width="100%">
+</p>
+<p align="center">
+<i>Gambar 23. Diagram Kelas UC07</i>
+</p>
 
 ## 3.8 Use Case Mengelola Akun Relawan dan Data Komunitas
 
@@ -552,7 +557,7 @@ Tabel 3.8. Identifikasi Kelas Use Case UC08
 <img alt="Sequence Diagram UC08 normal" src="./assets/diagram/UC08_normal.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC08</i>
+<i>Gambar 24. Sequence Diagram UC08</i>
 </p>
 
 - **Skenario Alternatif 1: Pembaruan Data Gagal**
@@ -561,12 +566,17 @@ Tabel 3.8. Identifikasi Kelas Use Case UC08
 <img alt="Sequence Diagram UC08 alt1" src="./assets/diagram/UC08_alt.jpg" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram UC08 - Pembaruan Data Gagal</i>
+<i>Gambar 25. Sequence Diagram UC08 - Pembaruan Data Gagal</i>
 </p>
 
 ### 3.8.3 Diagram Kelas
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Diagram Kelas UC08" src="./assets/diagram/diagram-kelas-UC08.png" width="100%">
+</p>
+<p align="center">
+<i>Gambar 26. Diagram Kelas UC08</i>
+</p>
 
 <br>
 
@@ -576,23 +586,43 @@ Tabel 3.8. Identifikasi Kelas Use Case UC08
 
 ## 4.1 Diagram Kelas
 
-**Bagian ini diisi dengan diagram kelas keseluruhan.**
-
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh-class_diargam.png" width="35%">
+<img alt="Diagram Kelas Perancangan Keseluruhan SeaGuard" src="./assets/diagram/diagram-kelas-keseluruhan.png" width="100%">
 </p>
 <p align="center">
-<i>Gambar 4.1. Diagram Kelas Perancangan Keseluruhan [Nama P/L]</i>
+<i>Gambar 27. Diagram Kelas Perancangan Keseluruhan SeaGuard</i>
 </p>
 
 Tabel 4.1. Daftar Kelas Perancangan Keseluruhan
 
 | ID Kelas | Nama Kelas | Atribut | Metode/Operasi |
 | :--- | :--- | :--- | :--- |
-| *[C01]* | *[Nama kelas]* | *[Daftar atribut]* | *[Daftar metode/operasi]* |
-| *[C02]* | *[Nama kelas]* | *[Daftar atribut]* | *[Daftar metode/operasi]* |
-| *[C03]* | *[Nama kelas]* | *[Daftar atribut]* | *[Daftar metode/operasi]* |
-| *...* | *...* | *...* | *...* |
+| *C01* | *LaporanPencemaran* | *idLaporan, idRelawan, koordinatGPS, indikatorTingkat, tanggalLaporan, statusLaporan* | *buatLaporan(), simpanLaporan(), getLaporanTerverifikasi(), getDetailPencemaran(), getLokasiGPS(), getAntreanLaporan(), perbaruiStatusLaporan(), setStatusDiklaim()* |
+| *C02* | *BuktiLaporan* | *idBukti, idLaporan, fotoUrl, ukuranFile, formatFile, metadataEXIF* | *validasiFormatUkuran(), ekstrakMetadataEXIF(), simpanBukti(), getDetailBukti()* |
+| *C03* | *KlaimTitikPencemaran* | *idKlaim, idLaporan, idRelawan, koordinatTitik, wktKlaim, statusKlaim* | *getStatusKlaim(), kunciTitikLokasi(), getKoordinatAcuan(), ubahStatusKlaim()* |
+| *C04* | *LaporanPembersihan* | *idPembersihan, idKlaim, idRelawan, deskripsiKegiatan, tglSelesai, statusPembersihan* | *buatLaporanPembersihan(), simpanLaporanPembersihan(), getDaftarMenungguVerifikasi(), getDetailPembersihan(), setHasilVerifikasi()* |
+| *C05* | *BuktiPembersihan* | *idBuktiPembersihan, idPembersihan, fotoBeforeUrl, fotoAfterUrl, gpsBefore, gpsAfter* | *validasiGeofencingRadius(), tampilkanPerbandinganFoto()* |
+| *C06* | *LogVerifikasi* | *idLog, idVerifikator, idObjek, statusKeputusan, timestamp* | *catatLogVerifikasi(), catatLogAudit()* |
+| *C07* | *Leaderboard* | *idLeaderboard, daftarPeringkat, tglPembaruan* | *hitungUlangPeringkat(), getPosisiPengguna(), getDaftarPeringkat()* |
+| *C08* | *AkunRelawan* | *idRelawan, nama, email, peran, statusAkun, totalPoin* | *getProfilRelawan(), getDataRelawan(), ajukanKlaimTitik(), tambahSkorPoin(), getAtributPoin(), getDaftarAkun(), getDetailAkun(), ubahHakAkses(), tangguhkanAkun()* |
+| *C09* | *Komunitas* | *idKomunitas, namaKomunitas, deskripsiKomunitas* | *getDaftarKomunitas(), getDetailKomunitas(), perbaruiKomunitas()* |
+| *C10* | *PetaHeatmap* | *idKlaster, koordinatPusat, heatIntensity, kategoriKualitas* | *hitungHeatIntensity(), tampilkanHeatmap(), filterBerdasarkanKategori(), cariLokasi(), getDetailKlaster()* |
+| *C11* | *PelaporanView* | *idSesi* | *bukaFormLaporan(), tampilkanFormLaporan(), isiFormLaporan(), ambilKoordinatGPS(), kirimLaporan(), tampilkanPesan()* |
+| *C12* | *HeatmapView* | *idSesi* | *bukaMenuHeatmap(), muatPetaDasar(), tampilkanPeta(), pilihFilter(), inputLokasi(), fokuskanPeta(), pilihTitik(), tampilkanDetailPencemaran(), pilihTitikUntukKlaim(), tampilkanDetailKlaim(), tekanKlaim(), tampilkanPesan()* |
+| *C13* | *DashboardVerifikasiView* | *idSesi* | *bukaDashboard(), tampilkanAntrean(), pilihLaporan(), tampilkanDetailLaporan(), ubahStatusLaporan(), bukaDaftarPengajuan(), tampilkanDaftarPengajuan(), pilihPengajuan(), tampilkanDetailPengajuan(), putuskanPengajuan(), tampilkanHasilVerifikasi()* |
+| *C14* | *PembersihanView* | *idSesi* | *bukaMenuPembersihan(), tampilkanFormPembersihan(), isiFormPembersihan(), ambilKoordinatGPS(), kirimLaporan(), tampilkanPesan()* |
+| *C15* | *LeaderboardView* | *idSesi* | *bukaMenuLeaderboard(), tampilkanLeaderboard(), lihatDaftarPeringkat(), tampilkanDaftarPeringkat(), tampilkanPesan(), tekanRefresh()* |
+| *C16* | *PanelAdminView* | *idSesi* | *bukaPanelPengelolaan(), tampilkanPanelPengelolaan(), pilihEntitas(), tampilkanFormUbahAkun(), tampilkanFormUbahKomunitas(), simpanPerubahan(), tampilkanPesanSukses(), tampilkanPesanError(), konfirmasiCobaLagi()* |
+| *C17* | *PelaporanController* | *-* | *ambilFormLaporan(), validasiBukti(), prosesLaporan()* |
+| *C18* | *HeatmapController* | *-* | *ambilDataHeatmap(), terapkanFilter(), cariLokasi(), ambilDetailTitik()* |
+| *C19* | *VerifikasiController* | *-* | *ambilAntreanLaporan(), ambilDetailLaporan(), prosesVerifikasiLaporan(), ambilDaftarPengajuan(), ambilDetailPengajuan(), prosesVerifikasiPembersihan()* |
+| *C20* | *KlaimController* | *-* | *ambilDetailTitikKlaim(), klaimTitik()* |
+| *C21* | *PembersihanController* | *-* | *ambilFormPembersihan(), validasiBukti(), prosesLaporanPembersihan()* |
+| *C22* | *LeaderboardController* | *-* | *ambilLeaderboard(), ambilDaftarPeringkat()* |
+| *C23* | *AdminController* | *-* | *ambilDataAkunDanKomunitas(), ambilDetailEntitas(), prosesPerubahanData()* |
+| *C24* | *Notifikasi* | *idNotifikasi, idRelawan, pesan* | *kirimNotifikasi()* |
+| *C25* | *Autentikasi* | *idSesi, jumlahGagalLogin, waktuKunci* | *cekSesiDanPeran()* |
+| *C26* | *StorageAdapter* | *urlStorage* | *unggahFoto()* |
 
 <br>
 
@@ -611,7 +641,7 @@ Tabel 5.1. Matriks Kerunutan Kelas terhadap Use Case
 | *C05 - BuktiPembersihan* | *UC05 - Melaporkan Hasil Pembersihan*<br>*UC06 - Memverifikasi Hasil Pembersihan* |
 | *C06 - LogVerifikasi* | *UC03 - Memverifikasi Laporan Pencemaran*<br>*UC06 - Memverifikasi Hasil Pembersihan* |
 | *C07 - Leaderboard* | *UC06 - Memverifikasi Hasil Pembersihan*<br>*UC07 - Melihat Leaderboard* |
-| *C08 - AkunRelawan* | *UC01 - Melaporkan Titik Pencemaran*<br>*UC02 - Melihat Data dan Heatmap Pencemaran*<br>*UC03 - Memverifikasi Laporan Pencemaran*<br>*UC04 - Mengklaim Titik Pencemaran*<br>*UC05 - Melaporkan Hasil Pembersihan*<br>*UC06 - Memverifikasi Hasil Pembersihan*<br>*UC07 - Melihat Leaderboard*<br>*UC08 - Mengelola Akun Relawan dan Data Komunitas* |
+| *C08 - AkunRelawan* | *UC01 - Melaporkan Titik Pencemaran*<br>*UC03 - Memverifikasi Laporan Pencemaran*<br>*UC04 - Mengklaim Titik Pencemaran*<br>*UC05 - Melaporkan Hasil Pembersihan*<br>*UC06 - Memverifikasi Hasil Pembersihan*<br>*UC07 - Melihat Leaderboard*<br>*UC08 - Mengelola Akun Relawan dan Data Komunitas* |
 | *C09 - Komunitas* | *UC08 - Mengelola Akun Relawan dan Data Komunitas* |
 | *C10 - PetaHeatmap* | *UC02 - Melihat Data dan Heatmap Pencemaran* |
 | *C11 - PelaporanView* | *UC01 - Melaporkan Titik Pencemaran* |
@@ -630,5 +660,3 @@ Tabel 5.1. Matriks Kerunutan Kelas terhadap Use Case
 | *C24 - Notifikasi* | *UC03 - Memverifikasi Laporan Pencemaran*<br>*UC06 - Memverifikasi Hasil Pembersihan* |
 | *C25 - Autentikasi* | *UC01 - Melaporkan Titik Pencemaran*<br>*UC02 - Melihat Data dan Heatmap Pencemaran*<br>*UC03 - Memverifikasi Laporan Pencemaran*<br>*UC04 - Mengklaim Titik Pencemaran*<br>*UC05 - Melaporkan Hasil Pembersihan*<br>*UC06 - Memverifikasi Hasil Pembersihan*<br>*UC07 - Melihat Leaderboard*<br>*UC08 - Mengelola Akun Relawan dan Data Komunitas* |
 | *C26 - StorageAdapter* | *UC01 - Melaporkan Titik Pencemaran*<br>*UC05 - Melaporkan Hasil Pembersihan* |
-
- 
