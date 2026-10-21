@@ -307,7 +307,7 @@ Tabel 3.2. Identifikasi Kelas Use Case UC02
 - **Skenario Normal**
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/UC02_normal.jpg" width="50%">
+<img alt="Sequence Diagram UC02 normal" src="./assets/diagram/UC02_normal.jpg" width="50%">
 </p>
 <p align="center">
 <i>Gambar X. Sequence Diagram [UC02]</i>
@@ -316,7 +316,7 @@ Tabel 3.2. Identifikasi Kelas Use Case UC02
 - **Skenario Alternatif 1: Lokasi Tidak Ditemukan**
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/UC02_alt.jpg" width="50%">
+<img alt="Sequence Diagram UC02 alt1" src="./assets/diagram/UC02_alt.jpg" width="50%">
 </p>
 <p align="center">
 <i>Gambar X. Sequence Diagram [UC02] - Lokasi Tidak Ditemukan</i>
@@ -325,7 +325,7 @@ Tabel 3.2. Identifikasi Kelas Use Case UC02
 - **Skenario Alternatif 2: Hasil Filter Kosong**
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/UC02_alt2.jpg" width="50%">
+<img alt="Sequence Diagram UC02 alt2" src="./assets/diagram/UC02_alt2.jpg" width="50%">
 </p>
 <p align="center">
 <i>Gambar X. Sequence Diagram [UC02] - Hasil Filter Kosong</i>
@@ -365,7 +365,7 @@ Tabel 3.3. Identifikasi Kelas Use Case UC03
 - **Skenario Normal**
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/UC03_normal.jpg" width="50%">
+<img alt="Sequence Diagram UC03 normal" src="./assets/diagram/UC03_normal.jpg" width="50%">
 </p>
 <p align="center">
 <i>Gambar X. Sequence Diagram [UC03]</i>
@@ -398,15 +398,29 @@ Tabel 3.4. Identifikasi Kelas Use Case UC04
 - **Skenario Normal**
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/UC03_normal.jpg" width="50%">
+<img alt="Sequence Diagram UC04 normal" src="./assets/diagram/UC04_normal.jpg" width="50%">
 </p>
 <p align="center">
 <i>Gambar X. Sequence Diagram [UC04]</i>
 </p>
 
-- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+- **Skenario Alternatif 1: Titik Sudah Diklaim**
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Sequence Diagram UC04 alt1" src="./assets/diagram/UC04_alt.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC04] - Titik Sudah Diklaim</i>
+</p>
+
+- **Skenario Alternatif 2: Klaim Bersamaan pada Titik yang Sama**
+
+<p align="center">
+<img alt="Sequence Diagram UC04 alt2" src="./assets/diagram/UC04_alt2.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC04] - Klaim Bersamaan pada Titik yang Sama</i>
+</p>
 
 ### 3.4.3 Diagram Kelas
 
@@ -436,11 +450,21 @@ Tabel 3.5. Identifikasi Kelas Use Case UC05
 
 - **Skenario Normal**
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Sequence Diagram UC05 normal" src="./assets/diagram/UC05_normal.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC05]</i>
+</p>
 
-- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+- **Skenario Alternatif 1: Lokasi Foto di Luar Radius Geofencing**
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Sequence Diagram UC05 alt1" src="./assets/diagram/UC05_alt.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC05] - Lokasi Foto di Luar Radius Geofencing</i>
+</p>
 
 ### 3.5.3 Diagram Kelas
 
@@ -471,11 +495,12 @@ Tabel 3.6. Identifikasi Kelas Use Case UC06
 
 - **Skenario Normal**
 
-> *(Diagram blm selesai)*
-
-- **Skenario Alternatif [Nomor]: [Nama Skenario]**
-
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Sequence Diagram UC06 normal" src="./assets/diagram/UC06_normal.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC06]</i>
+</p>
 
 ### 3.6.3 Diagram Kelas
 
@@ -502,11 +527,21 @@ Tabel 3.7. Identifikasi Kelas Use Case UC07
 
 - **Skenario Normal**
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Sequence Diagram UC07 normal" src="./assets/diagram/UC07_normal.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC07]</i>
+</p>
 
-- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+- **Skenario Alternatif 1: Gagal Memuat Leaderboard**
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Sequence Diagram UC07 alt1" src="./assets/diagram/UC07_alt.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC05] - Gagal Memuat Leaderboard</i>
+</p>
 
 ### 3.7.3 Diagram Kelas
 
@@ -533,11 +568,21 @@ Tabel 3.8. Identifikasi Kelas Use Case UC08
 
 - **Skenario Normal**
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Sequence Diagram UC08 normal" src="./assets/diagram/UC08_normal.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC08]</i>
+</p>
 
-- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+- **Skenario Alternatif 1: Pembaruan Data Gagal**
 
-> *(Diagram blm selesai)*
+<p align="center">
+<img alt="Sequence Diagram UC08 alt1" src="./assets/diagram/UC08_alt.jpg" width="50%">
+</p>
+<p align="center">
+<i>Gambar X. Sequence Diagram [UC08] - Pembaruan Data Gagal</i>
+</p>
 
 ### 3.8.3 Diagram Kelas
 
