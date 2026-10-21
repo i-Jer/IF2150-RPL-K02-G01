@@ -242,8 +242,6 @@ Tuliskan secara singkat model arsitektur yang dipilih dan alasan model tersebut 
 
 ### 3.1.1 Identifikasi Kelas
 
-Identifikasi kelas yang terkait dengan use case tersebut. Kelas di tahap perancangan dapat berbeda dengan dengan kelas di tahap analisis. Dapat menggunakan tabel di bawah:
-
 Tabel 3.1. Identifikasi Kelas Use Case UC01
 
 | No | Nama Kelas Perancangan | Nama Kelas Analisis Terkait |
@@ -258,24 +256,22 @@ Tabel 3.1. Identifikasi Kelas Use Case UC01
 
 ### 3.1.2 Sequence Diagram
 
-Buat *sequence diagram* untuk **setiap skenario use case**, mencakup skenario normal dan alternatif pada subbab 4.4 SKPL. Diagram melibatkan kelas-kelas yang telah diidentifikasi pada SKPL. 
-
 - **Skenario Normal**
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC01 normal" src="./assets/diagram/UC01_normal.png" width="50%">
 </p>
 <p align="center">
 <i>Gambar X. Sequence Diagram [UC01]</i>
 </p>
 
-- **Skenario Alternatif [Nomor]: [Nama Skenario]**
+- **Skenario Alternatif 1: Format Atau Ukuran Foto Tidak Valid**
 
 <p align="center">
-<img alt="Contoh Logical View pada P/L E-Commerce" src="./assets/diagram/contoh-sequence_diagram.png" width="50%">
+<img alt="Sequence Diagram UC01 alt1" src="./assets/diagram/UC01_alt.png" width="50%">
 </p>
 <p align="center">
-<i>Gambar X. Sequence Diagram [UC01] - [Nama skenario alternatif]</i>
+<i>Gambar X. Sequence Diagram [UC01] - Format Atau Ukuran Foto Tidak Valid</i>
 </p>
 
 ### 3.1.3 Diagram Kelas
