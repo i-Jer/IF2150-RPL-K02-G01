@@ -1722,4 +1722,5 @@ Tabel 7.1. Matriks Kerunutan Kelas terhadap Use Case
 
 ---
 Referensi
-- Diagram: https://drive.google.com/file/d/1fiAcloAlCprb9VkNXHB0XuNEx4XPLoKW/view?usp=sharing
+- Diagram: [https://drive.google.com/file/d/1fiAcloAlCprb9VkNXHB0XuNEx4XPLoKW/view?usp=sharing](https://drive.google.com/file/d/1fiAcloAlCprb9VkNXHB0XuNEx4XPLoKW/view?usp=sharing)
+- Diagram: [https://drive.google.com/file/d/1VMT3G2mZXuXYGyWwGvIIMPVRF_bTwLlF/view?usp=sharing](https://drive.google.com/file/d/1VMT3G2mZXuXYGyWwGvIIMPVRF_bTwLlF/view?usp=sharing)
