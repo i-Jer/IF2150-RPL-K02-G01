@@ -123,7 +123,7 @@
 ---
 
 ### Milestone 6
-**Periode:** 24/09/2026 - 30/09/2026
+**Periode:** 1/10/2026 - 7/10/2026
 
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
@@ -131,7 +131,31 @@
 | *07/10/2026* | *Denzel* | *Mengerjakan bab 2* | *2* | *Done* | - |
 | *07/10/2026* | *Christian* | *Mengerjakan bab 1* | *2* | *Done* | - |
 
-**Catatan/Evaluasi Milestone 5:**
+**Catatan/Evaluasi Milestone 6:**
+* *-*
+
+---
+
+### Milestone 7
+**Periode:** 8/10/2026 - 21/10/2026
+
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *07/10/2026* | *Jeremy* | *Membuat DPPL dan diagram-diagramnya* | *5* | *Done* | - |
+
+**Catatan/Evaluasi Milestone 7:**
+* *-*
+
+---
+
+### Milestone 8
+**Periode:** 22/10/2026 - 28/10/2026
+
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *07/10/2026* | *Jeremy* | *Mengerjakan DPPL 2 dan membuat design UI* | *4* | *Done* | - |
+
+**Catatan/Evaluasi Milestone 8:**
 * *-*
 
 ---
