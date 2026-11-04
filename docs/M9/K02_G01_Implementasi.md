@@ -7,24 +7,26 @@ IMPLEMENTASI PERANGKAT LUNAK
 </h1>
 <br>
 
-## *Nama Perangkat Lunak*
-### *[Logo Perangkat Lunak]*
+## *SeaGuard*
+<p align="center">
+<img alt="Logo SeaGuard" src="./assets/logo-seaguard.png" width="45%">
+</p>
 
-### Untuk: *[Nama Asisten]*
+### Untuk: *Aurelia Jennifer Gunawan*
 
 Dipersiapkan oleh:
 | Informasi | Keterangan |
 | --- | --- |
-| Kelas | *\[Kelas\]* |
-| Kelompok | *\[Nomor Kelompok\]*  |
-
+| Kelas | *K02* |
+| Kelompok | *G01 (Swike Karang Anyar)* |
+ 
 | NIM | Nama |
 |---|---|
-| *[NIM 1]* | *[Nama Anggota 1]* |
-| *[NIM 2]* | *[Nama Anggota 2]* |
-| *[NIM 3]* | *[Nama Anggota 3]* |
-| *[NIM 4]* | *[Nama Anggota 4]* |
-| *[NIM 5]* | *[Nama Anggota 5]* |
+| *13525104* | *Jeremy Gerald Sutanto* |
+| *13525116* | *Christian Immanuel* |
+| *13525014* | *Denzel Santoso* |
+| *13525011* | *Raihan* |
+| *13525125* | *Peter Emmanuel Suwardy* |
 ---
 
 > **Petunjuk pengerjaan:** *[Silahkan hapus bagian ini setelah selesai mengerjakan]*
