@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="shield">
+      <path d="M100 18 L168 42 L168 96 C168 140 138 168 100 184 C62 168 32 140 32 96 L32 42 Z"/>
+    </clipPath>
+  </defs>
+  <!-- perisai -->
+  <path d="M100 18 L168 42 L168 96 C168 140 138 168 100 184 C62 168 32 140 32 96 L32 42 Z" fill="#0B3C5D"/>
+  <g clip-path="url(#shield)">
+    <!-- matahari / titik heatmap -->
+    <circle cx="100" cy="72" r="20" fill="#F2A541"/>
+    <circle cx="100" cy="72" r="32" fill="none" stroke="#F2A541" stroke-width="3" opacity="0.45"/>
+    <!-- ombak -->
+    <path d="M20 112 C45 96 70 96 100 112 C130 128 155 128 180 112 L180 200 L20 200 Z" fill="#1FA2B8"/>
+    <path d="M20 136 C45 120 70 120 100 136 C130 152 155 152 180 136 L180 200 L20 200 Z" fill="#147A8C"/>
+    <path d="M20 160 C45 146 70 146 100 160 C130 174 155 174 180 160 L180 200 L20 200 Z" fill="#0E5566"/>
+  </g>
+  <path d="M100 18 L168 42 L168 96 C168 140 138 168 100 184 C62 168 32 140 32 96 L32 42 Z" fill="none" stroke="#0B3C5D" stroke-width="8" stroke-linejoin="round"/>
+</svg>
