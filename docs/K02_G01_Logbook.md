@@ -119,6 +119,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *28/09/2026* | *Denzel* | *Mengerjakan bab 1.1, 1.2, 2.1, 4.2, 5.1, 6* | *1.5* | *Done* | - |
 | *28/09/2026* | *Christian* | *Mengerjakan bab 1.4, 2.3, 2.4, 3.1, 3.2, 4.1, 4.3, 4.4, 5.2, 5.3* | *1.5* | *Done* | - |
+| *30/09/2026* | *Raihan* | *Mengerjakan bab 1.4, 2.1, 2.2* | *1* | *Done* | - |
 
 **Catatan/Evaluasi Milestone 5:**
 * *-*
@@ -146,6 +147,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *07/10/2026* | *Jeremy* | *Membuat DPPL dan diagram-diagramnya* | *5* | *Done* | - |
 | *19/10/2026* | *Denzel* | *Membuat bab 3.1.1 dan bab 5 DPPL* | *1.6* | *Done* | - |
+| *21/10/2026* | *Raihan* | *Membuat bab 2.1 dan 3.1* | *1* | *Done* | - |
 
 **Catatan/Evaluasi Milestone 7:**
 * *-*
