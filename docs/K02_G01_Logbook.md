@@ -28,6 +28,9 @@
 * [Milestone 4](#milestone-4)
 * [Milestone 5](#milestone-5)
 * [Milestone 6](#milestone-6)
+* [Milestone 7](#milestone-7)
+* [Milestone 8](#milestone-8)
+* [Milestone 9](#milestone-9)
 
 ---
 
@@ -142,6 +145,7 @@
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *07/10/2026* | *Jeremy* | *Membuat DPPL dan diagram-diagramnya* | *5* | *Done* | - |
+| *19/10/2026* | *Denzel* | *Membuat bab 3.1.1 dan bab 5 DPPL* | *1.6* | *Done* | - |
 
 **Catatan/Evaluasi Milestone 7:**
 * *-*
@@ -154,6 +158,19 @@
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *07/10/2026* | *Jeremy* | *Mengerjakan DPPL 2 dan membuat design UI* | *4* | *Done* | - |
+| *25/10/2026* | *Denzel* | *Menambahkan bab dari M7* | *2* | *Done* | - |
+
+**Catatan/Evaluasi Milestone 8:**
+* *-*
+
+---
+
+### Milestone 9
+**Periode:** 28/10/2026 - 13/11/2026
+
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *08/11/2026* | *Denzel* | *Mengerjakan dokumen implementasi tahap awal* | *1.4* | *Done* | - |
 
 **Catatan/Evaluasi Milestone 8:**
 * *-*
