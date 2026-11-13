@@ -146,6 +146,7 @@
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *07/10/2026* | *Jeremy* | *Membuat DPPL dan diagram-diagramnya* | *5* | *Done* | - |
+| *14/10/2026* | *Christian* | *Mengerjakan bab 1, 2.2, 2.3, 2.4* | *1.5* | *Done* | - |
 | *19/10/2026* | *Denzel* | *Membuat bab 3.1.1 dan bab 5 DPPL* | *1.6* | *Done* | - |
 | *21/10/2026* | *Raihan* | *Membuat bab 2.1 dan 3.1* | *1* | *Done* | - |
 
@@ -161,6 +162,7 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *07/10/2026* | *Jeremy* | *Mengerjakan DPPL 2 dan membuat design UI* | *4* | *Done* | - |
 | *25/10/2026* | *Denzel* | *Menambahkan bab dari M7* | *2* | *Done* | - |
+| *27/10/2026* | *Christian* | *Mengerjakan Diagram dan logo* | *2* | *Done* | - |
 
 **Catatan/Evaluasi Milestone 8:**
 * *-*
