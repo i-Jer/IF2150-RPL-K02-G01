@@ -26,6 +26,11 @@
 * [Milestone 2](#milestone-2)
 * [Milestone 3](#milestone-3)
 * [Milestone 4](#milestone-4)
+* [Milestone 5](#milestone-5)
+* [Milestone 6](#milestone-6)
+* [Milestone 7](#milestone-7)
+* [Milestone 8](#milestone-8)
+* [Milestone 9](#milestone-9)
 
 ---
 
@@ -56,6 +61,32 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
 | :--- | :--- | :--- | :--- |
 | Gemini | *Brainstorming ide dan format penulisan (parafrase) agar kalimat lebih jelas* | *Tolong cek penulisan dan ide apa yang perlu ditambahkan* | *Memeriksa kembali hasil yang diberikan dan memperbaiki penulisan sesuai gaya bahasa sendiri dan memodifikasi konsep ide brainstorming yang diberikan* |
+
+### Milestone 5
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| ChatGPT | *Mempastikan agar struktur SKPL sesuai dengan yang diminta* | *Apakah struktur sudah sesuai dengan format SKPL* | *Menyesuaikan kata-kata dan format file SKPL* |
+
+### Milestone 6
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| ChatGPT | *Brainstorming arsitektur yang cocok untuk perangkat lunak yang ingin kita buat* | *Menurut anda apakah arsitektur MVC cocok digunakkan untuk perangkat kami dan kenapa?* | *Membandingkan arsitektur yang sesuai dan akhirnya memutuskan untuk menggunakan arsitektur MVC* |
+
+### Milestone 7
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| Claude | *Memastikan agar struktur DPPL sesuai dengan yang diminta* | *Bagaimana struktur file DPPL yang baik?* | *Menyesuaikan dan membandingkan dengan struktur DPPL dari contoh lain di internet* |
+
+### Milestone 8
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| | | | | |
+| | | | | |
+
+### Milestone 9
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| Claude | *Membantu dalam perancangan perangkat lunak dan menyesuaikan dengan milestone sebelumnya* | *Tolong merangkum spesifikasi dari milestone sebelumnya untuk membantu dalam mengimplementasikan perangkat kami* | *Memeriksa kembali hasil yang diberikan dan memperbaiki perancangan perangkat lunak kami* |
 
 ---
 ### Pernyataan Integritas dan Persetujuan
