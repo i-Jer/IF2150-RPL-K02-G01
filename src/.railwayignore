@@ -1,0 +1,6 @@
+**/node_modules
+**/*.log
+web/dist
+web/android
+server/uploads
+server/.env
