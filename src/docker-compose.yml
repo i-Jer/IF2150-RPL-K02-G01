@@ -1,0 +1,22 @@
+# Local database for development and grading: PostgreSQL 16 with PostGIS 3.4.
+#   docker compose up -d        (from src/)
+# Then copy server/.env.example to server/.env and start the API (see README section 2).
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: seaguard
+      POSTGRES_PASSWORD: seaguard
+      POSTGRES_DB: seaguard
+    ports:
+      - "5432:5432"
+    volumes:
+      - seaguard-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U seaguard -d seaguard"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  seaguard-db:
