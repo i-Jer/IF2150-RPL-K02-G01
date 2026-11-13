@@ -13,7 +13,8 @@
     "dev": "node --watch src/server.js",
     "migrate": "node src/db/migrate.js",
     "seed": "node src/db/seed.js",
-    "test": "node --test tests/e2e.test.mjs"
+    "test": "node --test tests/e2e.test.mjs",
+    "profile": "node tests/profile-heatmap.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1164.0",

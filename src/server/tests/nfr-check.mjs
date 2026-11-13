@@ -1,9 +1,12 @@
 // KNF07 (immutable audit log) and KNF03 (heatmap of 10,000 points in <= 3 s), run against a scratch database.
-// Usage: railway run --service PostGIS -- node tests/nfr-check.mjs
+// Usage: DATABASE_URL=postgres://seaguard:seaguard@localhost:5432/seaguard node tests/nfr-check.mjs
+//    or: railway run --service PostGIS -- node tests/nfr-check.mjs
 import pg from 'pg';
 
 const url = new URL(process.env.DATABASE_URL);
-const admin = new pg.Client({ connectionString: url.toString(), ssl: { rejectUnauthorized: false } });
+const baseDb = url.pathname;
+const ssl = /localhost|127.0.0.1/.test(url.hostname) ? false : { rejectUnauthorized: false };
+const admin = new pg.Client({ connectionString: url.toString(), ssl });
 await admin.connect();
 await admin.query('DROP DATABASE IF EXISTS seaguard_bench');
 await admin.query('CREATE DATABASE seaguard_bench');
@@ -43,5 +46,5 @@ const layer = await PetaHeatmap.tampilkanHeatmap();
 const tLayer = Date.now() - t;
 console.log(`KNF03: ${r.laporan} points -> ${r.klaster} clusters in ${tCluster} ms; layer query ${layer.titik.length} points in ${tLayer} ms; total ${tCluster + tLayer} ms (limit 3000 ms)`);
 await pool.end();
-const a2 = new pg.Client({ connectionString: process.env.DATABASE_URL.replace('/seaguard_bench', '/railway'), ssl: { rejectUnauthorized: false } });
+const a2 = new pg.Client({ connectionString: process.env.DATABASE_URL.replace('/seaguard_bench', baseDb), ssl });
 await a2.connect(); await a2.query('DROP DATABASE IF EXISTS seaguard_bench WITH (FORCE)'); await a2.end();
