@@ -36,31 +36,49 @@ Hosting (Railway project "SeaGuard"): `seaguard-app` (this Docker image), `PostG
 
 ## 2. Running locally
 
-Requirements: Node.js 20+, a PostgreSQL database with PostGIS.
+No account or cloud service is needed. Requirements: Node.js 20 or newer, and Docker (for the database). Photos are stored in `server/uploads/` when no bucket is configured.
 
-```bash
-cd src/server && npm install
-cd ../web && npm install && npx vite build
-```
+1. Start PostgreSQL 16 + PostGIS 3.4 (from `src/`):
 
-Start the API (also serves `web/dist`):
+   ```bash
+   docker compose up -d
+   ```
 
-```bash
-cd src/server
-DATABASE_URL=postgres://user:pass@host:5432/db npm start
-```
+   Already have PostgreSQL with PostGIS installed? Skip this step and point `DATABASE_URL` at it instead.
 
-With the Railway CLI linked to the project, `railway run --service PostGIS -- node scripts/dev-server.mjs` creates a separate `seaguard_dev` database on the Railway PostGIS server and starts the API on port 8080 with photos stored in `server/uploads/`. The schema is applied and demo data is seeded automatically on first start.
+2. Install, configure and build:
 
-For live-reload UI work: `cd src/web && npm run dev` (Vite on :5173, proxies `/api` to :8080).
+   ```bash
+   cd src/server && npm install && cp .env.example .env
+   cd ../web && npm install && npx vite build
+   ```
+
+   `.env.example` already matches the Docker database. Set `SEED_ADMIN_PASSWORD` there to choose the admin password.
+
+3. Start the API, which also serves the built web app:
+
+   ```bash
+   cd src/server && npm start
+   ```
+
+   Open http://localhost:8080. On first start the schema is applied and fictional demo data is seeded (section 4).
+
+For live-reload UI work, keep the API running and run `cd src/web && npm run dev` (Vite on :5173, proxies `/api` to :8080).
+
+Team members with the Railway CLI can instead run `railway run --service PostGIS -- node scripts/dev-server.mjs`, which uses a separate `seaguard_dev` database on the Railway PostGIS server.
 
 ## 3. Tests
 
+With the API running (section 2):
+
 ```bash
 cd src/server
-npm test                                               # 11 end-to-end tests against BASE_URL (default http://localhost:8080)
-railway run --service PostGIS -- node tests/nfr-check.mjs   # KNF07 immutable log + KNF03 10,000-point heatmap timing
+npm test              # 11 end-to-end tests against BASE_URL (default http://localhost:8080)
+npm run profile       # heatmap profiling with 10,000 points (KNF03), in a scratch database it creates and drops
+node tests/nfr-check.mjs   # KNF07 immutable audit log + KNF03 timing, also in a scratch database
 ```
+
+`npm run profile` and `nfr-check.mjs` read `DATABASE_URL` from the environment (for example `DATABASE_URL=postgres://seaguard:seaguard@localhost:5432/seaguard npm run profile`). The tests sign in many times, so run `npm test` against a freshly started server: sign-in is rate-limited to 40 attempts per 15 minutes per address.
 
 The end-to-end suite covers sign-up and login, the 5-attempt lockout (KNF09), RBAC (401/403), UC01 with invalid photo and outside-Indonesia location (R02), UC03 approve with audit log and notification, UC02 filters/empty filter/location not found, UC04 with two simultaneous claims (exactly one succeeds, KNF05), UC05 geofence reject/accept, UC06/UC07 points and ranking, and UC08 with the R24 institution rule.
 
@@ -105,4 +123,40 @@ The Dockerfile builds the web client and the OTA bundle, then the API image. Con
 ## 7. External services
 
 - Map tiles: OpenFreeMap (OpenStreetMap data), no API key.
-- Location search and reverse lookup: OpenStreetMap Nominatim (1 request per second, cached), with a built-in gazetteer of Indonesian coastal places as fallback.
+- Place search suggestions: Photon (OpenStreetMap search, built for type-ahead), with Nominatim as fallback and a built-in gazetteer of Indonesian coastal places. Common abbreviations are expanded first (BSD, PIK, Jaksel, Tangsel, Jogja, NTT and others).
+- Reverse lookup (naming a reported place, rejecting points outside Indonesia): OpenStreetMap Nominatim, 1 request per second, cached.
+
+None of these need an account or API key.
+
+## 8. Database tables
+
+Full definitions, indexes, triggers and the `kode_berikut` code generator are in `server/src/db/schema.sql`. Coordinates are PostGIS `geography(Point, 4326)`.
+
+| Table | Columns |
+|---|---|
+| `komunitas` | `id_komunitas`, `kode`, `nama_komunitas`, `deskripsi_komunitas`, `wilayah`, `terverifikasi`, `dibuat`, `diperbarui` |
+| `akun_relawan` | `id_relawan`, `kode`, `nama`, `email`, `password_hash`, `peran`, `status_akun`, `total_poin`, `id_komunitas`, `instansi`, `jumlah_gagal_login`, `waktu_kunci`, `jumlah_teguran`, `bahasa`, `dibuat`, `diperbarui` |
+| `sesi` | `id_sesi`, `id_relawan`, `dibuat`, `kedaluwarsa`, `perangkat` |
+| `consent_log` | `id_consent`, `id_relawan`, `jenis`, `keputusan`, `perangkat`, `alamat_ip`, `waktu` |
+| `laporan_pencemaran` | `id_laporan`, `kode`, `id_relawan`, `koordinat_gps`, `sumber_koordinat`, `indikator_tingkat`, `jenis_sampah`, `perkiraan_volume`, `deskripsi`, `lokasi_nama`, `tanggal_laporan`, `status_laporan`, `catatan_verifikasi`, `diverifikasi_oleh`, `diverifikasi_pada`, `dibersihkan_pada` |
+| `bukti_laporan` | `id_bukti`, `id_laporan`, `foto_url`, `ukuran_file`, `format_file`, `metadata_exif`, `gps_exif` |
+| `klaim_titik_pencemaran` | `id_klaim`, `kode`, `id_laporan`, `id_relawan`, `koordinat_titik`, `wkt_klaim`, `batas_waktu`, `status_klaim`, `diperbarui` |
+| `laporan_pembersihan` | `id_pembersihan`, `kode`, `id_klaim`, `id_relawan`, `deskripsi_kegiatan`, `jumlah_peserta`, `perkiraan_berat_kg`, `tgl_selesai`, `status_pembersihan`, `poin_diberikan`, `catatan_verifikasi`, `diverifikasi_oleh`, `diverifikasi_pada` |
+| `bukti_pembersihan` | `id_bukti_pembersihan`, `id_pembersihan`, `foto_before_url`, `foto_after_url`, `gps_before`, `gps_after`, `sumber_gps_before`, `sumber_gps_after`, `jarak_before_m`, `jarak_after_m` |
+| `log_verifikasi` | `id_log`, `id_verifikator`, `jenis_objek`, `id_objek`, `kode_objek`, `status_keputusan`, `catatan`, `timestamp` (UPDATE/DELETE blocked by trigger) |
+| `teguran` | `id_teguran`, `id_relawan`, `id_verifikator`, `alasan`, `kode_objek`, `dibuat` |
+| `riwayat_poin` | `id_riwayat`, `id_relawan`, `id_pembersihan`, `poin`, `dibuat` |
+| `peta_heatmap` | `id_klaster`, `koordinat_pusat`, `heat_intensity`, `kategori_kualitas`, `jumlah_laporan`, `rata_rata_keparahan`, `rata_rata_hari`, `dihitung_pada` |
+| `leaderboard` | `id_leaderboard`, `tgl_pembaruan` |
+| `notifikasi` | `id_notifikasi`, `id_relawan`, `jenis`, `judul`, `pesan`, `tautan`, `data`, `dibaca`, `dibuat` |
+| `rilis_aplikasi` | `id_rilis`, `jenis`, `versi`, `kode_versi`, `catatan`, `berkas`, `wajib`, `dibuat` |
+
+## 9. Modules and team
+
+| Member | Modules |
+|---|---|
+| 13525104 Jeremy Gerald Sutanto | UC02 heatmap and UC04 claims: `PetaHeatmap`, `KlaimTitikPencemaran`, `HeatmapController`, `KlaimController`, `Geocoder`, `pages/Heatmap.jsx`, `components/MapView.jsx`; heatmap profiling |
+| 13525116 Christian Immanuel | UC01 reporting: `LaporanPencemaran`, `BuktiLaporan`, `PelaporanController`, `StorageAdapter`, `pages/Report.jsx`, consent dialog |
+| 13525014 Denzel Santoso | UC03 and UC06 verification: `VerifikasiController`, `LogVerifikasi`, `Notifikasi` (SSE), `pages/VerifyReports.jsx`, `pages/VerifyCleanups.jsx`, audit log page |
+| 13525011 Raihan | UC05 cleanup and UC07 leaderboard: `LaporanPembersihan`, `BuktiPembersihan`, `Leaderboard`, `PembersihanController`, `LeaderboardController`, `pages/Cleanup.jsx`, `pages/Leaderboard.jsx` |
+| 13525125 Peter Emmanuel Suwardy | UC08 administration and accounts: `AkunRelawan`, `Komunitas`, `Autentikasi`, `AdminController`, `pages/Admin.jsx`, sign-in pages; database schema, demo data and end-to-end tests |
