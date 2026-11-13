@@ -67,7 +67,9 @@ flowchart LR
   N -. "notifikasi dan pembaruan peta real-time" .-> Client
   M --> DB[(PostgreSQL + PostGIS)]
   S --> F[(Bucket S3 / uploads lokal)]
-  classDef v fill:#d7eef3,stroke:#1fa3b8; classDef c fill:#fff3d6,stroke:#f39c34; classDef m fill:#e3f5ea,stroke:#3aa76d;
+  classDef v fill:#d7eef3,stroke:#1fa3b8
+  classDef c fill:#fff3d6,stroke:#f39c34
+  classDef m fill:#e3f5ea,stroke:#3aa76d
 ```
 
 Tabel R.1. Status implementasi use case
