@@ -120,6 +120,15 @@ railway up --service seaguard-app
 
 The Dockerfile builds the web client and the OTA bundle, then the API image. Configuration (all set on Railway): `DATABASE_URL`, `S3_ENDPOINT`, `S3_BUCKET`, `S3_REGION`, `S3_ACCESS_KEY_ID`, `S3_SECRET_ACCESS_KEY` (references to the PostGIS service and the bucket), `JWT_SECRET`, `PUBLIC_URL`, `PORT=8080`, `SEED_ADMIN_PASSWORD`.
 
+**Keeping hosting cost near zero.** The server is built to go fully idle so Railway's Serverless setting (app sleeping) can stop both `seaguard-app` and `PostGIS` when nobody is using the app:
+
+- No background timers. Claim expiry and the hourly heat refresh run on the next API request instead (`services/Pemeliharaan.js`).
+- Idle database connections close after 10 s (`db/pool.js`), so a quiet app holds no link to the database.
+- Public map, ranking and community responses are cached in memory and cleared on any write (`utils/cacheRespons.js`), so repeated map loads skip the database.
+- Browser tabs and the Android app close their live stream a minute after going to the background and reconnect (and refresh) when reopened (`web/src/api/live.js`).
+
+Enable **Serverless** in the service settings of both `seaguard-app` and `PostGIS`. The first request after a sleep takes a few seconds while the services wake up.
+
 ## 7. External services
 
 - Map tiles: OpenFreeMap (OpenStreetMap data), no API key.
