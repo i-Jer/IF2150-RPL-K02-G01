@@ -22,8 +22,15 @@ import { KlaimController } from '../controllers/KlaimController.js';
 import { PembersihanController } from '../controllers/PembersihanController.js';
 import { LeaderboardController } from '../controllers/LeaderboardController.js';
 import { AdminController } from '../controllers/AdminController.js';
+import { Pemeliharaan } from '../services/Pemeliharaan.js';
+import { CacheRespons } from '../utils/cacheRespons.js';
 
 export const api = express.Router();
+
+// Writes invalidate cached reads; upkeep jobs piggyback on requests instead of running on timers.
+api.use(CacheRespons.penjagaTulis, Pemeliharaan.middleware);
+const peta = [async (_req, _res, next) => { await Pemeliharaan.pastikanHeatSegar(); next(); }, CacheRespons.untuk(5 * 60 * 1000)];
+const publik = CacheRespons.untuk(5 * 60 * 1000);
 
 const upload = multer({
   storage: multer.memoryStorage(),
@@ -74,7 +81,7 @@ api.post('/auth/consent', wajib(), ah(async (req, res) => {
   await Autentikasi.catatConsent(req.akun.idRelawan, req.body?.jenis || 'lokasi_kamera', req.body?.keputusan, perangkat(req), req.ip);
   res.status(201).json({ ok: true });
 }));
-api.get('/komunitas', ah(async (_req, res) => res.json(await Komunitas.getDaftarKomunitas())));
+api.get('/komunitas', publik, ah(async (_req, res) => res.json(await Komunitas.getDaftarKomunitas())));
 
 // ---------- UC01 Pelaporan (C17) ----------
 api.get('/pelaporan/form', wajib('Relawan'), ah(async (req, res) => res.json(await PelaporanController.ambilFormLaporan(req.akun))));
@@ -87,11 +94,11 @@ api.post('/pelaporan', wajib('Relawan'), uploadHandler(upload.single('foto')), a
 api.get('/pelaporan/saya', wajib(), ah(async (req, res) => res.json(await LaporanPencemaran.getLaporanSaya(req.akun.idRelawan))));
 
 // ---------- UC02 Heatmap (C18) — public read so the landing page can show the live map ----------
-api.get('/heatmap', ah(async (req, res) => res.json(await HeatmapController.ambilDataHeatmap({ kategori: req.query.kategori, area: req.query.area }))));
-api.get('/heatmap/filter', ah(async (req, res) => res.json(await HeatmapController.terapkanFilter({ kategori: req.query.kategori, area: req.query.area }))));
+api.get('/heatmap', ...peta, ah(async (req, res) => res.json(await HeatmapController.ambilDataHeatmap({ kategori: req.query.kategori, area: req.query.area }))));
+api.get('/heatmap/filter', ...peta, ah(async (req, res) => res.json(await HeatmapController.terapkanFilter({ kategori: req.query.kategori, area: req.query.area }))));
 api.get('/heatmap/cari', ah(async (req, res) => res.json(await HeatmapController.cariLokasi(req.query.q))));
 api.get('/heatmap/saran', ah(async (req, res) => res.json(await HeatmapController.saranLokasi(req.query.q))));
-api.get('/heatmap/titik/:id', ah(async (req, res) => res.json(await HeatmapController.ambilDetailTitik(req.params.id))));
+api.get('/heatmap/titik/:id', ...peta, ah(async (req, res) => res.json(await HeatmapController.ambilDetailTitik(req.params.id))));
 
 // ---------- UC04 Klaim (C20) ----------
 api.get('/klaim/saya', wajib(), ah(async (req, res) => {
@@ -120,7 +127,7 @@ api.get('/verifikasi/log', wajib('Verifikator'), ah(async (req, res) => res.json
 
 // ---------- UC07 Leaderboard (C22) ----------
 api.get('/leaderboard', opsional, ah(async (req, res) => res.json(await LeaderboardController.ambilLeaderboard(req.akun, { periode: req.query.periode }))));
-api.get('/leaderboard/peringkat', ah(async (req, res) => res.json(await LeaderboardController.ambilDaftarPeringkat(req.query))));
+api.get('/leaderboard/peringkat', publik, ah(async (req, res) => res.json(await LeaderboardController.ambilDaftarPeringkat(req.query))));
 
 // ---------- UC08 Admin (C23) ----------
 api.get('/admin', wajib('Verifikator'), ah(async (req, res) => res.json(await AdminController.ambilDataAkunDanKomunitas(req.query))));

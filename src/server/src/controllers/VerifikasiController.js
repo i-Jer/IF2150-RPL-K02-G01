@@ -1,5 +1,6 @@
 // C19 VerifikasiController: UC03 (verify reports) and UC06 (verify cleanups), Algo-006.
 import { withTransaction } from '../db/pool.js';
+import { Pemeliharaan } from '../services/Pemeliharaan.js';
 import { config } from '../config.js';
 import { LaporanPencemaran } from '../models/LaporanPencemaran.js';
 import { BuktiLaporan } from '../models/BuktiLaporan.js';
@@ -31,7 +32,7 @@ function cekCatatan(keputusan, catatan, teguran) {
 /** Recompute clusters and tell every open map/board to refresh (KNF08 <= 10 s). */
 export async function segarkanPeta(alasan) {
   try {
-    await PetaHeatmap.hitungHeatIntensity();
+    await Pemeliharaan.hitungUlangHeat();
     Notifikasi.siarkan('heatmap', { alasan, waktu: new Date().toISOString() });
   } catch (e) {
     console.error('[heatmap] recompute failed', e.message);

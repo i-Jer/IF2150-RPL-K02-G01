@@ -10,7 +10,9 @@ const needsSsl = config.databaseUrl && !/localhost|127\.0\.0\.1|\.railway\.inter
 
 export const pool = new pg.Pool({
   connectionString: config.databaseUrl,
-  max: 15,
+  max: 10,
+  // Close idle connections quickly so an unused app holds no open link to the database (lets both sleep).
+  idleTimeoutMillis: 10_000,
   ssl: needsSsl ? { rejectUnauthorized: false } : false,
 });
 
