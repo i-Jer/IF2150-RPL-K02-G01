@@ -36,8 +36,10 @@ export function AuthProvider({ children }) {
     if (!akun) { setUnread(0); return undefined; }
     refreshUnread();
     const un = onLive('notifikasi', () => setUnread((n) => n + 1));
-    const poll = setInterval(refreshUnread, 60000);
-    return () => { un(); clearInterval(poll); };
+    // Poll only while visible (the live stream covers most updates); refresh when the user comes back.
+    const poll = setInterval(() => { if (!document.hidden) refreshUnread(); }, 5 * 60 * 1000);
+    const back = onLive('kembali', refreshUnread);
+    return () => { un(); back(); clearInterval(poll); };
   }, [akun, refreshUnread]);
 
   const masuk = useCallback(async (r) => {
