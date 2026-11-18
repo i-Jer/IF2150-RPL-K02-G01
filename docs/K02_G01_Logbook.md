@@ -177,8 +177,12 @@
 | Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *08/11/2026* | *Denzel* | *Mengerjakan dokumen implementasi tahap awal* | *1.4* | *Done* | - |
+| *10/11/2026* | *Jeremy* | *Membuat implementasi full-stack dari seaguard* | *2* | *Done* | - |
+| *11/11/2026* | *Jeremy* | *Membuat implementasi full-stack dari seaguard dan hosting aplikasi* | *3* | *Done* | - |
+| *12/11/2026* | *Jeremy* | *Membuat optimisasi dan bug fixing* | *2* | *Done* | - |
 
-**Catatan/Evaluasi Milestone 8:**
+
+**Catatan/Evaluasi Milestone 9:**
 * *-*
 
 ---
