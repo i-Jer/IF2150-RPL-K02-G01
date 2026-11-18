@@ -34,7 +34,7 @@ export default defineConfig({
   }],
   define: {
     __BUNDLE_VERSION__: JSON.stringify(BUNDLE_VERSION),
-    __API_ORIGIN__: JSON.stringify(process.env.API_ORIGIN || 'https://seaguard.i-jer.com'),
+    __API_ORIGIN__: JSON.stringify(process.env.API_ORIGIN || 'https://seaguard-app-production.up.railway.app'),
   },
   server: {
     port: 5173,
