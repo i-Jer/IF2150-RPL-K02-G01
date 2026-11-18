@@ -31,6 +31,7 @@
 * [Milestone 7](#milestone-7)
 * [Milestone 8](#milestone-8)
 * [Milestone 9](#milestone-9)
+* [Milestone 10](#milestone-10)
 
 ---
 
@@ -178,11 +179,21 @@
 | :--- | :--- | :--- | :--- | :--- | :--- | 
 | *08/11/2026* | *Denzel* | *Mengerjakan dokumen implementasi tahap awal* | *1.4* | *Done* | - |
 | *10/11/2026* | *Jeremy* | *Membuat implementasi full-stack dari seaguard* | *2* | *Done* | - |
+| *11/11/2026* | *Christian* | *Mengerjakan dan memperbaiki mermaid diagram* | *1.5* | *Done* | - |
 | *11/11/2026* | *Jeremy* | *Membuat implementasi full-stack dari seaguard dan hosting aplikasi* | *3* | *Done* | - |
 | *12/11/2026* | *Jeremy* | *Membuat optimisasi dan bug fixing* | *2* | *Done* | - |
 
-
 **Catatan/Evaluasi Milestone 9:**
+* *-*
+
+### Milestone 10
+**Periode:** 13/11/2026 - 20/11/2026
+
+| Tanggal | Nama Anggota | Deskripsi Pekerjaan | Durasi (Jam) | Status | Kendala / *Blocker* | 
+| :--- | :--- | :--- | :--- | :--- | :--- | 
+| *16/11/2026* | *Christian* | *Mengerjakan bab 1, 2, 3.2, tabel 5.1 | *2* | *Done* | - |
+
+**Catatan/Evaluasi Milestone 10:**
 * *-*
 
 ---
