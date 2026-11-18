@@ -1,0 +1,26 @@
+Pengukuran KNF SeaGuard, 18 November 2026 (laptop pengembang -> server PostGIS Railway, asia-southeast1)
+
+$ railway run --service PostGIS -- node tests/nfr-check.mjs
+KNF07 ok, rejected: log_verifikasi bersifat immutable (KNF07)
+KNF07 ok, rejected: log_verifikasi bersifat immutable (KNF07)
+KNF03: 10000 points -> 8636 clusters in 1334 ms; layer query 10000 points in 2455 ms; total 3789 ms (limit 3000 ms)
+
+$ railway run --service PostGIS -- npm run profile
+Data: 10000 approved reports -> 8636 clusters; layer returns 10000 points + 8636 clusters
+Runs: 3, median wall time measured from this machine (includes network round trips to the database)
+A. compute on read  (cluster + read): 6057 ms   [clustering alone 2481 ms]
+B. precomputed      (read only)     : 3576 ms
+Database execution time (EXPLAIN ANALYZE): ST_ClusterDBSCAN over 10,000 points 97 ms; cluster layer read 8.1 ms
+KNF03 limit: 3000 ms
+
+Notifikasi dan leaderboard real-time (server dev lokal, klien SSE, waktu dari POST keputusan sampai event diterima)
+KNF04 notifikasi: n=5 rata-rata 608 ms, maks 1053 ms [1010, 227, 279, 472, 1053]
+KNF08 leaderboard: n=1 rata-rata 921 ms, maks 921 ms [921]
+
+Waktu respons GET /api/heatmap di produksi (curl, 6 kali; permintaan pertama membangunkan layanan yang tidur)
+1.321242
+0.184378
+0.182473
+0.177479
+0.170516
+0.166287

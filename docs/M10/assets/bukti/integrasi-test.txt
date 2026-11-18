@@ -1,0 +1,24 @@
+[seed] empty database, inserting demo data
+✔ INT-TC01 IA-01 PelaporanController -> LaporanPencemaran, BuktiLaporan, StorageAdapter: laporan tersimpan beserta foto (707.5831ms)
+✔ INT-TC02 IA-01 PelaporanController: foto tidak valid dan lokasi di luar Indonesia ditolak, tidak ada baris tersimpan (502.5685ms)
+✔ INT-TC03 IA-02 HeatmapController -> PetaHeatmap, LaporanPencemaran: data peta, ringkasan, dan papan hotspot (5932.0204ms)
+✔ INT-TC04 IA-02 HeatmapController: filter kosong mengembalikan pesan "tidak ada data" (0.3239ms)
+✔ INT-TC05 IA-03 VerifikasiController -> LaporanPencemaran, LogVerifikasi, Notifikasi: persetujuan tercatat di tiga tabel (1137.6007ms)
+✔ INT-TC06 IA-03 VerifikasiController: keputusan kedua pada laporan yang sama ditolak tanpa log baru (1573.9429ms)
+✔ INT-TC07 IA-04 KlaimController -> KlaimTitikPencemaran: klaim mengunci titik lalu dapat dilepas (3808.443ms)
+✔ INT-TC08 IA-05 PembersihanController -> KlaimTitikPencemaran, BuktiPembersihan: geofencing memakai titik klaim (1895.2864ms)
+✔ INT-TC09 IA-06 VerifikasiController -> LaporanPembersihan, AkunRelawan, Leaderboard: persetujuan menambah poin dan menyelesaikan klaim (2361.6105ms)
+✔ INT-TC10 IA-07 LeaderboardController -> Leaderboard: posisi pengguna dan daftar peringkat (377.55ms)
+✔ INT-TC11 IA-08 AdminController -> AkunRelawan, Komunitas, LogVerifikasi: penangguhan dan pembaruan komunitas tercatat (3238.6217ms)
+✔ INT-TC12 IA-08 AdminController: Admin tidak dapat mengubah perannya sendiri; Verifikator wajib instansi (1303.6864ms)
+✔ INT-TC13 IA-09 Model -> Database: log audit tidak dapat diubah/dihapus, satu relawan satu klaim aktif (1005.4796ms)
+✔ INT-TC14 IA-10 StorageAdapter -> penyimpanan objek: unggah lalu baca berkas yang sama (11.1027ms)
+✔ INT-TC15 IA-11 HeatmapController -> Geocoder (Photon/Nominatim): "BSD" ditemukan di Tangerang; teks acak tidak ditemukan (1474.0356ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 53013.2542

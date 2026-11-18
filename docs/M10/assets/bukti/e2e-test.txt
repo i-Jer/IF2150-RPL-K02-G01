@@ -1,0 +1,19 @@
+✔ sign up a new volunteer, then log in with demo accounts (1537.5376ms)
+✔ KNF09: five failed logins lock the account (2066.2131ms)
+✔ RBAC: volunteer cannot open the verification queue (45.4128ms)
+✔ UC01 alternative: invalid photo and outside-Indonesia location are rejected (214.6182ms)
+✔ UC01: report a pollution point (1416.5949ms)
+✔ UC03: verifier approves; audit log and notification are written (3916.0815ms)
+✔ UC02: the approved point is on the heatmap, filters and search work (4304.2813ms)
+✔ UC04 + KNF05: two volunteers claim at once, exactly one wins (613.0088ms)
+✔ UC05: photos outside 100 m are rejected, inside are accepted (890.4269ms)
+✔ UC06 + UC07: approval adds heat-based points and reranks the leaderboard (3422.1774ms)
+✔ UC08: admin panel updates communities and guards roles (R24) (1395.2819ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19914.3295

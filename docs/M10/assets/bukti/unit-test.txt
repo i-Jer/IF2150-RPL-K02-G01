@@ -1,0 +1,103 @@
+[seed] empty database, inserting demo data
+✔ C02-UT01 validasiFormatUkuran: foto PNG valid diterima (4.2889ms)
+✔ C02-UT02 validasiFormatUkuran: JPG tepat 5 MB diterima (batas) (0.2331ms)
+✔ C02-UT03 validasiFormatUkuran: 5 MB + 1 byte ditolak (batas) (0.1393ms)
+✔ C02-UT04 validasiFormatUkuran: format GIF ditolak (0.0921ms)
+✔ C02-UT05 validasiFormatUkuran: berkas teks berlabel PNG ditolak (magic bytes) (0.1184ms)
+✔ C02-UT06 validasiFormatUkuran: tanpa foto ditolak (0.082ms)
+✔ C02-UT07 ekstrakMetadataEXIF: foto tanpa EXIF dan berkas rusak menghasilkan null (3.55ms)
+✔ C02-UT08 simpanBukti + getDetailBukti: metadata GPS tersimpan dan jarak EXIF dihitung (933.9596ms)
+✔ C03-UT01 kunciTitikLokasi: titik Disetujui berhasil diklaim, laporan menjadi Diklaim (1787.7039ms)
+✔ C03-UT02 getStatusKlaim: mengembalikan klaim hidup, null bila belum diklaim (489.8082ms)
+✔ C03-UT03 kunciTitikLokasi: titik yang sudah diklaim ditolak (ALREADY_CLAIMED) (119.2346ms)
+✔ C03-UT04 kunciTitikLokasi: relawan dengan klaim aktif tidak dapat klaim lagi (HAS_ACTIVE_CLAIM) (158.9417ms)
+✔ C03-UT05 kunciTitikLokasi: laporan belum diverifikasi atau tidak ada ditolak (804.1282ms)
+✔ C03-UT06 kunciTitikLokasi: 5 klaim bersamaan pada satu titik, tepat satu berhasil (KNF05) (3323.3589ms)
+✔ C03-UT07 getKoordinatAcuan + ubahStatusKlaim: acuan hanya untuk klaim Aktif (666.4834ms)
+✔ C03-UT08 batalkanKlaim: titik kembali Disetujui; tanpa klaim aktif ditolak (945.6126ms)
+✔ C03-UT09 kedaluwarsakan: klaim melewati batas 7 hari dilepas (1536.1261ms)
+✔ C05-UT01 validasiGeofencingRadius: foto ±55 m dari titik klaim valid (43.5866ms)
+✔ C05-UT02 validasiGeofencingRadius: 105 m masih diterima (toleransi 10 m, KNF06) (35.2277ms)
+✔ C05-UT03 validasiGeofencingRadius: 115 m ditolak (GEOFENCE_OUTSIDE) (49.1345ms)
+✔ C05-UT04 validasiGeofencingRadius: koordinat GPS tidak ada ditolak (0.2429ms)
+✔ C05-UT05 tampilkanPerbandinganFoto: before/after tersedia; id tidak dikenal null (110.9382ms)
+✔ C10-UT01 hitungHeatIntensity: semua laporan Disetujui/Diklaim masuk klaster (555.6151ms)
+✔ C10-UT02 hitungHeatIntensity: heat = 6·jumlah + 12·keparahan + 1,5·hari; kategori = paling parah (386.298ms)
+✔ C10-UT03 tampilkanHeatmap: filter Sehat hanya mengembalikan kategori Sehat (39.8084ms)
+✔ C10-UT04 tampilkanHeatmap: tanpa kategori dipilih hasilnya kosong (batas) (0.249ms)
+✔ C10-UT05 tampilkanHeatmap: area peta Bali membatasi titik; area tidak valid diabaikan (216.1586ms)
+✔ C10-UT06 getDetailKlaster: klaster di dekat titik ditemukan; di tengah laut null (94.155ms)
+✔ C10-UT07 getPapanHotspot: urut heat menurun dan menghormati limit (43.1808ms)
+✔ C25-UT01 validasiPassword: 8 karakter huruf+angka diterima, 7 karakter ditolak (batas) (0.8149ms)
+✔ C25-UT02 validasiPassword: tanpa angka ditolak (0.1634ms)
+✔ C25-UT03 daftar: akun baru mendapat token; email sama ditolak (814.255ms)
+✔ C25-UT04 login: kata sandi benar berhasil; salah dan email tak dikenal gagal dengan pesan sama (2481.751ms)
+✔ C25-UT05 login: 5 kali gagal mengunci akun 15 menit, sandi benar pun ditolak (KNF09) (1510.0653ms)
+✔ C25-UT06 cekSesiDanPeran: peran dicek sesuai hierarki (Algo-005) (2078.3956ms)
+✔ C25-UT07 cekSesiDanPeran + login: akun ditangguhkan ditolak (246.546ms)
+✔ C25-UT08 gantiPassword + logout: sandi lama salah ditolak; sesi berakhir setelah logout (854.5719ms)
+✔ C25-UT09 catatConsent + sudahConsent: keputusan tersimpan; jenis tidak dikenal ditolak (KNF02) (90.1878ms)
+[storage] upload attempt 1 failed: jaringan putus
+✔ C26-UT01 unggahFoto (lokal): berkas tersimpan dan dapat dibaca kembali (5.3807ms)
+[storage] upload attempt 2 failed: jaringan putus
+[storage] upload attempt 1 failed: jaringan putus
+✔ C26-UT02 unggahFoto: gagal 2 kali lalu berhasil pada percobaan ke-3 (KNF01) (1826.6088ms)
+[storage] upload attempt 2 failed: jaringan putus
+[storage] upload attempt 3 failed: jaringan putus
+✔ C26-UT03 unggahFoto: selalu gagal, berhenti setelah 3 percobaan (UPLOAD_FAILED) (1802.6954ms)
+✔ C01-UT01 buatLaporan + simpanLaporan: laporan baru berstatus Menunggu Verifikasi (85.6803ms)
+✔ C01-UT02 buatLaporan / perbaruiStatusLaporan: indikator salah dan keputusan ganda ditolak (167.2086ms)
+✔ C04-UT01 buatLaporanPembersihan: data valid dibulatkan dan disiapkan (0.3674ms)
+✔ C04-UT02 buatLaporanPembersihan / setHasilVerifikasi: deskripsi pendek dan keputusan tak dikenal ditolak (0.2478ms)
+✔ C06-UT01 catatLogVerifikasi: catatan audit tersimpan dan terbaca (80.3348ms)
+✔ C06-UT02 log_verifikasi: UPDATE dan DELETE ditolak trigger (KNF07) (814.7548ms)
+✔ C07-UT01 getDaftarPeringkat: urut poin menurun dengan RANK() (1455.5012ms)
+✔ C07-UT02 getPosisiPengguna: Verifikator tidak masuk peringkat (null) (323.2653ms)
+✔ C08-UT01 tambahSkorPoin: poin = max(1, round(heat klaster)) ditambahkan ke total (Algo-007) (504.854ms)
+✔ C08-UT02 ubahHakAkses / tangguhkanAkun: peran tak dikenal dan akun tak ada ditolak (308.7553ms)
+✔ C09-UT01 perbaruiKomunitas: nama baru tersimpan (118.8359ms)
+✔ C09-UT02 perbaruiKomunitas: nama kosong ditolak (304.0944ms)
+✔ C24-UT01 kirimNotifikasi: tersimpan sebagai belum dibaca, lalu ditandai dibaca (828.249ms)
+✔ C24-UT02 kirimNotifikasi: penerima tidak ada ditolak basis data (36.225ms)
+ℹ tests 55
+ℹ suites 0
+ℹ pass 55
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 62935.361
+ℹ start of coverage report
+ℹ ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ℹ file                      | line % | branch % | funcs % | uncovered lines
+ℹ ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ℹ src                       |        |          |         | 
+ℹ  config.js                |  91.23 |    40.00 |  100.00 | 11-15
+ℹ  db                       |        |          |         | 
+ℹ   demoImage.js            | 100.00 |   100.00 |  100.00 | 
+ℹ   migrate.js              |  84.62 |    66.67 |   25.00 | 23-26
+ℹ   pool.js                 | 100.00 |    80.00 |   71.43 | 
+ℹ   seed.js                 |  97.52 |    82.14 |  100.00 | 198-202
+ℹ  models                   |        |          |         | 
+ℹ   AkunRelawan.js          |  59.90 |    56.52 |   55.56 | 29-30 32-33 46-48 67-72 76-77 109-119 123-124 127-128 137-138 142-148 151-171 179-185 188-193 197-206
+ℹ   BuktiLaporan.js         |  93.06 |    84.78 |  100.00 | 35-37 42-43
+ℹ   BuktiPembersihan.js     | 100.00 |   100.00 |  100.00 | 
+ℹ   KlaimTitikPencemaran.js |  96.64 |    96.30 |  100.00 | 61-64
+ℹ   Komunitas.js            |  78.26 |    57.69 |   83.33 | 41-52 64-66
+ℹ   LaporanPembersihan.js   |  44.44 |    55.56 |   25.00 | 7-25 49-66 69-72 75-78 81-83 88-90 92-93 97-98
+ℹ   LaporanPencemaran.js    |  47.43 |    80.00 |   26.67 | 15-41 77-81 84-96 99-101 105-111 115-119 122-127 141-143 146-148 152-153 157-174
+ℹ   Leaderboard.js          |  75.68 |    60.00 |   50.00 | 13-17 59-68 71-73
+ℹ   LogVerifikasi.js        |  90.00 |    71.43 |   66.67 | 12-13 17-18
+ℹ   PetaHeatmap.js          |  98.77 |    83.33 |   92.86 | 123-124
+ℹ  services                 |        |          |         | 
+ℹ   Autentikasi.js          | 100.00 |    83.33 |  100.00 | 
+ℹ   Geocoder.js             |  35.45 |   100.00 |    0.00 | 26-46 50-55 76-88 91-112 114-121 129-165 169-171 178-189
+ℹ   Notifikasi.js           |  56.04 |    85.71 |   40.00 | 9-13 18-44 60-61 64-65 68-69 86-87
+ℹ   StorageAdapter.js       |  82.95 |    67.74 |   87.50 | 18-22 50-51 68 70-73 79-81
+ℹ  utils                    |        |          |         | 
+ℹ   errors.js               | 100.00 |    85.71 |   71.43 | 
+ℹ   geo.js                  |  47.37 |   100.00 |   16.67 | 6-12 17-19 23-29 32-34
+ℹ ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ℹ all files                 |  76.25 |    80.00 |   65.71 | 
+ℹ ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ℹ end of coverage report
