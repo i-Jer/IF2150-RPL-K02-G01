@@ -136,7 +136,7 @@ Dokumen ini terdiri atas lima bab. BAB 1 berisi pendahuluan, BAB 2 berisi gambar
 
 # BAB 2: Deskripsi Umum Perangkat Lunak
 
-SeaGuard adalah aplikasi client-server berpola MVC. Klien berupa aplikasi web (React) yang dibuka di browser dan aplikasi Android (Capacitor) yang memakai kode antarmuka yang sama. Server Node.js/Express menjalankan Controller dan Model, menyimpan data di PostgreSQL + PostGIS, dan menyimpan foto bukti di *bucket* S3-compatible. Versi produksi berjalan di Railway (https://seaguard-app-production.up.railway.app).
+SeaGuard adalah aplikasi client-server berpola MVC. Klien berupa aplikasi web (React) yang dibuka di browser dan aplikasi Android (Capacitor) yang memakai kode antarmuka yang sama. Server Node.js/Express menjalankan Controller dan Model, menyimpan data di PostgreSQL + PostGIS, dan menyimpan foto bukti di *bucket* S3-compatible. Versi produksi berjalan di Railway (https://seaguard.i-jer.com).
 
 Batasan dan keterkaitan dengan sistem di luar SeaGuard:
 1. **Geolocation API / GPS perangkat** dipakai oleh View untuk mengambil koordinat saat melapor dan saat mengunggah bukti pembersihan. SeaGuard tidak menyimpan riwayat lokasi pengguna di luar laporan.

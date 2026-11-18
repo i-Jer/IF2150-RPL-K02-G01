@@ -51,7 +51,7 @@ export const config = {
   },
   // Indonesian territory + waters bounding box (R02, coarse first pass).
   indonesiaBox: { minLon: 94.0, maxLon: 141.5, minLat: -11.5, maxLat: 6.5 },
-  userAgent: 'SeaGuard/1.0 (+https://seaguard-app-production.up.railway.app)',
+  userAgent: 'SeaGuard/1.0 (+https://seaguard.i-jer.com)',
 };
 
 export default config;

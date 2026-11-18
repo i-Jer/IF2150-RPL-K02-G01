@@ -2,8 +2,8 @@
 
 SeaGuard is a platform for reporting, verifying, claiming and cleaning marine litter hotspots along Indonesia's coasts (IF2150 RPL, K02 G01 "Swike Karang Anyar"). It implements all 8 use cases (UC01 to UC08), the 21 functional requirements (KF01 to KF21) and the testable non-functional requirements (KNF01 to KNF12) from the SKPL/DPPL in `docs/`.
 
-- **Web app:** https://seaguard-app-production.up.railway.app
-- **Android APK:** https://seaguard-app-production.up.railway.app/download (the app updates itself; see "App updates")
+- **Web app:** https://seaguard.i-jer.com
+- **Android APK:** https://seaguard.i-jer.com/download (the app updates itself; see "App updates")
 
 ## 1. Architecture
 

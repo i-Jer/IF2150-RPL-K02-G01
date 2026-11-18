@@ -32,8 +32,8 @@ Dipersiapkan oleh:
 **Deadline:** Rabu, 11 November 2026, 21.50 WIB  
 **Tag pengumpulan:** `v9.0` pada branch `main` repository public kelompok.  
 **Kode sumber dan README:** [`src/`](../../src) dan [`src/README.md`](../../src/README.md)  
-**Aplikasi web (deploy):** https://seaguard-app-production.up.railway.app  
-**Aplikasi Android (APK):** https://seaguard-app-production.up.railway.app/download
+**Aplikasi web (deploy):** https://seaguard.i-jer.com  
+**Aplikasi Android (APK):** https://seaguard.i-jer.com/download
 
 ---
 
