@@ -78,7 +78,14 @@ npm run profile       # heatmap profiling with 10,000 points (KNF03), in a scrat
 node tests/nfr-check.mjs   # KNF07 immutable audit log + KNF03 timing, also in a scratch database
 ```
 
-`npm run profile` and `nfr-check.mjs` read `DATABASE_URL` from the environment (for example `DATABASE_URL=postgres://seaguard:seaguard@localhost:5432/seaguard npm run profile`). The tests sign in many times, so run `npm test` against a freshly started server: sign-in is rate-limited to 40 attempts per 15 minutes per address.
+Unit and integration tests (HIUPL, Tugas 10) do not need the API running. They create a scratch database from `DATABASE_URL`, migrate and seed it, and drop it afterwards:
+
+```bash
+npm run test:unit        # 55 unit tests on the model/service classes, with a line/branch coverage report
+npm run test:integrasi   # 15 integration tests: Controller -> Model -> PostgreSQL, storage, Photon/Nominatim
+```
+
+`npm run profile` and `nfr-check.mjs` also read `DATABASE_URL` from the environment (for example `DATABASE_URL=postgres://seaguard:seaguard@localhost:5432/seaguard npm run profile`). The tests sign in many times, so run `npm test` against a freshly started server: sign-in is rate-limited to 40 attempts per 15 minutes per address.
 
 The end-to-end suite covers sign-up and login, the 5-attempt lockout (KNF09), RBAC (401/403), UC01 with invalid photo and outside-Indonesia location (R02), UC03 approve with audit log and notification, UC02 filters/empty filter/location not found, UC04 with two simultaneous claims (exactly one succeeds, KNF05), UC05 geofence reject/accept, UC06/UC07 points and ranking, and UC08 with the R24 institution rule.
 
