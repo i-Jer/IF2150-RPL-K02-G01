@@ -31,6 +31,7 @@
 * [Milestone 7](#milestone-7)
 * [Milestone 8](#milestone-8)
 * [Milestone 9](#milestone-9)
+* [Milestone 10](#milestone-10)
 
 ---
 
@@ -47,10 +48,7 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | *Gemini* | *Menyusun dan mencari referensi terkait latar belakang pencemaran sampah laut di Indonesia* | *Tolong carikan sumber dan referensi terkait permasalahan pencemaran laut di Indonesia dan hubungannya dengan SDGs 14* | Sumber yang diberikan dicek ulang dan diverifikasi lagi untuk memastikan kebenaran informasi dan data yang diberikan masih relevan dengan kondisi saat ini |
 
 ### Milestone 2
-| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
-| :--- | :--- | :--- | :--- |
-| | | | | |
-| | | | | |
+Tidak Menggunakan AI
 
 ### Milestone 3
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
@@ -78,15 +76,17 @@ Silakan catat penggunaan AI yang berdampak signifikan pada pengerjaan tugas (mis
 | Claude | *Memastikan agar struktur DPPL sesuai dengan yang diminta* | *Bagaimana struktur file DPPL yang baik?* | *Menyesuaikan dan membandingkan dengan struktur DPPL dari contoh lain di internet* |
 
 ### Milestone 8
-| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
-| :--- | :--- | :--- | :--- |
-| | | | | |
-| | | | | |
+Tidak menggunakan AI
 
 ### Milestone 9
 | Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
 | :--- | :--- | :--- | :--- |
 | Claude | *Membantu dalam perancangan perangkat lunak dan menyesuaikan dengan milestone sebelumnya* | *Tolong merangkum spesifikasi dari milestone sebelumnya untuk membantu dalam mengimplementasikan perangkat kami* | *Memeriksa kembali hasil yang diberikan dan memperbaiki perancangan perangkat lunak kami* |
+
+### Milestone 10
+| Tool AI | Tujuan Penggunaan | Contoh Prompt Utama | Modifikasi & Validasi Manusia |
+| :--- | :--- | :--- | :--- |
+| Claude | *Membantu dalam merancang pengujian dan test case perangkat lunak* | *Lanjutkan membuat suatu perancangan hasil pengujian kelas dari aplikasi seaguard* | *Memeriksa kembali setiap ide test case yang diberikan dan memperbaiki beberapa kesalahan dari perancangan test case perangkat lunak* |
 
 ---
 ### Pernyataan Integritas dan Persetujuan
